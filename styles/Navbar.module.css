@@ -1,2 +1,24 @@
 .navcontainer {
+  background-color: #0d1a3d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links,
+.contactlink {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.links {
+  color: white;
+}
+
+.contactlink {
+  color: black;
+  background-color: #24ff7c;
+  padding: 0.5em 1em;
+  border-radius: 13px;
 }

@@ -127,6 +127,8 @@ table {
 
 /*Start of my CSS implementation*/
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -135,4 +137,5 @@ table {
 
 body {
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
