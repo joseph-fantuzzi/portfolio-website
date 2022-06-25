@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import PaperAirplane from "./PaperAirplane";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
-const Navbar = () => {
+const Navbar = ({ setMobileNav }) => {
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
@@ -22,7 +22,11 @@ const Navbar = () => {
             </Link>
           );
         })}
-        <MenuRoundedIcon className={styles.hamburger} fontSize="large" />
+        <MenuRoundedIcon
+          className={styles.hamburger}
+          fontSize="large"
+          onClick={() => setMobileNav(true)}
+        />
       </div>
     </div>
   );
