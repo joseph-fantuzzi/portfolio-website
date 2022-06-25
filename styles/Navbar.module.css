@@ -1,8 +1,13 @@
-.navcontainer {
+.container {
   background-color: #0d1a3d;
+}
+
+.navcontainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .links,
@@ -21,4 +26,5 @@
   background-color: #24ff7c;
   padding: 0.5em 1em;
   border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
