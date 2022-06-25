@@ -23,8 +23,15 @@
 
 .contactlink {
   color: black;
+  margin-right: 0.5em;
+}
+
+.contactlinkcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #24ff7c;
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

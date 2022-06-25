@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import Logo from "./Logo";
+import PaperAirplane from "./PaperAirplane";
 
 const Navbar = () => {
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -12,9 +13,12 @@ const Navbar = () => {
         <Logo />
         {links.map((link) => {
           return (
-            <Link key={link} href={"#"}>
-              <a className={link === "Contact" ? styles.contactlink : styles.links}>{link}</a>
-            </Link>
+            <div key={link} className={link === "Contact" ? styles.contactlinkcontainer : ""}>
+              <Link href={"#"}>
+                <a className={link === "Contact" ? styles.contactlink : styles.links}>{link}</a>
+              </Link>
+              {link === "Contact" ? <PaperAirplane /> : ""}
+            </div>
           );
         })}
       </div>
