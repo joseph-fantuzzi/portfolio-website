@@ -14,15 +14,12 @@ const Navbar = () => {
         <Logo />
         {links.map((link) => {
           return (
-            <div
-              key={link}
-              className={link === "Contact" ? styles.contactlinkcontainer : styles.linkscontainer}
-            >
-              <Link href={"#"}>
-                <a className={link === "Contact" ? styles.contactlink : styles.links}>{link}</a>
-              </Link>
-              {link === "Contact" ? <PaperAirplane /> : ""}
-            </div>
+            <Link key={link} href={"#"}>
+              <a className={link === "Contact" ? styles.contactlink : styles.links}>
+                <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
+                {link === "Contact" ? <PaperAirplane /> : ""}
+              </a>
+            </Link>
           );
         })}
         <MenuRoundedIcon className={styles.hamburger} fontSize="large" />
