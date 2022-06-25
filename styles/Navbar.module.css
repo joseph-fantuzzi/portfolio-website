@@ -4,9 +4,9 @@
 
 .navcontainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -26,12 +26,36 @@
   margin-right: 0.5em;
 }
 
+.linkscontainer,
 .contactlinkcontainer {
-  display: flex;
+  display: none;
+}
+
+.contactlinkcontainer {
   justify-content: center;
   align-items: center;
   background-color: #24ff7c;
   padding: 0.75em 1em;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hamburger {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .linkscontainer,
+  .contactlinkcontainer {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navcontainer {
+    justify-content: space-around;
+    width: 75%;
+  }
 }

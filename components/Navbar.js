@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import Logo from "./Logo";
 import PaperAirplane from "./PaperAirplane";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 const Navbar = () => {
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -13,7 +14,10 @@ const Navbar = () => {
         <Logo />
         {links.map((link) => {
           return (
-            <div key={link} className={link === "Contact" ? styles.contactlinkcontainer : ""}>
+            <div
+              key={link}
+              className={link === "Contact" ? styles.contactlinkcontainer : styles.linkscontainer}
+            >
               <Link href={"#"}>
                 <a className={link === "Contact" ? styles.contactlink : styles.links}>{link}</a>
               </Link>
@@ -21,6 +25,7 @@ const Navbar = () => {
             </div>
           );
         })}
+        <MenuRoundedIcon className={styles.hamburger} fontSize="large" />
       </div>
     </div>
   );
