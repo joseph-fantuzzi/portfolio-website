@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import PaperAirplane from "./PaperAirplane";
 import Toggle from "./Toggle";
@@ -6,7 +6,15 @@ import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
+  const [display, setDisplay] = useState(false);
+
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setDisplay(true);
+    }
+  }, []);
 
   return (
     <div className={mobileNav ? styles.mobilenavopen : styles.mobilenav}>
@@ -26,7 +34,7 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
             </Link>
           );
         })}
-        <Toggle dark={dark} setDark={setDark} />
+        {display && <Toggle dark={dark} setDark={setDark} />}
       </div>
     </div>
   );
