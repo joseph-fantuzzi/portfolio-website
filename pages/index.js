@@ -11,6 +11,7 @@ import MobileNav from "../components/MobileNav";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
+  const [dark, setDark] = useState(false);
 
   return (
     <div>
@@ -21,8 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar setMobileNav={setMobileNav} />
-      <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} />
-      <Main />
+      <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} dark={dark} setDark={setDark} />
+      <Main dark={dark} setDark={setDark} />
       <About />
       <Skills />
       <Projects />

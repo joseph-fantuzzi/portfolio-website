@@ -38,7 +38,7 @@
   color: white;
   position: absolute;
   top: 32.5px;
-  right: 39px;
+  right: 13%;
 }
 
 .textdiv {
@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  margin-right: 47px;
+  margin-right: 14%;
 }
 
 .links,
@@ -56,7 +56,11 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  margin: 2em 0 2em 0;
+}
+
+.links,
+.contactlink {
+  margin: 1.5em 0 1.5em 0;
 }
 
 .contactlink {

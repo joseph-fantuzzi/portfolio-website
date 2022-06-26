@@ -1,0 +1,58 @@
+.togglelight {
+  background-color: #404040;
+  width: 70px;
+  height: 25px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.toggledark {
+  background-color: #f0f0f0;
+  width: 70px;
+  height: 25px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.circlelight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -2.5px;
+  transform: translateX(0%);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.circledark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -2.5px;
+  transform: translateX(120%);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.moon {
+  color: white;
+}
+
+.toggledark,
+.togglelight {
+  margin: 1.5em 0 1.5em 0;
+}

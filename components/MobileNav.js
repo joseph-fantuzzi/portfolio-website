@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import PaperAirplane from "./PaperAirplane";
+import Toggle from "./Toggle";
 import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
-const MobileNav = ({ mobileNav, setMobileNav }) => {
+const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
-
-  const handleCloseBtn = () => {
-    setMobileNav(false);
-  };
 
   return (
     <div className={mobileNav ? styles.mobilenavopen : styles.mobilenav}>
-      <CloseRoundedIcon className={styles.close} fontSize="large" onClick={handleCloseBtn} />
+      <CloseRoundedIcon
+        className={styles.close}
+        fontSize="large"
+        onClick={() => setMobileNav(false)}
+      />
       <div className={styles.textdiv}>
         {links.map((link) => {
           return (
@@ -25,6 +26,7 @@ const MobileNav = ({ mobileNav, setMobileNav }) => {
             </Link>
           );
         })}
+        <Toggle dark={dark} setDark={setDark} />
       </div>
     </div>
   );
