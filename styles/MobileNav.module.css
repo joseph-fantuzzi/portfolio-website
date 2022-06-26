@@ -40,3 +40,40 @@
   top: 32.5px;
   right: 39px;
 }
+
+.textdiv {
+  height: 100vh;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 47px;
+}
+
+.links,
+.contactlink {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 2em 0 2em 0;
+}
+
+.contactlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #24ff7c;
+  padding: 0.75em 1em;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.links {
+  color: white;
+}
+
+.contact {
+  padding-right: 0.5em;
+}

@@ -14,14 +14,16 @@ const MobileNav = ({ mobileNav, setMobileNav }) => {
   return (
     <div className={mobileNav ? styles.mobilenavopen : styles.mobilenav}>
       <CloseRoundedIcon className={styles.close} fontSize="large" onClick={handleCloseBtn} />
-      <div>
+      <div className={styles.textdiv}>
         {links.map((link) => {
-          <Link key={link} href={"#"}>
-            <a>
-              <p>{link}</p>
-              {link === "Contact" ? <PaperAirplane /> : ""}
-            </a>
-          </Link>;
+          return (
+            <Link key={link} href={"#"}>
+              <a className={link === "Contact" ? styles.contactlink : styles.links}>
+                <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
+                {link === "Contact" ? <PaperAirplane /> : ""}
+              </a>
+            </Link>
+          );
         })}
       </div>
     </div>
