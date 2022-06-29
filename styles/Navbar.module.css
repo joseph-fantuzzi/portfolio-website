@@ -57,7 +57,7 @@
   color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .links,
   .contactlink {
     display: flex;

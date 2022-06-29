@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&display=swap");
+
 .maincontainer {
+  min-height: calc(100vh - 100px);
 }
 
 .togglecontainer {
@@ -10,6 +13,86 @@
   padding: 1em 0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .toggle {
   display: none;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 2.2em;
+  margin-bottom: 1.3rem;
+}
+
+.titlescontainer {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+.titles {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+.bio {
+  width: 80%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-bottom: 1.3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animation {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 30px;
+  height: 65px;
+  border: 4px solid black;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.circle {
+  position: relative;
+  top: 3px;
+  background-color: black;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  animation: up-and-down 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(33px);
+  }
 }
