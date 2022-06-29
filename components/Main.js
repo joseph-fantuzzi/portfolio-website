@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import Toggle from "./Toggle";
 import styles from "../styles/Main.module.css";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { FiPaperclip } from "react-icons/fi";
 
 const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
@@ -16,11 +18,6 @@ const Main = ({ dark, setDark }) => {
 
   useEffect(() => {
     checkMatch();
-  }, []);
-
-  useLayoutEffect(() => {
-    window.addEventListener("resize", checkMatch);
-    return () => window.removeEventListener("resize", checkMatch);
   }, []);
 
   return (
@@ -42,9 +39,18 @@ const Main = ({ dark, setDark }) => {
           </p>
         </div>
         <div className={styles.buttons}>
-          <button>Hire Me</button>
-          <button>Resume</button>
+          <a href="#" className={styles.hirebtn}>
+            <p className={styles.hire}>Hire Me</p>
+            <ArrowForwardIcon />
+          </a>
+          <a href="#" className={styles.resumebtn}>
+            <p className={styles.resume}>Resume</p>
+            <FiPaperclip size={20} />
+          </a>
         </div>
+        <div className={styles.pinktriangle}></div>
+        <div className={styles.greenrectangle}></div>
+        <div className={styles.bluecircle}></div>
         <div className={styles.animation}>
           <div className={styles.circle}></div>
         </div>
