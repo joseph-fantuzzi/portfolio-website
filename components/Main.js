@@ -48,9 +48,6 @@ const Main = ({ dark, setDark }) => {
             <FiPaperclip size={20} />
           </a>
         </div>
-        <div className={styles.pinktriangle}></div>
-        <div className={styles.greenrectangle}></div>
-        <div className={styles.bluecircle}></div>
         <div className={styles.animation}>
           <div className={styles.circle}></div>
         </div>
