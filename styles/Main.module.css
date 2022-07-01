@@ -10,20 +10,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1em 0;
 }
 
 .content {
-  margin-top: 2em;
+  min-height: calc(100vh - 173px);
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-
-.toggle {
-  display: none;
+  padding-bottom: 75px;
 }
 
 .intro {
@@ -128,31 +125,11 @@
   color: black;
 }
 
-/* .content::before {
-  content: "";
-  width: 350px;
-  height: 330px;
-  background-color: #24ff7c;
-  border-radius: 81px;
-  position: relative;
-  top: 350px;
-  left: -110px;
-  z-index: -1;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.rectangle,
+.circle,
+.diamond {
+  display: none;
 }
-
-.content::after {
-  content: "";
-  width: 285px;
-  height: 285px;
-  background-color: #0d1a3d;
-  border-radius: 50%;
-  position: relative;
-  top: -25px;
-  right: -175px;
-  z-index: -2;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
 
 .animationlight {
   display: flex;
@@ -202,5 +179,101 @@
   }
   100% {
     transform: translateY(33px);
+  }
+}
+
+@media (min-width: 800px) {
+  .content {
+    margin: 0 auto 0 auto;
+    width: 77%;
+    align-items: flex-start;
+    padding-left: 100px;
+  }
+
+  .rectangle {
+    display: inline;
+    width: 350px;
+    height: 330px;
+    background-color: #24ff7c;
+    border-radius: 81px;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    z-index: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .circle {
+    display: inline;
+    width: 285px;
+    height: 285px;
+    background-color: #0d1a3d;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    right: 12%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .diamond {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    background-color: #fc81e1;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: rotate(45deg);
+  }
+
+  .intro {
+    align-items: flex-start;
+  }
+
+  .titlescontainer,
+  .bio {
+    text-align: left;
+  }
+
+  .bio {
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .hirebtndark,
+  .hirebtnlight,
+  .resumebtndark,
+  .resumebtnlight {
+    margin-right: 1.25em;
+    margin-bottom: 1.5em;
+  }
+
+  .animationdark,
+  .animationlight {
+    margin: 0;
+  }
+
+  .hello {
+    font-size: 1.5em;
+  }
+
+  .name {
+    font-size: 3em;
+  }
+
+  .titles {
+    font-size: 1.5em;
+    line-height: 30px;
+  }
+
+  .bio {
+    font-size: 1em;
   }
 }

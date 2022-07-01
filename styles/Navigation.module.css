@@ -1,6 +1,8 @@
 .navcontainer {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 4;
 }
 
 .nav {
@@ -13,6 +15,8 @@
   position: fixed;
   bottom: 40px;
   padding: 10px 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .icon {
