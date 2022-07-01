@@ -1,0 +1,38 @@
+.navcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  background-color: rgba(113, 109, 109, 0.76);
+  border-radius: 20px 20px 3px 3px;
+  position: fixed;
+  bottom: 40px;
+  padding: 10px 0;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media (min-width: 800px) {
+  .nav {
+    flex-direction: column;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    width: 0;
+    padding: 0 22px;
+    border-radius: 0px 20px 20px 0px;
+  }
+}

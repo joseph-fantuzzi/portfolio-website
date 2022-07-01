@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
+import Navigation from "../components/Navigation";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -37,6 +38,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <Navigation />
     </div>
   );
 }

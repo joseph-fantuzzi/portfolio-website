@@ -8,7 +8,7 @@ const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
 
   function checkMatch() {
-    const x = window.matchMedia("(min-width: 768px)");
+    const x = window.matchMedia("(min-width: 800px)");
     if (!x.matches) {
       setToggleVisibility(false);
     } else {
