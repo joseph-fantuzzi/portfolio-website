@@ -135,5 +135,12 @@ table {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+}
+
+.bglight {
   background-color: #d6f7ff;
+}
+
+.bgdark {
+  background-color: #0d1a3d;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Main from "../components/Main";
@@ -12,10 +12,18 @@ import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
-  const [dark, setDark] = useLocalStorage("dark", false);
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    if (!window.localStorage.getItem("theme")) {
+      window.localStorage.setItem("theme", "light");
+    } else if (window.localStorage.getItem("theme") === "dark") {
+      setDark(true);
+    }
+  }, [dark]);
 
   return (
-    <div>
+    <div className={dark ? "bgdark" : "bglight"}>
       <Head>
         <title>Joseph Fantuzzi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
