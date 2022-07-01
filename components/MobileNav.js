@@ -16,10 +16,26 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
     }
   }, []);
 
+  const getMobileContainerClass = () => {
+    if (mobileNav) {
+      if (dark) {
+        return styles.mobilenavopendark;
+      } else {
+        return styles.mobilenavopenlight;
+      }
+    } else {
+      if (dark) {
+        return styles.mobilenavdark;
+      } else {
+        return styles.mobilenavlight;
+      }
+    }
+  };
+
   return (
-    <div className={mobileNav ? styles.mobilenavopen : styles.mobilenav}>
+    <div className={getMobileContainerClass()}>
       <CloseRoundedIcon
-        className={styles.close}
+        className={dark ? styles.closedark : styles.closelight}
         fontSize="large"
         onClick={() => setMobileNav(false)}
       />
@@ -27,7 +43,15 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
         {links.map((link) => {
           return (
             <Link key={link} href={"#"}>
-              <a className={link === "Contact" ? styles.contactlink : styles.links}>
+              <a
+                className={
+                  link === "Contact"
+                    ? styles.contactlink
+                    : dark
+                    ? styles.linksdark
+                    : styles.linkslight
+                }
+              >
                 <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
                 {link === "Contact" ? <PaperAirplane /> : ""}
               </a>

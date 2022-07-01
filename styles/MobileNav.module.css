@@ -1,4 +1,4 @@
-.mobilenav {
+.mobilenavlight {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,13 +10,29 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
   transform: translateX(120%);
   visibility: hidden;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.mobilenavopen {
+.mobilenavdark {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 75vw;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px 0px 0px 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateX(120%);
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.mobilenavopenlight {
   position: fixed;
   top: 0;
   right: 0;
@@ -28,14 +44,37 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
   transform: translateX(0%);
   visibility: visible;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.close {
+.mobilenavopendark {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 75vw;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px 0px 0px 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateX(0%);
+  visibility: visible;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.closelight {
   color: white;
+  position: absolute;
+  top: 32.5px;
+  right: 13%;
+}
+
+.closedark {
+  color: black;
   position: absolute;
   top: 32.5px;
   right: 13%;
@@ -51,18 +90,6 @@
   margin-right: 14%;
 }
 
-.links,
-.contactlink {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.links,
-.contactlink {
-  margin: 1.5em 0 1.5em 0;
-}
-
 .contactlink {
   display: flex;
   justify-content: center;
@@ -72,10 +99,26 @@
   padding: 0.75em 1em;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 1.5em 0 1.5em 0;
 }
 
-.links {
+.linkslight {
+  margin: 1.5em 0 1.5em 0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
   color: white;
+}
+
+.linksdark {
+  margin: 1.5em 0 1.5em 0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: black;
 }
 
 .contact {
