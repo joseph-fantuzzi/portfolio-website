@@ -68,13 +68,13 @@
   justify-content: center;
 }
 
-.hirebtn,
-.resumebtn {
+.hirebtnlight,
+.resumebtnlight {
   text-decoration: none;
   color: white;
 }
 
-.hirebtn {
+.hirebtnlight {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,13 +85,26 @@
   margin-bottom: 1.2em;
 }
 
+.hirebtndark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.76);
+  padding: 1em 1.5em;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 1.2em;
+  text-decoration: none;
+  color: black;
+}
+
 .hire,
 .resume {
   margin-right: 0.5em;
   font-weight: 700;
 }
 
-.resumebtn {
+.resumebtnlight {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +113,19 @@
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
+}
+
+.resumebtndark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fc81e1;
+  padding: 1em 1.5em;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 1.2em;
+  text-decoration: none;
+  color: black;
 }
 
 /* .content::before {
@@ -128,7 +154,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 } */
 
-.animation {
+.animationlight {
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -139,10 +165,31 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.circle {
+.animationdark {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 30px;
+  height: 65px;
+  border: 4px solid white;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.circlelight {
   position: relative;
   top: 3px;
   background-color: black;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  animation: up-and-down 1.5s ease-in-out infinite alternate;
+}
+
+.circledark {
+  position: relative;
+  top: 3px;
+  background-color: white;
   width: 18px;
   height: 18px;
   border-radius: 50%;

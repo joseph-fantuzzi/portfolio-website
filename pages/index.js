@@ -8,7 +8,6 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);

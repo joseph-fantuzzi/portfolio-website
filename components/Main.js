@@ -39,17 +39,17 @@ const Main = ({ dark, setDark }) => {
           </p>
         </div>
         <div className={styles.buttons}>
-          <a href="#" className={styles.hirebtn}>
+          <a href="#" className={dark ? styles.hirebtndark : styles.hirebtnlight}>
             <p className={styles.hire}>Hire Me</p>
             <ArrowForwardIcon />
           </a>
-          <a href="#" className={styles.resumebtn}>
+          <a href="#" className={dark ? styles.resumebtndark : styles.resumebtnlight}>
             <p className={styles.resume}>Resume</p>
             <FiPaperclip size={20} />
           </a>
         </div>
-        <div className={styles.animation}>
-          <div className={styles.circle}></div>
+        <div className={dark ? styles.animationdark : styles.animationlight}>
+          <div className={dark ? styles.circledark : styles.circlelight}></div>
         </div>
       </div>
     </main>
