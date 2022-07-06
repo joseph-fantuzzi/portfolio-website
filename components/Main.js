@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Toggle from "./Toggle";
 import styles from "../styles/Main.module.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { FiPaperclip } from "react-icons/fi";
+import Typewriter from "typewriter-effect";
 
 const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
+  const [displayTyping, setDisplayTyping] = useState(false);
 
   function checkMatch() {
     const x = window.matchMedia("(min-width: 800px)");
@@ -18,6 +20,9 @@ const Main = ({ dark, setDark }) => {
 
   useEffect(() => {
     checkMatch();
+    if (typeof window !== "undefined") {
+      setDisplayTyping(true);
+    }
   }, []);
 
   return (
@@ -30,9 +35,15 @@ const Main = ({ dark, setDark }) => {
           <p className={styles.hello}>Hello, I&apos;m</p>
           <h1 className={styles.name}>Joseph Fantuzzi</h1>
           <div className={styles.titlescontainer}>
-            <p className={styles.titles}>Full Stack Web Developer</p>
-            <p className={styles.titles}>Software Engineer</p>
-            <p className={styles.titles}>UI/UX Designer</p>
+            {displayTyping && (
+              <Typewriter
+                options={{
+                  strings: ["Full Stack Web Developer", "Software Engineer", "UI/UX Designer"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            )}
           </div>
           <p className={styles.bio}>
             Specialized in crafting and implementing modern and beautiful web experiences.
