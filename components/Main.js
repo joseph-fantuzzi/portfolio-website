@@ -52,9 +52,11 @@ const Main = ({ dark, setDark }) => {
           <div className={dark ? styles.circledark : styles.circlelight}></div>
         </div>
       </div>
-      <div className={styles.rectangle}></div>
-      <div className={styles.circle}></div>
-      <div className={styles.diamond}></div>
+      <div className={styles.shapecontainer}>
+        <div className={styles.rectangle}></div>
+        <div className={dark ? styles.darkcircle : styles.lightcircle}></div>
+        <div className={styles.diamond}></div>
+      </div>
     </main>
   );
 };

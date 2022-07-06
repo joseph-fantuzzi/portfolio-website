@@ -20,7 +20,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 75px;
 }
 
 .intro {
@@ -125,12 +124,6 @@
   color: black;
 }
 
-.rectangle,
-.circle,
-.diamond {
-  display: none;
-}
-
 .animationlight {
   display: flex;
   margin: 0 auto;
@@ -188,46 +181,7 @@
     width: 77%;
     align-items: flex-start;
     padding-left: 100px;
-  }
-
-  .rectangle {
-    display: inline;
-    width: 350px;
-    height: 330px;
-    background-color: #24ff7c;
-    border-radius: 81px;
-    position: absolute;
-    top: 30%;
-    right: 25%;
-    z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-
-  .circle {
-    display: inline;
-    width: 285px;
-    height: 285px;
-    background-color: #0d1a3d;
-    border-radius: 50%;
-    position: absolute;
-    top: 25%;
-    right: 12%;
-    z-index: 1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-
-  .diamond {
-    display: inline;
-    width: 200px;
-    height: 200px;
-    background-color: #fc81e1;
-    border-radius: 50px;
-    position: absolute;
-    top: 50%;
-    right: 18%;
-    z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: rotate(45deg);
+    padding-bottom: 130px;
   }
 
   .intro {
@@ -275,5 +229,83 @@
 
   .bio {
     font-size: 1em;
+  }
+}
+
+@media (min-width: 1080px) {
+  .rectangle {
+    width: 350px;
+    height: 330px;
+    background-color: #24ff7c;
+    border-radius: 81px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 2;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .darkcircle {
+    width: 285px;
+    height: 285px;
+    background-color: #d6f7ff;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    top: -400px;
+    right: -170px;
+    z-index: 2;
+  }
+
+  .lightcircle {
+    width: 285px;
+    height: 285px;
+    background-color: #0d1a3d;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    top: -400px;
+    right: -170px;
+    z-index: 2;
+  }
+
+  .diamond {
+    width: 200px;
+    height: 200px;
+    background-color: #fc81e1;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: rotate(45deg);
+    position: relative;
+    top: -450px;
+    right: -220px;
+    z-index: 2;
+  }
+
+  .shapecontainer {
+    position: absolute;
+    top: 35vh;
+    right: 25vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hello {
+    font-size: 2em;
+  }
+
+  .name {
+    font-size: 3.5em;
+  }
+
+  .titles {
+    font-size: 2em;
+    line-height: 40px;
+  }
+
+  .bio {
+    font-size: 1.5em;
   }
 }
