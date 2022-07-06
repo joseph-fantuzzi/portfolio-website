@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import PaperAirplane from "./PaperAirplane";
 import Toggle from "./Toggle";
 import styles from "../styles/MobileNav.module.css";
@@ -42,20 +41,20 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
       <div className={styles.textdiv}>
         {links.map((link) => {
           return (
-            <Link key={link} href={"#"}>
-              <a
-                className={
-                  link === "Contact"
-                    ? styles.contactlink
-                    : dark
-                    ? styles.linksdark
-                    : styles.linkslight
-                }
-              >
-                <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
-                {link === "Contact" ? <PaperAirplane /> : ""}
-              </a>
-            </Link>
+            <a
+              key={link}
+              href="#"
+              className={
+                link === "Contact"
+                  ? styles.contactlink
+                  : dark
+                  ? styles.linksdark
+                  : styles.linkslight
+              }
+            >
+              <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
+              {link === "Contact" ? <PaperAirplane /> : ""}
+            </a>
           );
         })}
         {display && <Toggle dark={dark} setDark={setDark} />}

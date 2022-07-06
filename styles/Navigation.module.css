@@ -27,6 +27,7 @@
   height: 25px;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 800px) {

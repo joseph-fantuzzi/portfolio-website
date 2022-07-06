@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import Logo from "./Logo";
 import PaperAirplane from "./PaperAirplane";
@@ -14,12 +12,14 @@ const Navbar = ({ setMobileNav }) => {
         <Logo />
         {links.map((link) => {
           return (
-            <Link key={link} href={"#"}>
-              <a className={link === "Contact" ? styles.contactlink : styles.links}>
-                <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
-                {link === "Contact" ? <PaperAirplane /> : ""}
-              </a>
-            </Link>
+            <a
+              key={link}
+              href="#"
+              className={link === "Contact" ? styles.contactlink : styles.links}
+            >
+              <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
+              {link === "Contact" ? <PaperAirplane /> : ""}
+            </a>
           );
         })}
         <MenuRoundedIcon
