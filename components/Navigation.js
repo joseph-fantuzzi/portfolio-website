@@ -9,19 +9,19 @@ const Navigation = () => {
   return (
     <div className={styles.navcontainer}>
       <div className={styles.nav}>
-        <a href="#" className={styles.icon}>
+        <a href="#home" className={styles.icon}>
           <BiHome size={17} />
         </a>
-        <a href="#" className={styles.icon}>
+        <a href="#about" className={styles.icon}>
           <MdOutlinePersonOutline size={17} />
         </a>
-        <a href="#" className={styles.icon}>
+        <a href="#skills" className={styles.icon}>
           <HiOutlinePencil size={17} />
         </a>
-        <a href="#" className={styles.icon}>
+        <a href="#projects" className={styles.icon}>
           <CgBriefcase size={17} />
         </a>
-        <a href="#" className={styles.icon}>
+        <a href="#contact" className={styles.icon}>
           <FiMail size={17} />
         </a>
       </div>

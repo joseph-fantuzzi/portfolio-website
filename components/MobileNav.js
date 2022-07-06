@@ -43,7 +43,7 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
           return (
             <a
               key={link}
-              href="#"
+              href={`#${link.toLowerCase()}`}
               className={
                 link === "Contact"
                   ? styles.contactlink

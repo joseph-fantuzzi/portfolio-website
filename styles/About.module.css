@@ -1,0 +1,24 @@
+.aboutcontainer {
+  min-height: 100vh;
+}
+
+.about {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.text {
+  margin-top: 1em;
+  font-weight: 300;
+  font-size: 0.9em;
+}

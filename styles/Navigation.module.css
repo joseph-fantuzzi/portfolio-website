@@ -28,6 +28,7 @@
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
+  color: black;
 }
 
 @media (min-width: 800px) {

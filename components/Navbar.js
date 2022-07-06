@@ -14,7 +14,7 @@ const Navbar = ({ setMobileNav }) => {
           return (
             <a
               key={link}
-              href="#"
+              href={`#${link.toLowerCase()}`}
               className={link === "Contact" ? styles.contactlink : styles.links}
             >
               <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
