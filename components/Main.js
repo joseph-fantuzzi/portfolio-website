@@ -26,7 +26,7 @@ const Main = ({ dark, setDark }) => {
   }, []);
 
   return (
-    <main className={styles.maincontainer}>
+    <main id="home" className={styles.maincontainer}>
       <div className={styles.togglecontainer}>
         {toggleVisibility && <Toggle dark={dark} setDark={setDark} />}
       </div>

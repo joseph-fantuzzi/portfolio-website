@@ -4,26 +4,62 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 import { HiOutlinePencil } from "react-icons/hi";
 import { CgBriefcase } from "react-icons/cg";
 import { FiMail } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 const Navigation = () => {
   return (
     <div className={styles.navcontainer}>
       <div className={styles.nav}>
-        <a href="#home" className={styles.icon}>
+        <Link
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          className={styles.icon}
+        >
           <BiHome size={17} />
-        </a>
-        <a href="#about" className={styles.icon}>
+        </Link>
+        <Link
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={0}
+          className={styles.icon}
+        >
           <MdOutlinePersonOutline size={17} />
-        </a>
-        <a href="#skills" className={styles.icon}>
+        </Link>
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={0}
+          className={styles.icon}
+        >
           <HiOutlinePencil size={17} />
-        </a>
-        <a href="#projects" className={styles.icon}>
+        </Link>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={0}
+          className={styles.icon}
+        >
           <CgBriefcase size={17} />
-        </a>
-        <a href="#contact" className={styles.icon}>
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={0}
+          className={styles.icon}
+        >
           <FiMail size={17} />
-        </a>
+        </Link>
       </div>
     </div>
   );

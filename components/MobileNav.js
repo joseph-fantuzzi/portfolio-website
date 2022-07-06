@@ -3,6 +3,7 @@ import PaperAirplane from "./PaperAirplane";
 import Toggle from "./Toggle";
 import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { Link } from "react-scroll";
 
 const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   const [display, setDisplay] = useState(false);
@@ -41,9 +42,13 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
       <div className={styles.textdiv}>
         {links.map((link) => {
           return (
-            <a
+            <Link
               key={link}
-              href={`#${link.toLowerCase()}`}
+              activeClass="active"
+              to={`${link.toLowerCase()}`}
+              spy={true}
+              smooth={true}
+              offset={0}
               className={
                 link === "Contact"
                   ? styles.contactlink
@@ -54,7 +59,7 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
             >
               <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
               {link === "Contact" ? <PaperAirplane /> : ""}
-            </a>
+            </Link>
           );
         })}
         {display && <Toggle dark={dark} setDark={setDark} />}
