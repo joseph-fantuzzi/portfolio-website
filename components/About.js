@@ -24,6 +24,12 @@ const About = () => {
           management systems, and client-server relationships.
         </p>
       </div>
+      <div className={styles.biggreencircle}></div>
+      <div className={styles.smallgreencircle}></div>
+      <div className={styles.bigpinkcircle}></div>
+      <div className={styles.smallpinkcircle}></div>
+      <div className={styles.smallbluecircle}></div>
+      <div className={styles.bigbluecircle}></div>
     </div>
   );
 };

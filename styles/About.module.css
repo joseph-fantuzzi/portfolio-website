@@ -5,6 +5,8 @@
 .about {
   width: 85%;
   margin: 0 auto;
+  padding-top: 2em;
+  z-index: 2;
 }
 
 .intro {
@@ -18,7 +20,111 @@
 }
 
 .text {
-  margin-top: 1em;
+  margin-top: 1.25em;
   font-weight: 300;
   font-size: 0.9em;
+}
+
+.biggreencircle,
+.smallgreencircle,
+.bigpinkcircle,
+.smallpinkcircle,
+.smallbluecircle,
+.bigbluecircle {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .aboutcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about {
+    width: 50%;
+    background-color: rgba(90, 90, 90, 0.31);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 70px;
+    padding: 4em;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+
+  .biggreencircle {
+    display: inline;
+    position: absolute;
+    top: 155%;
+    right: 20%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #24ff7c;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .smallgreencircle {
+    display: inline;
+    position: absolute;
+    top: 125%;
+    left: 25%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #24ff7c;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .bigpinkcircle {
+    display: inline;
+    position: absolute;
+    top: 145%;
+    left: 20%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #fc81e1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .smallpinkcircle {
+    display: inline;
+    position: absolute;
+    top: 122%;
+    right: 25%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fc81e1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+  }
+
+  .smallbluecircle {
+    display: inline;
+    position: absolute;
+    top: 130%;
+    left: 28%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #0d1a3d;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .bigbluecircle {
+    display: inline;
+    position: absolute;
+    top: 130%;
+    right: 23%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #0d1a3d;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
