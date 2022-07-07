@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PaperAirplane from "./PaperAirplane";
 import Toggle from "./Toggle";
 import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
@@ -8,7 +7,7 @@ import { Link } from "react-scroll";
 const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   const [display, setDisplay] = useState(false);
 
-  const links = ["Home", "About", "Skills", "Projects", "Contact"];
+  const links = ["About", "Skills", "Work", "Contact"];
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -21,13 +20,13 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
       if (dark) {
         return styles.mobilenavopendark;
       } else {
-        return styles.mobilenavopenlight;
+        return styles.mobilenavopen;
       }
     } else {
       if (dark) {
         return styles.mobilenavdark;
       } else {
-        return styles.mobilenavlight;
+        return styles.mobilenav;
       }
     }
   };
@@ -35,12 +34,12 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   return (
     <div className={getMobileContainerClass()}>
       <CloseRoundedIcon
-        className={dark ? styles.closedark : styles.closelight}
+        className={styles.close}
         fontSize="large"
         onClick={() => setMobileNav(false)}
       />
       <div className={styles.textdiv}>
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
             <Link
               key={link}
@@ -49,19 +48,16 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
               spy={true}
               smooth={true}
               offset={0}
-              className={
-                link === "Contact"
-                  ? styles.contactlink
-                  : dark
-                  ? styles.linksdark
-                  : styles.linkslight
-              }
+              className={styles.links}
             >
-              <p className={link === "Contact" ? styles.contact : ""}>{link}</p>
-              {link === "Contact" ? <PaperAirplane /> : ""}
+              <p className={styles.numbers}>0{index + 1}.</p>
+              <p>{link}</p>
             </Link>
           );
         })}
+        <a href="#" className={styles.resumelink}>
+          Resume
+        </a>
         {display && <Toggle dark={dark} setDark={setDark} />}
       </div>
     </div>

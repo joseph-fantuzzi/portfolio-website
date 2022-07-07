@@ -25,6 +25,12 @@ const Main = ({ dark, setDark }) => {
     }
   }, []);
 
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", () => {
+      checkMatch();
+    });
+  }
+
   return (
     <main id="home" className={styles.maincontainer}>
       <div className={styles.togglecontainer}>
