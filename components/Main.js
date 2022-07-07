@@ -38,7 +38,12 @@ const Main = ({ dark, setDark }) => {
             {displayTyping && (
               <Typewriter
                 options={{
-                  strings: ["Full Stack Web Developer", "Software Engineer", "UI/UX Designer"],
+                  strings: [
+                    "Full Stack Web Developer",
+                    "Front End Engineer",
+                    "Software Engineer",
+                    "UI/UX Designer",
+                  ],
                   autoStart: true,
                   loop: true,
                 }}
