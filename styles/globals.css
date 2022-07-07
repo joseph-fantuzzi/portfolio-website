@@ -139,9 +139,11 @@ body {
 
 .bglight {
   background-color: #f2faff;
+  transition: all 0.3s ease;
 }
 
 .bgdark {
   background-color: #0d1a3d;
   color: white;
+  transition: all 0.3s ease;
 }

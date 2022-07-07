@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Toggle from "./Toggle";
 import styles from "../styles/Main.module.css";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { FiPaperclip } from "react-icons/fi";
+import { AiOutlineDownCircle } from "react-icons/ai";
+import { HiOutlinePaperAirplane } from "react-icons/hi";
 import Typewriter from "typewriter-effect";
 
 const Main = ({ dark, setDark }) => {
@@ -61,13 +61,13 @@ const Main = ({ dark, setDark }) => {
           </p>
         </div>
         <div className={styles.buttons}>
-          <a href="#" className={dark ? styles.hirebtndark : styles.hirebtnlight}>
-            <p className={styles.hire}>Hire Me</p>
-            <ArrowForwardIcon />
+          <a href="#" className={dark ? styles.connectbtndark : styles.connectbtnlight}>
+            <p className={styles.connect}>Connect</p>
+            <HiOutlinePaperAirplane size={22} />
           </a>
-          <a href="#" className={dark ? styles.resumebtndark : styles.resumebtnlight}>
-            <p className={styles.resume}>Resume</p>
-            <FiPaperclip size={20} />
+          <a href="#" className={dark ? styles.workbtndark : styles.workbtnlight}>
+            <p className={styles.work}>View My Work</p>
+            <AiOutlineDownCircle size={25} />
           </a>
         </div>
         <div className={dark ? styles.animationdark : styles.animationlight}>

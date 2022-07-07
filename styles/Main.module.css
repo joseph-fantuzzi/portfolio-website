@@ -61,64 +61,84 @@
   justify-content: center;
 }
 
-.hirebtnlight,
-.resumebtnlight {
+.connectbtnlight,
+.workbtnlight {
   text-decoration: none;
   color: white;
 }
 
-.hirebtnlight {
+.connectbtnlight {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.45);
-  padding: 1em 1.5em;
+  padding: 0.7em 1.2em;
+  border: 2px solid #0d1a3d;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
+  color: #0d1a3d;
+  transition: all 0.3s ease;
 }
 
-.hirebtndark {
+.connectbtnlight:hover {
+  background-color: rgba(13, 26, 61, 0.2);
+}
+
+.connectbtndark {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.76);
-  padding: 1em 1.5em;
+  padding: 0.7em 1.2em;
+  border: 2px solid white;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.hire,
-.resume {
+.connectbtndark:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.connect,
+.work {
   margin-right: 0.5em;
   font-weight: 700;
 }
 
-.resumebtnlight {
+.workbtnlight {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fc81e1;
-  padding: 1em 1.5em;
+  padding: 0.7em 1.2em;
+  border: 2px solid #fc81e1;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
+  transition: all 0.3s ease;
 }
 
-.resumebtndark {
+.workbtnlight:hover,
+.workbtndark:hover {
+  background-color: rgba(252, 129, 225, 0.3);
+}
+
+.workbtndark {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fc81e1;
-  padding: 1em 1.5em;
+  padding: 0.7em 1.2em;
+  border: 2px solid #fc81e1;
   border-radius: 13px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .animationlight {
@@ -130,6 +150,7 @@
   border: 3px solid black;
   border-radius: 1em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease;
 }
 
 .animationdark {
@@ -141,6 +162,7 @@
   border: 3px solid white;
   border-radius: 1em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease;
 }
 
 .circlelight {
@@ -151,6 +173,7 @@
   height: 18px;
   border-radius: 50%;
   animation: up-and-down 1.5s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
 }
 
 .circledark {
@@ -161,6 +184,7 @@
   height: 18px;
   border-radius: 50%;
   animation: up-and-down 1.5s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
 }
 
 @keyframes up-and-down {
@@ -199,10 +223,10 @@
     flex-direction: row;
   }
 
-  .hirebtndark,
-  .hirebtnlight,
-  .resumebtndark,
-  .resumebtnlight {
+  .connectbtndark,
+  .connectbtnlight,
+  .workbtndark,
+  .workbtnlight {
     margin-right: 1.25em;
     margin-bottom: 1.5em;
   }
@@ -249,6 +273,7 @@
     top: -400px;
     right: -170px;
     z-index: 2;
+    transition: all 0.3s ease;
   }
 
   .lightcircle {
@@ -262,6 +287,7 @@
     top: -400px;
     right: -170px;
     z-index: 2;
+    transition: all 0.3s ease;
   }
 
   .diamond {
