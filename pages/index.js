@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
 import Navigation from "../components/Navigation";
+import Socials from "../components/Socials";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <Navigation />
+      <Socials dark={dark} />
     </div>
   );
 }

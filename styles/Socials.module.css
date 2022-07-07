@@ -1,0 +1,51 @@
+.socialcontainer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkslight {
+  padding: 0.5em 0;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.linksdark {
+  padding: 0.5em 0;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.linkslight:hover,
+.linksdark:hover {
+  padding-bottom: 1em;
+  color: #24ff7c;
+}
+
+.linelight {
+  margin-top: 0.5em;
+  height: 100px;
+  border-right: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.linedark {
+  margin-top: 0.5em;
+  height: 100px;
+  border-right: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .socialcontainer {
+    display: flex;
+  }
+}
