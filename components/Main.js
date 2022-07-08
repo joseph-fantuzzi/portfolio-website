@@ -4,6 +4,7 @@ import styles from "../styles/Main.module.css";
 import { AiOutlineDownCircle } from "react-icons/ai";
 import { HiOutlinePaperAirplane } from "react-icons/hi";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-scroll";
 
 const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
@@ -65,19 +66,21 @@ const Main = ({ dark, setDark }) => {
             <p className={styles.connect}>Connect</p>
             <HiOutlinePaperAirplane size={22} />
           </a>
-          <a href="#" className={dark ? styles.workbtndark : styles.workbtnlight}>
+          <Link
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            offset={0}
+            className={dark ? styles.workbtndark : styles.workbtnlight}
+          >
             <p className={styles.work}>View My Work</p>
             <AiOutlineDownCircle size={25} />
-          </a>
+          </Link>
         </div>
         <div className={dark ? styles.animationdark : styles.animationlight}>
           <div className={dark ? styles.circledark : styles.circlelight}></div>
         </div>
-      </div>
-      <div className={styles.shapecontainer}>
-        <div className={styles.rectangle}></div>
-        <div className={dark ? styles.darkcircle : styles.lightcircle}></div>
-        <div className={styles.diamond}></div>
       </div>
     </main>
   );

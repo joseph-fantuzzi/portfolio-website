@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
 .container {
-  background-color: #0d1a3d;
+  background-color: #07112f;
 }
 
 .navcontainer {
@@ -27,7 +27,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.6s ease;
-  border-radius: 50px;
+  border-radius: 13px;
   text-align: center;
 }
 
@@ -40,14 +40,14 @@
 }
 
 .resumelink {
-  border: 2px solid white;
+  color: #24ff7c;
+  border: 2px solid #24ff7c;
   margin-left: 0.8em;
   padding: 0.5em 1.2em;
 }
 
 .resumelink:hover {
-  color: #24ff7c;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(36, 255, 124, 0.2);
 }
 
 .numbers {

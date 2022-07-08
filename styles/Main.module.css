@@ -61,12 +61,6 @@
   justify-content: center;
 }
 
-.connectbtnlight,
-.workbtnlight {
-  text-decoration: none;
-  color: white;
-}
-
 .connectbtnlight {
   display: flex;
   justify-content: center;
@@ -74,14 +68,14 @@
   padding: 0.7em 1.2em;
   border: 2px solid #0d1a3d;
   border-radius: 13px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
   color: #0d1a3d;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .connectbtnlight:hover {
-  background-color: rgba(13, 26, 61, 0.2);
+  background-color: rgba(13, 26, 61, 0.1);
 }
 
 .connectbtndark {
@@ -91,7 +85,6 @@
   padding: 0.7em 1.2em;
   border: 2px solid white;
   border-radius: 13px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
   text-decoration: none;
   color: white;
@@ -99,7 +92,7 @@
 }
 
 .connectbtndark:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .connect,
@@ -109,36 +102,45 @@
 }
 
 .workbtnlight {
+  color: #202020;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fc81e1;
+  background-color: #24ff7c;
   padding: 0.7em 1.2em;
-  border: 2px solid #fc81e1;
+  border: 2px solid #24ff7c;
   border-radius: 13px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .workbtnlight:hover,
 .workbtndark:hover {
-  background-color: rgba(252, 129, 225, 0.3);
+  background-color: rgba(36, 255, 124, 0.2);
 }
 
 .workbtndark {
+  color: #202020;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fc81e1;
+  background-color: #24ff7c;
   padding: 0.7em 1.2em;
-  border: 2px solid #fc81e1;
+  border: 2px solid #24ff7c;
   border-radius: 13px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 1.2em;
   text-decoration: none;
-  color: white;
   transition: all 0.3s ease;
+}
+
+.workbtndark:hover {
+  color: #24ff7c;
+}
+
+.workbtndark,
+.workbtnlight {
+  cursor: pointer;
 }
 
 .animationlight {
@@ -250,7 +252,7 @@
 }
 
 @media (min-width: 1080px) {
-  .rectangle {
+  /* .rectangle {
     width: 350px;
     height: 330px;
     background-color: #24ff7c;
@@ -303,13 +305,13 @@
     right: -220px;
     z-index: 2;
     transition: all 0.3s ease;
-  }
+  } */
 
-  .shapecontainer {
+  /* .shapecontainer {
     position: absolute;
     top: 35vh;
     right: 25vw;
-  }
+  } */
 }
 
 @media (min-width: 1600px) {

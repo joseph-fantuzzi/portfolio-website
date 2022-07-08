@@ -91,12 +91,12 @@ const Logo = () => {
           id="paint0_linear_42_161"
           x1="82.9762"
           y1="10.9375"
-          x2="15.4407"
-          y2="80.9171"
+          x2="16.5887"
+          y2="111.861"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#24FF7C" />
-          <stop offset="1" stopColor="#003395" />
+          <stop offset="1" stopColor="#05296F" />
         </linearGradient>
       </defs>
     </svg>
