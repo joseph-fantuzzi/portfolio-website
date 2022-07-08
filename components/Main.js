@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Toggle from "./Toggle";
 import styles from "../styles/Main.module.css";
 import { AiOutlineDownCircle } from "react-icons/ai";
-import { HiOutlinePaperAirplane } from "react-icons/hi";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 
@@ -64,7 +63,6 @@ const Main = ({ dark, setDark }) => {
         <div className={styles.buttons}>
           <a href="#" className={dark ? styles.connectbtndark : styles.connectbtnlight}>
             <p className={styles.connect}>Connect</p>
-            <HiOutlinePaperAirplane size={22} />
           </a>
           <Link
             activeClass="active"

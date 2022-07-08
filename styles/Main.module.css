@@ -95,7 +95,10 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.connect,
+.connect {
+  font-weight: 700;
+}
+
 .work {
   margin-right: 0.5em;
   font-weight: 700;

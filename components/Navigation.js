@@ -3,22 +3,22 @@ import { BiHome } from "react-icons/bi";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { HiOutlinePencil } from "react-icons/hi";
 import { CgBriefcase } from "react-icons/cg";
-import { FiMail } from "react-icons/fi";
+import { HiOutlinePaperAirplane } from "react-icons/hi";
 import { Link } from "react-scroll";
 
-const Navigation = () => {
+const Navigation = ({ dark }) => {
   return (
     <div className={styles.navcontainer}>
-      <div className={styles.nav}>
+      <div className={styles.icons}>
         <Link
           activeClass="active"
           to="home"
           spy={true}
           smooth={true}
           offset={0}
-          className={styles.icon}
+          className={dark ? styles.icondark : styles.iconlight}
         >
-          <BiHome size={17} />
+          <BiHome size={25} />
         </Link>
         <Link
           activeClass="active"
@@ -26,9 +26,9 @@ const Navigation = () => {
           spy={true}
           smooth={true}
           offset={0}
-          className={styles.icon}
+          className={dark ? styles.icondark : styles.iconlight}
         >
-          <MdOutlinePersonOutline size={17} />
+          <MdOutlinePersonOutline size={25} />
         </Link>
         <Link
           activeClass="active"
@@ -36,9 +36,9 @@ const Navigation = () => {
           spy={true}
           smooth={true}
           offset={0}
-          className={styles.icon}
+          className={dark ? styles.icondark : styles.iconlight}
         >
-          <HiOutlinePencil size={17} />
+          <HiOutlinePencil size={25} />
         </Link>
         <Link
           activeClass="active"
@@ -46,9 +46,9 @@ const Navigation = () => {
           spy={true}
           smooth={true}
           offset={0}
-          className={styles.icon}
+          className={dark ? styles.icondark : styles.iconlight}
         >
-          <CgBriefcase size={17} />
+          <CgBriefcase size={25} />
         </Link>
         <Link
           activeClass="active"
@@ -56,10 +56,11 @@ const Navigation = () => {
           spy={true}
           smooth={true}
           offset={0}
-          className={styles.icon}
+          className={dark ? styles.icondark : styles.iconlight}
         >
-          <FiMail size={17} />
+          <HiOutlinePaperAirplane size={25} />
         </Link>
+        <div className={dark ? styles.linedark : styles.linelight}></div>
       </div>
     </div>
   );

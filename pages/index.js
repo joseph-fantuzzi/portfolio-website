@@ -42,7 +42,7 @@ export default function Home() {
       <Work />
       <Contact />
       <Footer />
-      <Navigation />
+      <Navigation dark={dark} />
       <Socials dark={dark} />
     </div>
   );

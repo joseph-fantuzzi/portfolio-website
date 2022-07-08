@@ -1,45 +1,51 @@
 .navcontainer {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 4;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 75%;
-  background-color: rgba(113, 109, 109, 0.76);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 20px 20px 3px 3px;
+  display: none;
   position: fixed;
-  bottom: 40px;
-  padding: 10px 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  bottom: 0;
+  left: 10%;
 }
 
-.icon {
+.icons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  color: black;
+}
+
+.iconlight {
+  padding: 0.3em 0;
+  color: rgb(51, 51, 51);
+  transition: all 0.3s ease;
+}
+
+.icondark {
+  padding: 0.3em 0;
+  color: rgb(212, 211, 211);
+  transition: all 0.3s ease;
+}
+
+.iconlight:hover,
+.icondark:hover {
+  padding-bottom: 1em;
+  color: #24ff7c;
+}
+
+.linelight {
+  margin-top: 0.5em;
+  height: 75px;
+  border-right: 2px solid rgb(51, 51, 51);
+  transition: all 0.3s ease;
+}
+
+.linedark {
+  margin-top: 0.5em;
+  height: 75px;
+  border-right: 2px solid rgb(212, 211, 211);
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 800px) {
-  .nav {
-    flex-direction: column;
-    left: 0;
-    top: 25%;
-    height: 50%;
-    width: 0;
-    padding: 0 22px;
-    border-radius: 0px 20px 20px 0px;
+  .navcontainer {
+    display: flex;
   }
 }
