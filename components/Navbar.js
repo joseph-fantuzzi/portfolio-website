@@ -7,7 +7,7 @@ const Navbar = ({ setMobileNav }) => {
   const links = ["About", "Skills", "Work", "Contact"];
 
   return (
-    <div className={styles.container}>
+    <div id="home" className={styles.container}>
       <div className={styles.navcontainer}>
         <Logo />
         <div className={styles.linkcontainer}>

@@ -42,7 +42,7 @@ const Navigation = () => {
         </Link>
         <Link
           activeClass="active"
-          to="projects"
+          to="work"
           spy={true}
           smooth={true}
           offset={0}

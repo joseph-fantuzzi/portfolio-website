@@ -260,6 +260,7 @@
     position: relative;
     top: 0;
     right: 0;
+    transition: all 0.3s ease;
   }
 
   .darkcircle {
@@ -301,6 +302,7 @@
     top: -450px;
     right: -220px;
     z-index: 2;
+    transition: all 0.3s ease;
   }
 
   .shapecontainer {

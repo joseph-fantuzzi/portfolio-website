@@ -1,0 +1,13 @@
+.footercontainer {
+  background-color: #0d1a3d;
+  padding: 1.25em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  font-weight: 100;
+  font-size: 0.85em;
+}

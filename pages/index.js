@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Main from "../components/Main";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+import Work from "../components/Work";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
@@ -39,7 +39,7 @@ export default function Home() {
       <Main dark={dark} setDark={setDark} />
       <About />
       <Skills />
-      <Projects />
+      <Work />
       <Contact />
       <Footer />
       <Navigation />
