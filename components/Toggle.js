@@ -11,7 +11,7 @@ const Toggle = ({ dark, setDark }) => {
   return (
     <div className={dark ? styles.toggledark : styles.togglelight}>
       <div className={dark ? styles.circledark : styles.circlelight} onClick={setTheme}>
-        {dark ? <FiMoon className={styles.moon} /> : <LightModeIcon />}
+        {dark ? <FiMoon className={styles.moon} /> : <LightModeIcon className={styles.sun} />}
       </div>
     </div>
   );

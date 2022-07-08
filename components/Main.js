@@ -38,17 +38,17 @@ const Main = ({ dark, setDark }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.intro}>
-          <p className={styles.hello}>Hello, I&apos;m</p>
+          <p className={dark ? styles.hellodark : styles.hellolight}>Hello, my name is</p>
           <h1 className={styles.name}>Joseph Fantuzzi</h1>
           <div className={styles.titlescontainer}>
             {displayTyping && (
               <Typewriter
                 options={{
                   strings: [
-                    "Full Stack Web Developer",
-                    "Front End Engineer",
-                    "Software Engineer",
-                    "UI/UX Designer",
+                    "Full Stack Web Developer.",
+                    "Front End Engineer.",
+                    "Software Engineer.",
+                    "UI/UX Designer.",
                   ],
                   autoStart: true,
                   loop: true,

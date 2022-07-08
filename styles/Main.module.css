@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
 .maincontainer {
   min-height: calc(100vh - 100px);
@@ -15,7 +16,6 @@
 .content {
   min-height: calc(100vh - 173px);
   position: relative;
-  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,22 +29,31 @@
   align-items: center;
 }
 
-.hello {
-  font-weight: 500;
+.hellolight {
+  color: #07112f;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
   font-size: 1.2em;
-  margin-bottom: 0.6rem;
+}
+
+.hellodark {
+  color: #24ff7c;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 1.2em;
 }
 
 .name {
   font-weight: 900;
   font-size: 2.2em;
-  margin-bottom: 0.6rem;
 }
 
 .titlescontainer {
+  font-weight: 500;
   text-align: center;
   margin-bottom: 0.6rem;
   font-size: 1.3em;
+  opacity: 0.9;
 }
 
 .bio {
@@ -83,11 +92,11 @@
   justify-content: center;
   align-items: center;
   padding: 0.7em 1.2em;
-  border: 2px solid white;
+  border: 2px solid #e9e9e9;
   border-radius: 13px;
   margin-bottom: 1.2em;
   text-decoration: none;
-  color: white;
+  color: #e9e9e9;
   transition: all 0.3s ease;
 }
 
@@ -152,9 +161,8 @@
   justify-content: center;
   width: 30px;
   height: 65px;
-  border: 3px solid black;
+  border: 2px solid #07112f;
   border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.3s ease;
 }
 
@@ -164,31 +172,30 @@
   justify-content: center;
   width: 30px;
   height: 65px;
-  border: 3px solid white;
+  border: 2px solid #e9e9e9;
   border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.3s ease;
 }
 
 .circlelight {
   position: relative;
   top: 4px;
-  background-color: black;
   width: 18px;
   height: 18px;
+  border: 2px solid #07112f;
   border-radius: 50%;
-  animation: up-and-down 1.5s ease-in-out infinite alternate;
+  animation: up-and-down 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite alternate;
   transition: all 0.3s ease;
 }
 
 .circledark {
   position: relative;
   top: 4px;
-  background-color: white;
   width: 18px;
   height: 18px;
+  border: 2px solid #e9e9e9;
   border-radius: 50%;
-  animation: up-and-down 1.5s ease-in-out infinite alternate;
+  animation: up-and-down 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite alternate;
   transition: all 0.3s ease;
 }
 
@@ -203,10 +210,10 @@
 
 @media (min-width: 800px) {
   .content {
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     width: 77%;
     align-items: flex-start;
-    padding-left: 100px;
+    padding-left: 150px;
     padding-bottom: 130px;
   }
 
@@ -241,7 +248,8 @@
     margin: 0;
   }
 
-  .hello {
+  .hellolight,
+  .hellodark {
     font-size: 1.5em;
   }
 
@@ -318,19 +326,15 @@
 }
 
 @media (min-width: 1600px) {
-  .hello {
-    font-size: 2em;
-  }
-
   .name {
-    font-size: 3.5em;
+    font-size: 4.5em;
   }
 
   .titlescontainer {
-    font-size: 2em;
+    font-size: 2.8em;
   }
 
   .bio {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
