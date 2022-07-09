@@ -1,45 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
 .aboutcontainer {
   min-height: 100vh;
-}
-
-.about {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
-  padding-top: 2em;
-  z-index: 2;
-}
-
-.intro {
-  text-align: center;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1em;
+  padding-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
 }
 
 .text {
-  margin-top: 1.25em;
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: 0.8em;
+}
+
+.textcontainerlight,
+.textcontainerdark {
+  max-width: 700px;
+  border-radius: 13px;
+}
+
+.iconlight,
+.icondark {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.iconlight {
+  background-color: #e2e8ec;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+.icondark {
+  background-color: #24ff7c;
+  color: #07112f;
+}
+
+.titledark,
+.titlelight {
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.25em;
+  z-index: 1;
+  margin: 1em 0;
+}
+
+.titlelight::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  color: #07112f;
+}
+
+.number {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 0.75em;
+  margin-right: 0.5em;
+  color: #24ff7c;
+  background-color: #07112f;
+  border-radius: 13px;
+  padding: 0.3em 0.5em;
+}
+
+@media (min-width: 600px) {
+  .aboutcontainer {
+    width: 80%;
+  }
+
+  .textcontainerlight {
+    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  }
+
+  .textcontainerdark,
+  .textcontainerlight {
+    border: 2px solid #e2e8ec;
+    padding: 3em;
+  }
+
+  .icondark,
+  .iconlight {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 45px;
+    left: -45px;
+  }
+
+  .titledark,
+  .titlelight {
+    color: #e2e8ec;
+    position: relative;
+    top: 20px;
+    right: 20%;
+    font-size: 1.5em;
+    background-color: #07112f;
+    padding: 0.2em 0.6em;
+    margin: 0;
+  }
+
+  .titlelight {
+    border: 2px solid #07112f;
+    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  }
+
+  .titledark {
+    border: 2px solid #e2e8ec;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .number {
+    background-color: none;
+    padding: 0;
+    margin-right: 0.2em;
+  }
 }
 
 @media (min-width: 800px) {
   .aboutcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about {
     width: 50%;
-    background-color: rgba(90, 90, 90, 0.31);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 70px;
-    padding: 4em;
   }
 
   .text {

@@ -1,14 +1,16 @@
 import styles from "../styles/About.module.css";
 import { MdOutlinePersonOutline } from "react-icons/md";
 
-const About = () => {
+const About = ({ dark }) => {
   return (
     <div id="about" className={styles.aboutcontainer}>
-      <div className={styles.about}>
-        <div className={styles.intro}>
-          <MdOutlinePersonOutline size={50} />
-          <h1 className={styles.title}>About Me</h1>
-        </div>
+      <div className={styles.intro}>
+        <MdOutlinePersonOutline size={50} className={dark ? styles.icondark : styles.iconlight} />
+        <h1 className={dark ? styles.titledark : styles.titlelight}>
+          <span className={styles.number}>01.</span>About Me
+        </h1>
+      </div>
+      <div className={dark ? styles.textcontainerdark : styles.textcontainerlight}>
         <p className={styles.text}>
           I&apos;m a former Penn State Architectural Engineering student pursuing a dream of
           innovation to becoming a Full Stack Engineer for Web2 and Web3. I recently graduated from

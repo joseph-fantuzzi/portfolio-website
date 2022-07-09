@@ -13,13 +13,13 @@
 }
 
 .iconlight {
-  padding: 0.3em 0;
+  padding: 0.2em 0;
   color: #07112f;
   transition: all 0.3s ease;
 }
 
 .icondark {
-  padding: 0.3em 0;
+  padding: 0.2em 0;
   color: #e2e8ec;
   transition: all 0.3s ease;
 }

@@ -37,7 +37,7 @@ export default function Home() {
       <Navbar setMobileNav={setMobileNav} />
       <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} dark={dark} setDark={setDark} />
       <Main dark={dark} setDark={setDark} />
-      <About />
+      <About dark={dark} />
       <Skills />
       <Work />
       <Contact />
