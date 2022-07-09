@@ -305,3 +305,7 @@ body {
   animation: fade-up 1s;
   animation-delay: 1500ms;
 }
+
+.active {
+  animation: fade-up 2s;
+}

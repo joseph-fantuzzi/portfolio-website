@@ -1,7 +1,27 @@
+import React, { useEffect } from "react";
 import styles from "../styles/About.module.css";
 import { MdOutlinePersonOutline } from "react-icons/md";
 
 const About = ({ dark }) => {
+  useEffect(() => {
+    function reveal() {
+      const revealcontainer = document.getElementById("about");
+      const windowHeight = window.innerHeight;
+      const elementTop = revealcontainer?.getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop - 88 < windowHeight - elementVisible) {
+        revealcontainer.classList.add("active");
+      } else {
+        revealcontainer.classList.remove("active");
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div id="about" className={styles.aboutcontainer}>
       <div className={styles.intro}>
