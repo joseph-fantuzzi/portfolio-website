@@ -14,7 +14,9 @@
 }
 
 .content {
-  min-height: calc(100vh - 173px);
+  width: 90%;
+  margin: 0 auto;
+  min-height: calc(100vh - 168px);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,19 +35,22 @@
   color: #07112f;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 0.9em;
+  margin-bottom: 0.6em;
 }
 
 .hellodark {
   color: #24ff7c;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 0.9em;
+  margin-bottom: 0.6em;
 }
 
 .name {
   font-weight: 900;
-  font-size: 2.2em;
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
 }
 
 .titlescontainer {
@@ -57,7 +62,6 @@
 }
 
 .bio {
-  width: 80%;
   text-align: center;
   font-weight: 300;
   font-size: 0.8em;
@@ -208,27 +212,22 @@
   }
 }
 
+@media (min-width: 320px) {
+  .name {
+    font-size: 2.2em;
+  }
+}
+
 @media (min-width: 800px) {
   .content {
     margin: 0 auto;
-    width: 77%;
+    width: 70%;
     align-items: flex-start;
-    padding-left: 150px;
-    padding-bottom: 130px;
+    padding: 0 20px 68px 50px;
   }
 
   .intro {
     align-items: flex-start;
-  }
-
-  .titlescontainer,
-  .bio {
-    text-align: left;
-  }
-
-  .bio {
-    width: 70%;
-    font-size: 1em;
   }
 
   .buttons {
@@ -250,79 +249,37 @@
 
   .hellolight,
   .hellodark {
-    font-size: 1.5em;
+    font-size: 1em;
+    margin-bottom: 0;
   }
 
   .name {
-    font-size: 3em;
+    font-size: 3.5em;
+    margin-bottom: 0;
   }
 
   .titlescontainer {
-    font-size: 1.5em;
+    font-size: 2.3em;
+    text-align: left;
+  }
+
+  .bio {
+    width: 70%;
+    font-size: 1em;
+    text-align: left;
   }
 }
 
-@media (min-width: 1080px) {
-  /* .rectangle {
-    width: 350px;
-    height: 330px;
-    background-color: #24ff7c;
-    border-radius: 81px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    z-index: 2;
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: all 0.3s ease;
+@media (min-width: 1100px) {
+  .content {
+    padding-left: 100px;
   }
+}
 
-  .darkcircle {
-    width: 285px;
-    height: 285px;
-    background-color: #d6f7ff;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: relative;
-    top: -400px;
-    right: -170px;
-    z-index: 2;
-    transition: all 0.3s ease;
+@media (min-width: 1400px) {
+  .content {
+    padding-left: 250px;
   }
-
-  .lightcircle {
-    width: 285px;
-    height: 285px;
-    background-color: #0d1a3d;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: relative;
-    top: -400px;
-    right: -170px;
-    z-index: 2;
-    transition: all 0.3s ease;
-  }
-
-  .diamond {
-    width: 200px;
-    height: 200px;
-    background-color: #fc81e1;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: rotate(45deg);
-    position: relative;
-    top: -450px;
-    right: -220px;
-    z-index: 2;
-    transition: all 0.3s ease;
-  } */
-
-  /* .shapecontainer {
-    position: absolute;
-    top: 35vh;
-    right: 25vw;
-  } */
 }
 
 @media (min-width: 1600px) {
@@ -336,5 +293,10 @@
 
   .bio {
     font-size: 1em;
+  }
+
+  .hellolight,
+  .hellodark {
+    font-size: 1.5em;
   }
 }

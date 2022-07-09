@@ -38,9 +38,13 @@ const Main = ({ dark, setDark }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.intro}>
-          <p className={dark ? styles.hellodark : styles.hellolight}>Hello, my name is</p>
-          <h1 className={styles.name}>Joseph Fantuzzi</h1>
-          <div className={styles.titlescontainer}>
+          <p id="hello" className={dark ? styles.hellodark : styles.hellolight}>
+            Hello, my name is
+          </p>
+          <h1 id="name" className={styles.name}>
+            Joseph Fantuzzi
+          </h1>
+          <div id="typing" className={styles.titlescontainer}>
             {displayTyping && (
               <Typewriter
                 options={{
@@ -56,7 +60,7 @@ const Main = ({ dark, setDark }) => {
               />
             )}
           </div>
-          <p className={styles.bio}>
+          <p id="bio" className={styles.bio}>
             Specialized in crafting and implementing modern and beautiful web experiences.
           </p>
         </div>

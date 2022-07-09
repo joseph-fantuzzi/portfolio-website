@@ -14,12 +14,13 @@ const Navbar = ({ setMobileNav }) => {
           {links.map((link, index) => {
             return (
               <Link
-                key={link}
+                key={index}
                 activeClass="active"
                 to={`${link.toLowerCase()}`}
                 spy={true}
                 smooth={true}
                 offset={0}
+                id={link}
                 className={styles.links}
               >
                 <p className={styles.numbers}>0{index + 1}.</p>
@@ -27,7 +28,7 @@ const Navbar = ({ setMobileNav }) => {
               </Link>
             );
           })}
-          <a href="#" className={styles.resumelink}>
+          <a href="#" id="resume" className={styles.resumelink}>
             Resume
           </a>
         </div>
