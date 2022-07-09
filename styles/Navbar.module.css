@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -63,6 +63,10 @@
 }
 
 @media (min-width: 800px) {
+  .navcontainer {
+    width: 80%;
+  }
+
   .links,
   .resumelink {
     display: flex;

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
 .aboutcontainer {
-  min-height: 100vh;
+  min-height: 70vh;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 5em;
@@ -11,6 +11,12 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .text {
@@ -29,7 +35,7 @@
   display: none;
   width: 50px;
   height: 50px;
-  padding: 1em;
+  padding: 2em;
   border-radius: 50%;
 }
 
@@ -52,25 +58,48 @@
   margin: 1em 0;
 }
 
-.titlelight::after {
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 2px;
-  color: #07112f;
-}
-
-.number {
+.numberlight,
+.numberdark {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
   font-size: 0.75em;
-  margin-right: 0.5em;
   color: #24ff7c;
   background-color: #07112f;
   border-radius: 13px;
   padding: 0.3em 0.5em;
+}
+
+.numberlight {
+  margin-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .titlelight::after,
+  .titledark::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 33px;
+    right: 0;
+    left: 155px;
+    width: inherit;
+    height: 1px;
+    opacity: 0.25;
+  }
+
+  .titlelight::after {
+    background-color: #07112f;
+  }
+
+  .titledark::after {
+    background-color: #e2e8ec;
+  }
 }
 
 @media (min-width: 600px) {
@@ -80,11 +109,12 @@
 
   .textcontainerlight {
     box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    border: 2px solid #e2e8ec;
+    padding: 3em;
   }
 
-  .textcontainerdark,
-  .textcontainerlight {
-    border: 2px solid #e2e8ec;
+  .textcontainerdark {
+    border: 2px solid #e2e8ec3e;
     padding: 3em;
   }
 
@@ -95,7 +125,7 @@
     width: 100px;
     position: relative;
     top: 45px;
-    left: -45px;
+    right: 15%;
   }
 
   .titledark,
@@ -104,7 +134,7 @@
     position: relative;
     top: 20px;
     right: 20%;
-    font-size: 1.5em;
+    font-size: 1.25em;
     background-color: #07112f;
     padding: 0.2em 0.6em;
     margin: 0;
@@ -119,13 +149,8 @@
     border: 2px solid #e2e8ec;
   }
 
-  .intro {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-
-  .number {
+  .numberdark,
+  .numberlight {
     background-color: none;
     padding: 0;
     margin-right: 0.2em;
@@ -134,10 +159,43 @@
 
 @media (min-width: 800px) {
   .aboutcontainer {
-    width: 50%;
+    width: 65%;
   }
 
   .text {
     font-size: 1em;
+  }
+
+  .titlelight,
+  .titledark {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutcontainer {
+    padding: 0 3em;
+    padding-bottom: 5em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .aboutcontainer {
+    padding: 0 8em;
+    padding-bottom: 5em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .aboutcontainer {
+    padding: 0 12em;
+    padding-bottom: 5em;
+  }
+}
+
+@media (min-width: 1800px) {
+  .aboutcontainer {
+    padding: 0 18em;
+    padding-bottom: 5em;
   }
 }

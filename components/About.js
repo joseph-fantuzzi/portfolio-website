@@ -7,7 +7,7 @@ const About = ({ dark }) => {
       <div className={styles.intro}>
         <MdOutlinePersonOutline size={50} className={dark ? styles.icondark : styles.iconlight} />
         <h1 className={dark ? styles.titledark : styles.titlelight}>
-          <span className={styles.number}>01.</span>About Me
+          <span className={dark ? styles.numberdark : styles.numberlight}>01.</span>About Me
         </h1>
       </div>
       <div className={dark ? styles.textcontainerdark : styles.textcontainerlight}>
