@@ -14,13 +14,13 @@
 
 .linkslight {
   padding: 0.3em 0;
-  color: rgb(51, 51, 51);
+  color: #07112f;
   transition: all 0.3s ease;
 }
 
 .linksdark {
   padding: 0.3em 0;
-  color: rgb(212, 211, 211);
+  color: #e2e8ec;
   transition: all 0.3s ease;
 }
 
@@ -33,14 +33,14 @@
 .linelight {
   margin-top: 0.5em;
   height: 100px;
-  border-right: 2px solid rgb(51, 51, 51);
+  border-right: 2px solid #07112f;
   transition: all 0.3s ease;
 }
 
 .linedark {
   margin-top: 0.5em;
   height: 100px;
-  border-right: 2px solid rgb(212, 211, 211);
+  border-right: 2px solid #e2e8ec;
   transition: all 0.3s ease;
 }
 
