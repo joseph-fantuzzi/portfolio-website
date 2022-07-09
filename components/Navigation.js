@@ -17,6 +17,7 @@ const Navigation = ({ dark }) => {
           smooth={true}
           offset={0}
           className={dark ? styles.icondark : styles.iconlight}
+          id="home-btn"
         >
           <BiHome size={25} />
         </Link>
@@ -27,6 +28,7 @@ const Navigation = ({ dark }) => {
           smooth={true}
           offset={0}
           className={dark ? styles.icondark : styles.iconlight}
+          id="about-btn"
         >
           <MdOutlinePersonOutline size={25} />
         </Link>
@@ -37,6 +39,7 @@ const Navigation = ({ dark }) => {
           smooth={true}
           offset={0}
           className={dark ? styles.icondark : styles.iconlight}
+          id="skills-btn"
         >
           <HiOutlinePencil size={25} />
         </Link>
@@ -47,6 +50,7 @@ const Navigation = ({ dark }) => {
           smooth={true}
           offset={0}
           className={dark ? styles.icondark : styles.iconlight}
+          id="work-btn"
         >
           <CgBriefcase size={25} />
         </Link>
@@ -57,6 +61,7 @@ const Navigation = ({ dark }) => {
           smooth={true}
           offset={0}
           className={dark ? styles.icondark : styles.iconlight}
+          id="contact-btn"
         >
           <HiOutlinePaperAirplane size={25} />
         </Link>

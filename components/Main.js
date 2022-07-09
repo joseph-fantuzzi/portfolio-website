@@ -65,22 +65,31 @@ const Main = ({ dark, setDark }) => {
           </p>
         </div>
         <div className={styles.buttons}>
-          <a href="#" className={dark ? styles.connectbtndark : styles.connectbtnlight}>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            id="connectbtn"
+            className={dark ? styles.connectbtndark : styles.connectbtnlight}
+          >
             <p className={styles.connect}>Connect</p>
-          </a>
+          </Link>
           <Link
             activeClass="active"
             to="work"
             spy={true}
             smooth={true}
             offset={0}
+            id="workbtn"
             className={dark ? styles.workbtndark : styles.workbtnlight}
           >
             <p className={styles.work}>View My Work</p>
             <AiOutlineDownCircle size={25} />
           </Link>
         </div>
-        <div className={dark ? styles.animationdark : styles.animationlight}>
+        <div id="scroll-animation" className={dark ? styles.animationdark : styles.animationlight}>
           <div className={dark ? styles.circledark : styles.circlelight}></div>
         </div>
       </div>

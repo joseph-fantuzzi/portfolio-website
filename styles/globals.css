@@ -226,24 +226,81 @@ body {
 
 #logo {
   animation: fade-enter 2s;
+  animation-delay: 0ms;
 }
 
 #hello {
   animation: fade-up 1s;
-  animation-delay: 0ms;
+  animation-delay: 500ms;
 }
 
 #name {
   animation: fade-up 1s;
-  animation-delay: 100ms;
+  animation-delay: 600ms;
 }
 
 #typing {
   animation: fade-up 1s;
-  animation-delay: 200ms;
+  animation-delay: 700ms;
 }
 
 #bio {
   animation: fade-up 1s;
-  animation-delay: 300ms;
+  animation-delay: 800ms;
+}
+
+#connectbtn,
+#workbtn {
+  animation: fade-up 1s;
+  animation-delay: 900ms;
+}
+
+#scroll-animation {
+  animation: fade-up 1s;
+  animation-delay: 1000ms;
+}
+
+#github {
+  animation: fade-up 1s;
+  animation-delay: 1100ms;
+}
+
+#linkedin {
+  animation: fade-up 1s;
+  animation-delay: 1200ms;
+}
+
+#twitter {
+  animation: fade-up 1s;
+  animation-delay: 1300ms;
+}
+
+#email {
+  animation: fade-up 1s;
+  animation-delay: 1400ms;
+}
+
+#home-btn {
+  animation: fade-up 1s;
+  animation-delay: 1100ms;
+}
+
+#about-btn {
+  animation: fade-up 1s;
+  animation-delay: 1200ms;
+}
+
+#skills-btn {
+  animation: fade-up 1s;
+  animation-delay: 1300ms;
+}
+
+#work-btn {
+  animation: fade-up 1s;
+  animation-delay: 1400ms;
+}
+
+#contact-btn {
+  animation: fade-up 1s;
+  animation-delay: 1500ms;
 }
