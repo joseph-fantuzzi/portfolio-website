@@ -107,9 +107,7 @@
   font-weight: 300;
 }
 
-.resumelink {
-  color: #24ff7c;
-  text-decoration: none;
+.resumelinkcontainer {
   border: 2px solid #24ff7c;
   border-radius: 13px;
   padding: 0.5em 1.2em;
@@ -117,6 +115,11 @@
   margin: 1.5em 0;
 }
 
-.resumelink:active {
+.resumelink {
+  text-decoration: none;
+  color: #24ff7c;
+}
+
+.resumelinkcontainer:active {
   background-color: rgba(36, 255, 124, 0.2);
 }

@@ -3,6 +3,8 @@ import Toggle from "./Toggle";
 import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { mobileNavFadeLeft } from "./Animations";
 
 const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   const [display, setDisplay] = useState(false);
@@ -41,24 +43,45 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
       <div className={styles.textdiv}>
         {links.map((link, index) => {
           return (
-            <Link
-              key={link}
-              activeClass="active"
-              to={`${link.toLowerCase()}`}
-              spy={true}
-              smooth={true}
-              offset={0}
-              className={styles.links}
+            <motion.div
+              custom={index}
+              variants={mobileNavFadeLeft}
+              animate={mobileNav ? "visible" : "hidden"}
+              key={index}
             >
-              <p className={styles.numbers}>0{index + 1}.</p>
-              <p>{link}</p>
-            </Link>
+              <Link
+                key={link}
+                activeClass="active"
+                to={`${link.toLowerCase()}`}
+                spy={true}
+                smooth={true}
+                offset={0}
+                className={styles.links}
+              >
+                <p className={styles.numbers}>0{index + 1}.</p>
+                <p>{link}</p>
+              </Link>
+            </motion.div>
           );
         })}
-        <a href="#" className={styles.resumelink}>
-          Resume
-        </a>
-        {display && <Toggle dark={dark} setDark={setDark} />}
+        <motion.div
+          custom={4}
+          variants={mobileNavFadeLeft}
+          animate={mobileNav ? "visible" : "hidden"}
+        >
+          <div className={styles.resumelinkcontainer}>
+            <a href="#" className={styles.resumelink}>
+              Resume
+            </a>
+          </div>
+        </motion.div>
+        <motion.div
+          custom={5}
+          variants={mobileNavFadeLeft}
+          animate={mobileNav ? "visible" : "hidden"}
+        >
+          {display && <Toggle dark={dark} setDark={setDark} />}
+        </motion.div>
       </div>
     </div>
   );

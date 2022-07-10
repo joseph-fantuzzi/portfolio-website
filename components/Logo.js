@@ -1,11 +1,11 @@
 import styles from "../styles/Logo.module.css";
 import { motion } from "framer-motion";
-import { fadeDown } from "./Animations";
+import { navFadeDown } from "./Animations";
 
 const Logo = () => {
   return (
     <motion.svg
-      variants={fadeDown}
+      variants={navFadeDown}
       className={styles.logo}
       width="102"
       height="100"

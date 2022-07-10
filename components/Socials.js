@@ -43,10 +43,9 @@ const Socials = ({ dark }) => {
             <FiMail size={25} />
           </a>
         </motion.div>
-        <motion.div
-          variants={socialsFadeLeft}
-          className={dark ? styles.linedark : styles.linelight}
-        ></motion.div>
+        <motion.div variants={socialsFadeLeft}>
+          <div className={dark ? styles.linedark : styles.linelight}></div>
+        </motion.div>
       </motion.div>
     </div>
   );

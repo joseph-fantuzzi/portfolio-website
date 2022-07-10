@@ -53,16 +53,20 @@ const Navbar = ({ setMobileNav }) => {
               </motion.div>
             );
           })}
-          <motion.a variants={navFadeDown} href="#" className={styles.resumelink}>
-            Resume
-          </motion.a>
+          <motion.div variants={navFadeDown}>
+            <a href="#" className={styles.resumelink}>
+              Resume
+            </a>
+          </motion.div>
         </motion.div>
         {hamburgerVisible && (
-          <MenuRoundedIcon
-            className={styles.hamburger}
-            fontSize="large"
-            onClick={() => setMobileNav(true)}
-          />
+          <motion.div variants={navFadeDown}>
+            <MenuRoundedIcon
+              className={styles.hamburger}
+              fontSize="large"
+              onClick={() => setMobileNav(true)}
+            />
+          </motion.div>
         )}
       </div>
     </div>

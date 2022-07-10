@@ -89,11 +89,10 @@ const Main = ({ dark, setDark }) => {
             <AiOutlineDownCircle size={25} />
           </Link>
         </motion.div>
-        <motion.div
-          variants={mainFadeUp}
-          className={dark ? styles.animationdark : styles.animationlight}
-        >
-          <div className={dark ? styles.circledark : styles.circlelight}></div>
+        <motion.div variants={mainFadeUp}>
+          <div className={dark ? styles.animationdark : styles.animationlight}>
+            <div className={dark ? styles.circledark : styles.circlelight}></div>
+          </div>
         </motion.div>
       </motion.div>
     </main>

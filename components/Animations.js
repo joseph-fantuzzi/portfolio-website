@@ -3,7 +3,7 @@ const easing = [0.6, -0.05, 0.01, 0.99];
 const navFadeDownContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -12,13 +12,13 @@ const navFadeDown = {
   initial: {
     y: -60,
     opacity: 0,
-    transition: { duration: 0.6, ease: easing },
+    transition: { duration: 1, ease: easing },
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 1,
       ease: easing,
     },
   },
@@ -27,8 +27,8 @@ const navFadeDown = {
 const mainFadeUpContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.6,
+      staggerChildren: 0.1,
+      delayChildren: 0.7,
     },
   },
 };
@@ -68,8 +68,8 @@ const toggleFadeLeft = {
 const navigationFadeRightContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 1,
+      staggerChildren: 0.1,
+      delayChildren: 1.3,
     },
   },
 };
@@ -93,8 +93,8 @@ const navigationFadeRight = {
 const socialsFadeLeftContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 1,
+      staggerChildren: 0.1,
+      delayChildren: 1.3,
     },
   },
 };
@@ -119,13 +119,33 @@ const scrollRevealFadeUp = {
   y: 0,
   opacity: 1,
   transition: {
-    duration: 1,
+    duration: 1.25,
     ease: easing,
-    delay: 0.65,
+    delay: 0.6,
   },
 };
 
 const initialScrollRevealFadeUp = { y: 100, opacity: 0 };
+
+const mobileNavFadeLeft = {
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 1,
+      ease: easing,
+    },
+  }),
+  hidden: {
+    opacity: 0,
+    x: 350,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
 
 export {
   navFadeDownContainer,
@@ -139,4 +159,5 @@ export {
   socialsFadeLeftContainer,
   scrollRevealFadeUp,
   initialScrollRevealFadeUp,
+  mobileNavFadeLeft,
 };

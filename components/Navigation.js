@@ -72,10 +72,9 @@ const Navigation = ({ dark }) => {
             <HiOutlinePaperAirplane size={25} />
           </Link>
         </motion.div>
-        <motion.div
-          variants={navigationFadeRight}
-          className={dark ? styles.linedark : styles.linelight}
-        ></motion.div>
+        <motion.div variants={navigationFadeRight}>
+          <div className={dark ? styles.linedark : styles.linelight}></div>
+        </motion.div>
       </motion.div>
     </div>
   );
