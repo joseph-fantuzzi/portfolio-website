@@ -4,6 +4,8 @@ import styles from "../styles/Main.module.css";
 import { AiOutlineDownCircle } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { mainFadeUpContainer, mainFadeUp, toggleFadeLeft } from "./Animations";
 
 const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
@@ -33,18 +35,18 @@ const Main = ({ dark, setDark }) => {
 
   return (
     <main className={styles.maincontainer}>
-      <div className={styles.togglecontainer}>
+      <motion.div variants={toggleFadeLeft} className={styles.togglecontainer}>
         {toggleVisibility && <Toggle dark={dark} setDark={setDark} />}
-      </div>
-      <div className={styles.content}>
+      </motion.div>
+      <motion.div variants={mainFadeUpContainer} className={styles.content}>
         <div className={styles.intro}>
-          <p id="hello" className={dark ? styles.hellodark : styles.hellolight}>
+          <motion.p variants={mainFadeUp} className={dark ? styles.hellodark : styles.hellolight}>
             Hello, my name is
-          </p>
-          <h1 id="name" className={styles.name}>
+          </motion.p>
+          <motion.h1 variants={mainFadeUp} className={styles.name}>
             Joseph Fantuzzi
-          </h1>
-          <div id="typing" className={styles.titlescontainer}>
+          </motion.h1>
+          <motion.div variants={mainFadeUp} className={styles.titlescontainer}>
             {displayTyping && (
               <Typewriter
                 options={{
@@ -59,19 +61,18 @@ const Main = ({ dark, setDark }) => {
                 }}
               />
             )}
-          </div>
-          <p id="bio" className={styles.bio}>
+          </motion.div>
+          <motion.p variants={mainFadeUp} className={styles.bio}>
             Specialized in crafting and implementing modern and beautiful web experiences.
-          </p>
+          </motion.p>
         </div>
-        <div className={styles.buttons}>
+        <motion.div variants={mainFadeUp} className={styles.buttons}>
           <Link
             activeClass="active"
             to="contact"
             spy={true}
             smooth={true}
             offset={0}
-            id="connectbtn"
             className={dark ? styles.connectbtndark : styles.connectbtnlight}
           >
             <p className={styles.connect}>Connect</p>
@@ -82,17 +83,19 @@ const Main = ({ dark, setDark }) => {
             spy={true}
             smooth={true}
             offset={0}
-            id="workbtn"
             className={dark ? styles.workbtndark : styles.workbtnlight}
           >
             <p className={styles.work}>View My Work</p>
             <AiOutlineDownCircle size={25} />
           </Link>
-        </div>
-        <div id="scroll-animation" className={dark ? styles.animationdark : styles.animationlight}>
+        </motion.div>
+        <motion.div
+          variants={mainFadeUp}
+          className={dark ? styles.animationdark : styles.animationlight}
+        >
           <div className={dark ? styles.circledark : styles.circlelight}></div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </main>
   );
 };

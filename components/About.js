@@ -1,29 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import styles from "../styles/About.module.css";
 import { MdOutlinePersonOutline } from "react-icons/md";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "./Animations";
 
 const About = ({ dark }) => {
-  useEffect(() => {
-    function reveal() {
-      const revealcontainer = document.getElementById("about");
-      const windowHeight = window.innerHeight;
-      const elementTop = revealcontainer?.getBoundingClientRect().top;
-      const elementVisible = 150;
+  const aboutContainer = useRef(null);
+  const isInView = useInView(aboutContainer);
+  const animationControl = useAnimation();
 
-      if (elementTop - 88 < windowHeight - elementVisible) {
-        revealcontainer.classList.add("active");
-      } else {
-        revealcontainer.classList.remove("active");
-      }
-    }
-
-    window.addEventListener("scroll", reveal);
-
-    () => window.removeEventListener("scroll", reveal);
-  }, []);
+  isInView ? animationControl.start(scrollRevealFadeUp) : "";
 
   return (
-    <div id="about" className={styles.aboutcontainer}>
+    <motion.div
+      id="about"
+      className={styles.aboutcontainer}
+      initial={initialScrollRevealFadeUp}
+      animate={animationControl}
+      ref={aboutContainer}
+    >
       <div className={styles.intro}>
         <MdOutlinePersonOutline size={50} className={dark ? styles.icondark : styles.iconlight} />
         <h1 className={dark ? styles.titledark : styles.titlelight}>
@@ -46,7 +41,7 @@ const About = ({ dark }) => {
           management systems, and client-server relationships.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

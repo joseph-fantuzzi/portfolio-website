@@ -15,6 +15,7 @@
 
 .linkcontainer {
   display: flex;
+  align-items: center;
 }
 
 .links,

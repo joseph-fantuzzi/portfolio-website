@@ -3,6 +3,8 @@ import styles from "../styles/Navbar.module.css";
 import Logo from "./Logo";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { navFadeDownContainer, navFadeDown } from "./Animations";
 
 const Navbar = ({ setMobileNav }) => {
   const [hamburgerVisible, setHamburgerVisible] = useState(false);
@@ -20,34 +22,41 @@ const Navbar = ({ setMobileNav }) => {
     checkMatch();
   }, []);
 
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", () => {
+      checkMatch();
+    });
+  }
+
   const links = ["About", "Skills", "Work", "Contact"];
 
   return (
     <div id="home" className={styles.container}>
       <div className={styles.navcontainer}>
         <Logo />
-        <div className={styles.linkcontainer}>
+        <motion.div variants={navFadeDownContainer} className={styles.linkcontainer}>
           {links.map((link, index) => {
             return (
-              <Link
-                key={index}
-                activeClass="active"
-                to={`${link.toLowerCase()}`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                id={link}
-                className={styles.links}
-              >
-                <p className={styles.numbers}>0{index + 1}.</p>
-                <p>{link}</p>
-              </Link>
+              <motion.div variants={navFadeDown} key={index}>
+                <Link
+                  key={index}
+                  activeClass="active"
+                  to={`${link.toLowerCase()}`}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  className={styles.links}
+                >
+                  <p className={styles.numbers}>0{index + 1}.</p>
+                  <p>{link}</p>
+                </Link>
+              </motion.div>
             );
           })}
-          <a href="#" id="resume" className={styles.resumelink}>
+          <motion.a variants={navFadeDown} href="#" className={styles.resumelink}>
             Resume
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
         {hamburgerVisible && (
           <MenuRoundedIcon
             className={styles.hamburger}

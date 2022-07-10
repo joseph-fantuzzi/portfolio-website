@@ -1,10 +1,12 @@
 import styles from "../styles/Logo.module.css";
+import { motion } from "framer-motion";
+import { fadeDown } from "./Animations";
 
 const Logo = () => {
   return (
-    <svg
+    <motion.svg
+      variants={fadeDown}
       className={styles.logo}
-      id="logo"
       width="102"
       height="100"
       viewBox="0 0 102 100"
@@ -100,7 +102,7 @@ const Logo = () => {
           <stop offset="1" stopColor="#05296F" />
         </linearGradient>
       </defs>
-    </svg>
+    </motion.svg>
   );
 };
 
