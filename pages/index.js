@@ -10,10 +10,12 @@ import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
 import Navigation from "../components/Navigation";
 import Socials from "../components/Socials";
+import LogoAnimation from "../components/LogoAnimation";
 
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false);
   const [dark, setDark] = useState(false);
+  const [showLogoAnimation, setShowLogoAnimation] = useState(false);
 
   useEffect(() => {
     if (!window.localStorage.getItem("theme")) {
@@ -34,16 +36,34 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
-      <Navbar setMobileNav={setMobileNav} />
-      <MobileNav mobileNav={mobileNav} setMobileNav={setMobileNav} dark={dark} setDark={setDark} />
-      <Main dark={dark} setDark={setDark} />
-      <About dark={dark} />
-      <Skills />
-      <Work />
-      <Contact />
-      <Footer />
-      <Navigation dark={dark} />
-      <Socials dark={dark} />
+      {showLogoAnimation ? (
+        <LogoAnimation
+          showLogoAnimation={showLogoAnimation}
+          setShowLogoAnimation={setShowLogoAnimation}
+        />
+      ) : (
+        <>
+          <Navbar
+            setMobileNav={setMobileNav}
+            showLogoAnimation={showLogoAnimation}
+            setShowLogoAnimation={setShowLogoAnimation}
+          />
+          <MobileNav
+            mobileNav={mobileNav}
+            setMobileNav={setMobileNav}
+            dark={dark}
+            setDark={setDark}
+          />
+          <Main dark={dark} setDark={setDark} />
+          <About dark={dark} />
+          <Skills />
+          <Work />
+          <Contact />
+          <Footer />
+          <Navigation dark={dark} />
+          <Socials dark={dark} />
+        </>
+      )}
     </div>
   );
 }

@@ -147,6 +147,26 @@ const mobileNavFadeLeft = {
   },
 };
 
+const logoAnimation = {
+  initial: {
+    x: -200,
+    y: -200,
+    scale: 0.01,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
 export {
   navFadeDownContainer,
   navFadeDown,
@@ -160,4 +180,5 @@ export {
   scrollRevealFadeUp,
   initialScrollRevealFadeUp,
   mobileNavFadeLeft,
+  logoAnimation,
 };

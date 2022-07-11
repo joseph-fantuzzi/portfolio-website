@@ -12,22 +12,35 @@
   align-items: center;
 }
 
+.icondark,
 .iconlight {
-  padding: 0.2em 0;
+  cursor: pointer;
+}
+
+.iconlight {
   color: #07112f;
   transition: all 0.3s ease;
 }
 
 .icondark {
-  padding: 0.2em 0;
   color: #e2e8ec;
+  transition: all 0.3s ease;
+}
+
+.iconlightcontainer,
+.icondarkcontainer {
+  padding: 0.2em 0;
   transition: all 0.3s ease;
 }
 
 .iconlight:hover,
 .icondark:hover {
-  padding-bottom: 1em;
   color: #24ff7c;
+}
+
+.iconlightcontainer:hover,
+.icondarkcontainer:hover {
+  padding-bottom: 1em;
 }
 
 .linelight {

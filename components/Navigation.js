@@ -13,64 +13,74 @@ const Navigation = ({ dark }) => {
     <div className={styles.navcontainer}>
       <motion.div variants={navigationFadeRightContainer} className={styles.icons}>
         <motion.div variants={navigationFadeRight}>
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={0}
-            className={dark ? styles.icondark : styles.iconlight}
-          >
-            <BiHome size={25} />
-          </Link>
+          <div className={dark ? styles.icondarkcontainer : styles.iconlightcontainer}>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={0}
+              className={dark ? styles.icondark : styles.iconlight}
+            >
+              <BiHome size={25} />
+            </Link>
+          </div>
         </motion.div>
         <motion.div variants={navigationFadeRight}>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            className={dark ? styles.icondark : styles.iconlight}
-          >
-            <MdOutlinePersonOutline size={25} />
-          </Link>
+          <div className={dark ? styles.icondarkcontainer : styles.iconlightcontainer}>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              className={dark ? styles.icondark : styles.iconlight}
+            >
+              <MdOutlinePersonOutline size={25} />
+            </Link>
+          </div>
         </motion.div>
         <motion.div variants={navigationFadeRight}>
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={0}
-            className={dark ? styles.icondark : styles.iconlight}
-          >
-            <HiOutlinePencil size={25} />
-          </Link>
+          <div className={dark ? styles.icondarkcontainer : styles.iconlightcontainer}>
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={0}
+              className={dark ? styles.icondark : styles.iconlight}
+            >
+              <HiOutlinePencil size={25} />
+            </Link>
+          </div>
         </motion.div>
         <motion.div variants={navigationFadeRight}>
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={0}
-            className={dark ? styles.icondark : styles.iconlight}
-          >
-            <CgBriefcase size={25} />
-          </Link>
+          <div className={dark ? styles.icondarkcontainer : styles.iconlightcontainer}>
+            <Link
+              activeClass="active"
+              to="work"
+              spy={true}
+              smooth={true}
+              offset={0}
+              className={dark ? styles.icondark : styles.iconlight}
+            >
+              <CgBriefcase size={25} />
+            </Link>
+          </div>
         </motion.div>
         <motion.div variants={navigationFadeRight}>
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={0}
-            className={dark ? styles.icondark : styles.iconlight}
-          >
-            <HiOutlinePaperAirplane size={25} />
-          </Link>
+          <div className={dark ? styles.icondarkcontainer : styles.iconlightcontainer}>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              className={dark ? styles.icondark : styles.iconlight}
+            >
+              <HiOutlinePaperAirplane size={25} />
+            </Link>
+          </div>
         </motion.div>
         <motion.div variants={navigationFadeRight}>
           <div className={dark ? styles.linedark : styles.linelight}></div>
