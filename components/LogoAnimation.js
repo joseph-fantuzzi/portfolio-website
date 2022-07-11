@@ -1,11 +1,9 @@
 /* eslint-disable */
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/LogoAnimation.module.css";
 
 const LogoAnimation = ({ setShowLogoAnimation }) => {
-  const [showCircleClass, setShowCircleClass] = useState(false);
-
   useEffect(() => {
     !(function (t, n) {
       "object" == typeof exports && "undefined" != typeof module
@@ -1917,14 +1915,10 @@ const LogoAnimation = ({ setShowLogoAnimation }) => {
     setShowLogoAnimation(false);
   }, 6000);
 
-  setTimeout(() => {
-    setShowCircleClass(true);
-  }, 3000);
-
   return (
     <div className={styles.animationcontainer}>
       <svg
-        className={showCircleClass ? styles.logoshadows : styles.logo}
+        className={styles.logo}
         id="ecs5ovM3lpL1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

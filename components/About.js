@@ -27,18 +27,31 @@ const About = ({ dark }) => {
       </div>
       <div className={dark ? styles.textcontainerdark : styles.textcontainerlight}>
         <p className={styles.text}>
-          I&apos;m a former Penn State Architectural Engineering student pursuing a dream of
-          innovation to becoming a Full Stack Engineer for Web2 and Web3. I recently graduated from
-          a 6 month Full Stack Development program at Bloom Institute of Technology. During my time
-          there, I learned a wide variety of concepts ranging from Frontend Development, Backend
-          Development, and Computer Science. Currently, I&apos;m building out different applications
-          to enhance my skills as a developer. In the future, I plan on learning Blockchain/Web3
-          Development to further my knowledge in the world of decentralization. My current
-          experience includes building frontend applications with view-layer functionality and
-          efficient logic, backend applications that provide an API with endpoints for accessing and
-          manipulating the database server, and full stack applications that encompass both client
-          and server integrations. Experience with authentication systems, relational database
-          management systems, and client-server relationships.
+          Hello! I&apos;m Joseph Fantuzzi, and I love designing and imeplementing elegant
+          applications on the internet. Recently, I graduated from a 6 month Full Stack Web
+          Development program at Bloom Institute of Technology, where I completed 960 hours of
+          development material. During my time there, I learned a wide variety of concepts ranging
+          from Frontend Development with React to Backend Development with Express to Database
+          Design with SQL databases, all the way to learning Computer Science algorithms and data
+          structures with my preferred programming language, JavaScript!
+        </p>
+        <p className={styles.text}>
+          Before kickstarting my development journey, I was an Architectural Engineering student at
+          Penn State. After realizing that was not the right career choice for me, I decided to make
+          the move to learn web development!
+        </p>
+        <p className={styles.text}>
+          Currently, I&apos;m building out different applications to enhance my skills as a software
+          engineer. My experience includes building Frontend applications with view-layer
+          functionality, Backend applications that provide an API with CRUD endpoints for accessing
+          and manipulating the database, and Full Stack applications that encompass both client and
+          server integrations. In the future, I plan on learning Blockchain Development to further
+          my knowledge in the world of decentralization.
+        </p>
+        <p className={styles.lasttext}>
+          With everything I implement, I strive to produce effective code and efficient logic. One
+          thing for sure is that if I don&apos;t know how to do something, I will figure it out, and
+          never give up. Please, if you get a chance, check out my related skills below!
         </p>
       </div>
     </motion.div>
