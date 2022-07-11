@@ -121,7 +121,7 @@ const scrollRevealFadeUp = {
   transition: {
     duration: 1.25,
     ease: easing,
-    delay: 0.6,
+    delay: 0.5,
   },
 };
 
@@ -147,25 +147,12 @@ const mobileNavFadeLeft = {
   },
 };
 
-const logoAnimation = {
-  initial: {
-    x: -200,
-    y: -200,
-    scale: 0.01,
-    opacity: 0,
-    transition: { duration: 1, ease: easing },
-  },
-  animate: {
-    x: 0,
-    y: 0,
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: easing,
-    },
-  },
+const logoHover = {
+  scale: 1.2,
+  transition: { duration: 0.5 },
 };
+
+const logoTap = { scale: 0.8 };
 
 export {
   navFadeDownContainer,
@@ -180,5 +167,6 @@ export {
   scrollRevealFadeUp,
   initialScrollRevealFadeUp,
   mobileNavFadeLeft,
-  logoAnimation,
+  logoHover,
+  logoTap,
 };

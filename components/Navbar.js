@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { navFadeDownContainer, navFadeDown } from "./Animations";
 
-const Navbar = ({ setMobileNav, setShowLogoAnimation, showLogoAnimation }) => {
+const Navbar = ({ setMobileNav, setShowLogoAnimation }) => {
   const [hamburgerVisible, setHamburgerVisible] = useState(false);
 
   function checkMatch() {
@@ -33,7 +33,7 @@ const Navbar = ({ setMobileNav, setShowLogoAnimation, showLogoAnimation }) => {
   return (
     <div id="home" className={styles.container}>
       <div className={styles.navcontainer}>
-        <Logo showLogoAnimation={showLogoAnimation} setShowLogoAnimation={setShowLogoAnimation} />
+        <Logo setShowLogoAnimation={setShowLogoAnimation} />
         <motion.div variants={navFadeDownContainer} className={styles.linkcontainer}>
           {links.map((link, index) => {
             return (

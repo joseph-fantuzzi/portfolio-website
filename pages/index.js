@@ -18,6 +18,10 @@ export default function Home() {
   const [showLogoAnimation, setShowLogoAnimation] = useState(false);
 
   useEffect(() => {
+    setShowLogoAnimation(true);
+  }, []);
+
+  useEffect(() => {
     if (!window.localStorage.getItem("theme")) {
       window.localStorage.setItem("theme", "light");
     } else if (window.localStorage.getItem("theme") === "dark") {
@@ -37,17 +41,10 @@ export default function Home() {
         <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
       {showLogoAnimation ? (
-        <LogoAnimation
-          showLogoAnimation={showLogoAnimation}
-          setShowLogoAnimation={setShowLogoAnimation}
-        />
+        <LogoAnimation setShowLogoAnimation={setShowLogoAnimation} />
       ) : (
         <>
-          <Navbar
-            setMobileNav={setMobileNav}
-            showLogoAnimation={showLogoAnimation}
-            setShowLogoAnimation={setShowLogoAnimation}
-          />
+          <Navbar setMobileNav={setMobileNav} setShowLogoAnimation={setShowLogoAnimation} />
           <MobileNav
             mobileNav={mobileNav}
             setMobileNav={setMobileNav}
