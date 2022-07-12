@@ -32,6 +32,7 @@ export default function Home() {
   return (
     <div className={dark ? "bgdark" : "bglight"}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <title>Joseph Fantuzzi</title>
       </Head>
       {showLogoAnimation ? (
