@@ -16,6 +16,11 @@
   align-items: flex-end;
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
 .iconlight,
 .icondark {
   display: none;
@@ -59,22 +64,92 @@
   margin-right: 0.5em;
 }
 
-.frontend,
-.backend {
-  width: 90%;
+.frontendlight,
+.backendlight,
+.frontenddark,
+.backenddark {
+  width: 90vw;
   border-radius: 13px;
-  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
-  border: 2px solid #e2e8ec;
-  padding: 2em;
+  padding: 1em;
   margin-bottom: 1em;
 }
 
-.other {
-  width: 90%;
-  border-radius: 13px;
+.frontendlight,
+.backendlight,
+.otherlight {
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
   border: 2px solid #e2e8ec;
-  padding: 2em;
+}
+
+.frontenddark,
+.backenddark,
+.otherdark {
+  border: 2px solid #e2e8ec3e;
+}
+
+.otherlight,
+.otherdark {
+  width: 90vw;
+  border-radius: 13px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.frontendlight,
+.frontenddark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.backendlight,
+.backenddark {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.frontendlight,
+.backendlight,
+.otherlight,
+.frontenddark,
+.backenddark,
+.otherdark {
+  margin-top: 0.25em;
+  max-width: 300px;
+}
+
+.toprow,
+.bottomrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toprow {
+  margin-bottom: 1em;
+}
+
+.text,
+.othertext {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.backtoprow,
+.backbottomrow {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (max-width: 600px) {
@@ -111,6 +186,13 @@
     width: 80%;
   }
 
+  .intro {
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
   .icondark,
   .iconlight {
     display: flex;
@@ -119,16 +201,13 @@
     height: 100px;
     width: 100px;
     position: relative;
-    top: 45px;
-    right: 15%;
   }
 
   .titledark,
   .titlelight {
     color: #e2e8ec;
     position: relative;
-    top: 20px;
-    right: 20%;
+    right: 15px;
     font-size: 1.25em;
     background-color: #07112f;
     padding: 0.2em 0.6em;
@@ -150,6 +229,15 @@
     padding: 0;
     margin-right: 0.2em;
   }
+
+  .frontendlight,
+  .frontenddark,
+  .backendlight,
+  .backenddark,
+  .otherlight,
+  .otherdark {
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -157,9 +245,57 @@
     width: 60%;
   }
 
+  .skills {
+    flex-direction: column;
+  }
+
   .titlelight,
   .titledark {
     font-size: 1.5em;
+  }
+
+  .frontandback {
+    display: flex;
+  }
+
+  .frontenddark,
+  .frontendlight {
+    margin-right: 1em;
+    max-width: 320px;
+  }
+
+  .backenddark,
+  .backendlight {
+    flex-direction: column;
+    max-width: 175px;
+  }
+
+  .backtoprow {
+    margin-bottom: 1em;
+  }
+
+  .backtoprow,
+  .backbottomrow {
+    width: 100%;
+  }
+
+  .otherdark,
+  .otherlight {
+    max-width: 510px;
+  }
+
+  .otherskillcontainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+
+  .othertext {
+    display: none;
   }
 }
 

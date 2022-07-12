@@ -51,7 +51,7 @@ const About = ({ dark }) => {
         <p className={styles.lasttext}>
           With everything I implement, I strive to produce effective code and efficient logic. One
           thing for sure is that if I don&apos;t know how to do something, I will figure it out, and
-          never give up. Check out some of my most valuable skills below!
+          never give up. Check out some of my most valuable skills and projects below!
         </p>
       </div>
     </motion.div>

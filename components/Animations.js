@@ -121,7 +121,7 @@ const scrollRevealFadeUp = {
   transition: {
     duration: 1.25,
     ease: easing,
-    delay: 0.5,
+    delay: 0.4,
   },
 };
 
