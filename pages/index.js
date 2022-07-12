@@ -18,7 +18,9 @@ export default function Home() {
   const [showLogoAnimation, setShowLogoAnimation] = useState(false);
 
   useEffect(() => {
-    setShowLogoAnimation(true);
+    if (typeof window !== "undefined") {
+      setShowLogoAnimation(true);
+    }
   }, []);
 
   useEffect(() => {
