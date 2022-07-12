@@ -27,7 +27,7 @@ const About = ({ dark }) => {
       </div>
       <div className={dark ? styles.textcontainerdark : styles.textcontainerlight}>
         <p className={styles.text}>
-          Hello! I&apos;m Joseph Fantuzzi, and I love designing and imeplementing elegant
+          Hello! I&apos;m Joseph Fantuzzi, and I love designing and implementing elegant
           applications on the internet. Recently, I graduated from a 6 month Full Stack Web
           Development program at Bloom Institute of Technology, where I completed 960 hours of
           development material. During my time there, I learned a wide variety of concepts ranging
@@ -51,7 +51,7 @@ const About = ({ dark }) => {
         <p className={styles.lasttext}>
           With everything I implement, I strive to produce effective code and efficient logic. One
           thing for sure is that if I don&apos;t know how to do something, I will figure it out, and
-          never give up. Please, if you get a chance, check out my related skills below!
+          never give up. Check out some of my most valuable skills below!
         </p>
       </div>
     </motion.div>

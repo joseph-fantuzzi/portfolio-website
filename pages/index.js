@@ -47,7 +47,7 @@ export default function Home() {
           />
           <Main dark={dark} setDark={setDark} />
           <About dark={dark} />
-          <Skills />
+          <Skills dark={dark} />
           <Work />
           <Contact />
           <Footer />

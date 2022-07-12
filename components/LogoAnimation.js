@@ -1919,7 +1919,7 @@ const LogoAnimation = ({ setShowLogoAnimation }) => {
 
   setTimeout(() => {
     setShowLogoAnimation(false);
-  }, 6000);
+  }, 4500);
 
   return (
     <div className={styles.animationcontainer}>

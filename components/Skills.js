@@ -1,46 +1,62 @@
+import React, { useRef } from "react";
 import styles from "../styles/Skills.module.css";
+import { HiOutlinePencil } from "react-icons/hi";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "./Animations";
 
-const Skills = () => {
+const Skills = ({ dark }) => {
+  const skillsContainer = useRef(null);
+  const isInView = useInView(skillsContainer);
+  const animationControl = useAnimation();
+
+  isInView ? animationControl.start(scrollRevealFadeUp) : "";
+
+  const fontSize = 30;
+
   return (
-    <div id="skills" className={styles.container}>
+    <motion.div
+      id="skills"
+      className={styles.container}
+      initial={initialScrollRevealFadeUp}
+      animate={animationControl}
+      ref={skillsContainer}
+    >
+      <div className={styles.intro}>
+        <div className={dark ? styles.icondark : styles.iconlight}>
+          <HiOutlinePencil size={50} />
+        </div>
+        <h1 className={dark ? styles.titledark : styles.titlelight}>
+          <span className={dark ? styles.numberdark : styles.numberlight}>02.</span>My Skills
+        </h1>
+      </div>
       <div className={styles.frontend}>
-        <i className="devicon-html5-plain colored"></i>
-        <i className="devicon-css3-plain colored"></i>
-        <i className="devicon-sass-original colored"></i>
-        <i className="devicon-less-plain-wordmark colored"></i>
-        <i className="devicon-tailwindcss-plain colored"></i>
-        <i className="devicon-materialui-plain colored"></i>
-        <i className="devicon-bootstrap-plain colored"></i>
-        <i className="devicon-javascript-plain colored"></i>
-        <i className="devicon-typescript-plain colored"></i>
-        <i className="devicon-react-original colored"></i>
-        <i className="devicon-redux-original colored"></i>
-        <i className="devicon-nextjs-original colored"></i>
+        <p>Frontend Development</p>
+        <i style={{ fontSize }} className="devicon-html5-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-css3-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-javascript-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-typescript-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-react-original colored"></i>
+        <i style={{ fontSize }} className="devicon-redux-original colored"></i>
+        <i style={{ fontSize }} className="devicon-nextjs-original colored"></i>
+        <i style={{ fontSize }} className="devicon-tailwindcss-plain colored"></i>
       </div>
       <div className={styles.backend}>
-        <i className="devicon-nodejs-plain colored"></i>
-        <i className="devicon-express-original colored"></i>
-        <i className="devicon-sqlite-plain colored"></i>
-        <i className="devicon-postgresql-plain colored"></i>
-        <i className="devicon-heroku-plain colored"></i>
+        <p>Backend Development</p>
+        <i style={{ fontSize }} className="devicon-nodejs-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-express-original colored"></i>
+        <i style={{ fontSize }} className="devicon-postgresql-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-heroku-plain colored"></i>
       </div>
-      <div className={styles.management}>
-        <i className="devicon-vscode-plain colored"></i>
-        <i className="devicon-git-plain colored"></i>
-        <i className="devicon-github-original colored"></i>
-        <i className="devicon-jira-plain colored"></i>
-        <i className="devicon-trello-plain colored"></i>
-        <i className="devicon-jest-plain colored"></i>
-        <i className="devicon-google-plain colored"></i>
-        <i className="devicon-npm-original-wordmark colored"></i>
-        <i className="devicon-markdown-original colored"></i>
+      <div className={styles.other}>
+        <p>Other Skills</p>
+        <i style={{ fontSize }} className="devicon-jest-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-git-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-github-original colored"></i>
+        <i style={{ fontSize }} className="devicon-npm-original-wordmark colored"></i>
+        <i style={{ fontSize }} className="devicon-figma-plain colored"></i>
+        <i style={{ fontSize }} className="devicon-google-plain colored"></i>
       </div>
-      <div className={styles.ui}>
-        <i className="devicon-figma-plain colored"></i>
-        <i className="devicon-blender-original colored"></i>
-        <i className="devicon-photoshop-plain colored"></i>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
