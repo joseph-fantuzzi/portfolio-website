@@ -1,9 +1,11 @@
 /* eslint-disable */
 
-import React, { useEffect } from "react";
+import React, { useEffect, useReducer } from "react";
 import styles from "../styles/LogoAnimation.module.css";
 
 const LogoAnimation = ({ setShowLogoAnimation }) => {
+  const [reducerValue, forceUpdate] = useReducer((x) => x + 1, 0);
+
   useEffect(() => {
     !(function (t, n) {
       "object" == typeof exports && "undefined" != typeof module
@@ -1909,6 +1911,10 @@ const LogoAnimation = ({ setShowLogoAnimation }) => {
       "__SVGATOR_PLAYER__",
       window
     );
+  }, [reducerValue]);
+
+  useEffect(() => {
+    forceUpdate();
   }, []);
 
   setTimeout(() => {
