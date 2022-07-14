@@ -121,7 +121,7 @@ const scrollRevealFadeUp = {
   transition: {
     duration: 1.25,
     ease: easing,
-    delay: 0.4,
+    delay: 0.3,
   },
 };
 
@@ -154,6 +154,16 @@ const logoHover = {
 
 const logoTap = { scale: 0.8 };
 
+const arrowHover = {
+  scale: 1.1,
+  rotate: 360,
+  transition: { duration: 0.5 },
+};
+
+const arrowTap = {
+  scale: 0.9,
+};
+
 export {
   navFadeDownContainer,
   navFadeDown,
@@ -169,4 +179,6 @@ export {
   mobileNavFadeLeft,
   logoHover,
   logoTap,
+  arrowHover,
+  arrowTap,
 };

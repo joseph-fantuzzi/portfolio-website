@@ -50,7 +50,7 @@ export default function Home() {
           <About dark={dark} />
           <Skills dark={dark} />
           <Work dark={dark} />
-          <Contact />
+          <Contact dark={dark} />
           <Footer />
           <Navigation dark={dark} />
           <Socials dark={dark} />

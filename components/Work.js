@@ -2,23 +2,17 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "../styles/Work.module.css";
 import { CgBriefcase } from "react-icons/cg";
-import Image from "next/image";
 import Link from "next/link";
-import { BsArrowRightSquare } from "react-icons/bs";
-import { initialScrollRevealFadeUp, scrollRevealFadeUp } from "./Animations";
+import { BsArrowRightShort } from "react-icons/bs";
+import { initialScrollRevealFadeUp, scrollRevealFadeUp, arrowHover, arrowTap } from "./Animations";
+import PortfolioLogos from "./PortfolioLogos";
 
 const Work = ({ dark }) => {
-  const [isHovering, setIsHovering] = useState(false);
-
   const workContainer = useRef(null);
   const isInView = useInView(workContainer);
   const animationControl = useAnimation();
 
   isInView ? animationControl.start(scrollRevealFadeUp) : "";
-
-  const hoverHandler = () => {
-    setIsHovering(!isHovering);
-  };
 
   return (
     <motion.div
@@ -37,27 +31,58 @@ const Work = ({ dark }) => {
           Worked On
         </h1>
       </div>
-      <Link href="/cryptox">
-        <motion.div
-          whileHover={{ scale: 1.025 }}
-          whileTap={{ scale: 0.9 }}
-          className={styles.imgcontainer}
-          onMouseEnter={hoverHandler}
-          onMouseLeave={hoverHandler}
-        >
-          <Image
-            className={styles.img}
-            layout="fill"
-            src="/cryptox.png"
-            alt="cryptox cryptocurrency tracker"
-          />
-          {isHovering ? (
-            <motion.div className={styles.iconcontainer}>
-              <BsArrowRightSquare className={styles.icon} fontSize={60} />
+      <div className={styles.allworkcontainer}>
+        <div className={styles.row}>
+          <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
+            <p className={styles.projecttitle}>Portfolio Website</p>
+            <div className={styles.logo}>
+              <PortfolioLogos.PortfolioLogo />
+            </div>
+            <Link href="/portfolio">
+              <motion.div
+                whileHover={arrowHover}
+                whileTap={arrowTap}
+                className={dark ? styles.arrowdark : styles.arrowlight}
+              >
+                <BsArrowRightShort fontSize={40} />
+              </motion.div>
+            </Link>
+          </div>
+          <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
+            <p className={styles.projecttitle}>Cryptox</p>
+            <div className={styles.logo}>
+              <PortfolioLogos.CryptoxLogo />
+            </div>
+            <Link href="/cryptox">
+              <motion.div
+                whileHover={arrowHover}
+                whileTap={arrowTap}
+                className={dark ? styles.arrowdark : styles.arrowlight}
+              >
+                <BsArrowRightShort fontSize={40} />
+              </motion.div>
+            </Link>
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div
+            className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
+          >
+            <p style={{ fontWeight: 300 }}>Coming Soon ...</p>
+            <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
+              <BsArrowRightShort fontSize={40} />
             </motion.div>
-          ) : null}
-        </motion.div>
-      </Link>
+          </div>
+          <div
+            className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
+          >
+            <p style={{ fontWeight: 300 }}>Coming Soon ...</p>
+            <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
+              <BsArrowRightShort fontSize={40} />
+            </motion.div>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 };
