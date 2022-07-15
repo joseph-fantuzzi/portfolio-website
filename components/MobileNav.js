@@ -17,24 +17,8 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
     }
   }, []);
 
-  const getMobileContainerClass = () => {
-    if (mobileNav) {
-      if (dark) {
-        return styles.mobilenavopendark;
-      } else {
-        return styles.mobilenavopen;
-      }
-    } else {
-      if (dark) {
-        return styles.mobilenavdark;
-      } else {
-        return styles.mobilenav;
-      }
-    }
-  };
-
   return (
-    <div className={getMobileContainerClass()}>
+    <div className={mobileNav ? styles.mobilenavopen : styles.mobilenav}>
       <CloseRoundedIcon
         className={styles.close}
         fontSize="large"
@@ -55,8 +39,9 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
                 to={`${link.toLowerCase()}`}
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-40}
                 className={styles.links}
+                onClick={() => setMobileNav(false)}
               >
                 <p className={styles.numbers}>0{index + 1}.</p>
                 <p>{link}</p>
@@ -70,7 +55,7 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
           animate={mobileNav ? "visible" : "hidden"}
         >
           <div className={styles.resumelinkcontainer}>
-            <a href="#" className={styles.resumelink}>
+            <a href="/Joseph.Fantuzzi-Resume.pdf" target="_blank" className={styles.resumelink}>
               Resume
             </a>
           </div>

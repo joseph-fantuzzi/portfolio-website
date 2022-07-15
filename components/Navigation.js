@@ -33,7 +33,7 @@ const Navigation = ({ dark }) => {
               to="about"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-40}
               className={dark ? styles.icondark : styles.iconlight}
             >
               <MdOutlinePersonOutline size={25} />
@@ -47,7 +47,7 @@ const Navigation = ({ dark }) => {
               to="skills"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-40}
               className={dark ? styles.icondark : styles.iconlight}
             >
               <HiOutlinePencil size={25} />
@@ -61,7 +61,7 @@ const Navigation = ({ dark }) => {
               to="work"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-40}
               className={dark ? styles.icondark : styles.iconlight}
             >
               <CgBriefcase size={25} />
@@ -75,7 +75,7 @@ const Navigation = ({ dark }) => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-40}
               className={dark ? styles.icondark : styles.iconlight}
             >
               <HiOutlinePaperAirplane size={25} />

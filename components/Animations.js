@@ -121,11 +121,11 @@ const scrollRevealFadeUp = {
   transition: {
     duration: 1.25,
     ease: easing,
-    delay: 0.3,
+    delay: 0.2,
   },
 };
 
-const initialScrollRevealFadeUp = { y: 100, opacity: 0 };
+const initialScrollRevealFadeUp = { y: 50, opacity: 0 };
 
 const mobileNavFadeLeft = {
   visible: (i) => ({

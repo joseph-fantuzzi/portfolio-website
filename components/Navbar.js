@@ -44,7 +44,7 @@ const Navbar = ({ setMobileNav, setShowLogoAnimation }) => {
                   to={`${link.toLowerCase()}`}
                   spy={true}
                   smooth={true}
-                  offset={0}
+                  offset={-40}
                   className={styles.links}
                 >
                   <p className={styles.numbers}>0{index + 1}.</p>
@@ -54,7 +54,7 @@ const Navbar = ({ setMobileNav, setShowLogoAnimation }) => {
             );
           })}
           <motion.div variants={navFadeDown}>
-            <a href="#" className={styles.resumelink}>
+            <a href="/Joseph.Fantuzzi-Resume.pdf" target="_blank" className={styles.resumelink}>
               Resume
             </a>
           </motion.div>

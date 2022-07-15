@@ -59,6 +59,7 @@
   font-size: 1.25em;
   z-index: 1;
   margin: 1em 0;
+  margin-bottom: 2em;
 }
 
 .numberlight,
@@ -88,7 +89,7 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: 33px;
+    bottom: 53px;
     right: 0;
     left: 155px;
     width: inherit;

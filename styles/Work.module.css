@@ -42,6 +42,7 @@
   font-size: 1.25em;
   z-index: 1;
   margin: 1em 0;
+  margin-bottom: 2em;
 }
 
 .numberlight,
@@ -106,12 +107,17 @@
   align-items: center;
 }
 
-.logo {
+.logo,
+.logoblurred {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.logoblurred {
+  opacity: 0.2;
 }
 
 .imgcontainer {
@@ -175,7 +181,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .projecttitle {
@@ -197,7 +203,7 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: 33px;
+    bottom: 53px;
     right: 0;
     left: 270px;
     width: inherit;

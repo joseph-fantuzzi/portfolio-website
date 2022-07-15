@@ -72,7 +72,7 @@ const Main = ({ dark, setDark }) => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-40}
             className={dark ? styles.connectbtndark : styles.connectbtnlight}
           >
             <p className={styles.connect}>Connect</p>
@@ -82,7 +82,7 @@ const Main = ({ dark, setDark }) => {
             to="work"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-40}
             className={dark ? styles.workbtndark : styles.workbtnlight}
           >
             <p className={styles.work}>View My Work</p>

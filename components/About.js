@@ -28,23 +28,23 @@ const About = ({ dark }) => {
       <div className={dark ? styles.textcontainerdark : styles.textcontainerlight}>
         <p className={styles.text}>
           Hello! I&apos;m Joseph Fantuzzi, and I love designing and implementing elegant
-          applications on the internet. Recently, I graduated from a 6 month Full Stack Web
+          applications on the internet. Recently, I graduated from a 6 month Full-Stack Web
           Development program at Bloom Institute of Technology, where I completed 960 hours of
           development material. During my time there, I learned a wide variety of concepts ranging
-          from Frontend Development with React to Backend Development with Express to Database
+          from Front-End Development with React to Back-End Development with Express to Database
           Design with SQL databases, all the way to learning Computer Science algorithms and data
           structures with my preferred programming language, JavaScript!
         </p>
         <p className={styles.text}>
           Before kickstarting my development journey, I was an Architectural Engineering student at
           Penn State. After realizing that was not the right career choice for me, I decided to make
-          the move to learn web development!
+          the move to learn Web Development!
         </p>
         <p className={styles.text}>
-          Currently, I&apos;m building out different applications to enhance my skills as a software
-          engineer. My experience includes building Frontend applications with view-layer
-          functionality, Backend applications that provide an API with CRUD endpoints for accessing
-          and manipulating the database, and Full Stack applications that encompass both client and
+          Currently, I&apos;m building out different applications to enhance my skills as a Software
+          Engineer. My experience includes building Front-End applications with view-layer
+          functionality, Back-End applications that provide an API with CRUD endpoints for accessing
+          and manipulating the database, and Full-Stack applications that encompass both client and
           server integrations. In the future, I plan on learning Blockchain Development to further
           my knowledge in the world of decentralization.
         </p>

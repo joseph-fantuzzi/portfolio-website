@@ -68,7 +68,10 @@ const Work = ({ dark }) => {
           <div
             className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
           >
-            <p style={{ fontWeight: 300 }}>Coming Soon ...</p>
+            <p className={styles.projecttitle}>Coming Soon ...</p>
+            <div className={styles.logoblurred}>
+              <PortfolioLogos.Logo3 />
+            </div>
             <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
               <BsArrowRightShort fontSize={40} />
             </motion.div>
@@ -76,7 +79,10 @@ const Work = ({ dark }) => {
           <div
             className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
           >
-            <p style={{ fontWeight: 300 }}>Coming Soon ...</p>
+            <p className={styles.projecttitle}>Coming Soon ...</p>
+            <div className={styles.logoblurred}>
+              <PortfolioLogos.Logo4 />
+            </div>
             <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
               <BsArrowRightShort fontSize={40} />
             </motion.div>
