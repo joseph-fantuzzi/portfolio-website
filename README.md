@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="/Logo.png" width="100" />
+  <img alt="Logo" src="/public/Logo.png" width="100" />
 </div>
 <h1 align="center">
   josephfantuzzi.dev
@@ -8,9 +8,9 @@
   A portfolio website that displays my technical skills, showcases projects I've worked on, and provides a means to contact me.
 </p>
 <p align="center">
-  Deployed Site: https://josephfantuzzi.dev
+  Deployed Site: <a href="https://josephfantuzzi.dev" target="_blank">josephfantuzzi.dev</a>
 </p>
-<img alt="desktop-img" src="/desktop-img.jpg">
+<img alt="desktop-img" src="/public/desktop-img.jpg">
 
 ## Installation and Set Up
 
