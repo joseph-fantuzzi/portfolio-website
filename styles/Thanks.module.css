@@ -1,0 +1,41 @@
+.container {
+  color: #07112f;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2e8ec;
+}
+
+.btn {
+  text-decoration: none;
+  border: 2px solid #24ff7c;
+  color: #07112f;
+  padding: 0.5em 1em;
+  border-radius: 13px;
+  background-color: #24ff7c;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+.btn:hover {
+  background-color: rgba(36, 255, 124, 0.2);
+}
+
+.checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #24ff7c;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #24ff7c;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
