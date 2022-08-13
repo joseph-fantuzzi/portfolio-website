@@ -10,6 +10,8 @@ const Socials = ({ dark }) => {
         <motion.div variants={socialsFadeLeft}>
           <div className={dark ? styles.linksdarkcontainer : styles.linkslightcontainer}>
             <a
+              rel="noreferrer"
+              target="_blank"
               className={dark ? styles.linksdark : styles.linkslight}
               href="https://github.com/joseph-fantuzzi"
               id="github"
@@ -21,6 +23,8 @@ const Socials = ({ dark }) => {
         <motion.div variants={socialsFadeLeft}>
           <div className={dark ? styles.linksdarkcontainer : styles.linkslightcontainer}>
             <a
+              rel="noreferrer"
+              target="_blank"
               className={dark ? styles.linksdark : styles.linkslight}
               href="https://www.linkedin.com/in/josephfantuzzi/"
               id="linkedin"
@@ -32,8 +36,10 @@ const Socials = ({ dark }) => {
         <motion.div variants={socialsFadeLeft}>
           <div className={dark ? styles.linksdarkcontainer : styles.linkslightcontainer}>
             <a
+              rel="noreferrer"
+              target="_blank"
               className={dark ? styles.linksdark : styles.linkslight}
-              href="https://twitter.com/?lang=en"
+              href="https://twitter.com/joseph_fantuzzi"
               id="twitter"
             >
               <FiTwitter size={25} />
@@ -43,6 +49,8 @@ const Socials = ({ dark }) => {
         <motion.div variants={socialsFadeLeft}>
           <div className={dark ? styles.linksdarkcontainer : styles.linkslightcontainer}>
             <a
+              rel="noreferrer"
+              target="_blank"
               className={dark ? styles.linksdark : styles.linkslight}
               href="mailto:dev.josephfantuzzi@gmail.com"
               id="email"
