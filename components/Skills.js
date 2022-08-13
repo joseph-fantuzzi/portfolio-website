@@ -55,16 +55,40 @@ const Skills = ({ dark }) => {
             <p className={styles.text}>Frontend</p>
             <div className={dark ? styles.frontenddark : styles.frontendlight}>
               <div className={styles.toprow}>
-                <i style={{ fontSize }} className="devicon-html5-plain colored"></i>
-                <i style={{ fontSize }} className="devicon-css3-plain colored"></i>
-                <i style={{ fontSize }} className="devicon-javascript-plain colored"></i>
-                <i style={{ fontSize }} className="devicon-typescript-plain colored"></i>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-html5-plain colored"></i>
+                  <p>HTML</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-css3-plain colored"></i>
+                  <p>CSS</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-javascript-plain colored"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-typescript-plain colored"></i>
+                  <p>TypeScript</p>
+                </div>
               </div>
               <div className={styles.bottomrow}>
-                <i style={{ fontSize }} className="devicon-react-original colored"></i>
-                <i style={{ fontSize }} className="devicon-redux-original colored"></i>
-                <i style={{ fontSize }} className="devicon-nextjs-original"></i>
-                <i style={{ fontSize }} className="devicon-tailwindcss-plain colored"></i>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-react-original colored"></i>
+                  <p>React</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-redux-original colored"></i>
+                  <p>Redux</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-nextjs-original"></i>
+                  <p>Next</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-tailwindcss-plain colored"></i>
+                  <p>Tailwind</p>
+                </div>
               </div>
             </div>
           </div>
@@ -72,12 +96,24 @@ const Skills = ({ dark }) => {
             <p className={styles.text}>Backend</p>
             <div className={dark ? styles.backenddark : styles.backendlight}>
               <div className={styles.backtoprow}>
-                <i style={{ fontSize }} className="devicon-nodejs-plain colored"></i>
-                <i style={{ fontSize }} className="devicon-express-original"></i>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-nodejs-plain colored"></i>
+                  <p>Node</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-express-original"></i>
+                  <p>Express</p>
+                </div>
               </div>
               <div className={styles.backbottomrow}>
-                <i style={{ fontSize }} className="devicon-postgresql-plain colored"></i>
-                <i style={{ fontSize }} className="devicon-heroku-plain colored"></i>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-postgresql-plain colored"></i>
+                  <p>Postgres</p>
+                </div>
+                <div className={styles.iconcontainer}>
+                  <i style={{ fontSize }} className="devicon-heroku-plain colored"></i>
+                  <p>Heroku</p>
+                </div>
               </div>
             </div>
           </div>
@@ -85,11 +121,30 @@ const Skills = ({ dark }) => {
         <div className={styles.otherskillcontainer}>
           <p className={styles.othertext}>Other</p>
           <div className={dark ? styles.otherdark : styles.otherlight}>
-            <i style={{ fontSize }} className="devicon-jest-plain colored"></i>
-            <i style={{ fontSize }} className="devicon-git-plain colored"></i>
-            <i style={{ fontSize }} className="devicon-github-original"></i>
-            <i style={{ fontSize }} className="devicon-figma-plain colored"></i>
-            <i style={{ fontSize }} className="devicon-google-plain colored"></i>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-jest-plain colored"></i>
+              <p>Jest</p>
+            </div>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-git-plain colored"></i>
+              <p>Git</p>
+            </div>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-github-original"></i>
+              <p>GitHub</p>
+            </div>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-trello-plain"></i>
+              <p>Trello</p>
+            </div>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-figma-plain colored"></i>
+              <p>Figma</p>
+            </div>
+            <div className={styles.iconcontainer}>
+              <i style={{ fontSize }} className="devicon-google-plain colored"></i>
+              <p>Google</p>
+            </div>
           </div>
         </div>
       </div>
