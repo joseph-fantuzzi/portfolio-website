@@ -28,7 +28,7 @@ const Contact = ({ dark }) => {
           <span className={dark ? styles.numberdark : styles.numberlight}>04.</span>Contact Me
         </h1>
       </div>
-      <div className={styles.contactcontainer}>
+      <div className={dark ? styles.contactcontainerdark : styles.contactcontainerlight}>
         <div className={styles.getintouch}>
           <h1 className={styles.h1}>Get in touch</h1>
           <p className={styles.message}>
@@ -37,7 +37,7 @@ const Contact = ({ dark }) => {
             soon as possible. Thank you!
           </p>
           <div className={styles.emailcontainer}>
-            <div className={styles.mailicon}>
+            <div className={dark ? styles.mailicondark : styles.mailiconlight}>
               <FiMail />
             </div>
             <p className={styles.email}>dev.josephfantuzzi@gmail.com</p>
@@ -62,7 +62,7 @@ const Contact = ({ dark }) => {
           <input className={styles.input} type="email" name="email" placeholder="Email Address" />
           <input className={styles.input} type="text" name="subject" placeholder="Subject" />
           <textarea className={styles.input} name="message" placeholder="Message" />
-          <button className={styles.btn}>Send</button>
+          <button className={dark ? styles.btndark : styles.btnlight}>Send</button>
         </form>
       </div>
     </motion.div>

@@ -60,13 +60,22 @@
   margin-right: 0.5em;
 }
 
-.contactcontainer {
+.contactcontainerlight,
+.contactcontainerdark {
   width: 95%;
   border-radius: 13px;
-  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 2em 1em;
+  border: 2px solid #e2e8ec;
+}
+
+.contactcontainerlight {
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+.contactcontainerdark {
+  border: 2px solid #e2e8ec3e;
 }
 
 .message,
@@ -97,14 +106,23 @@
   margin: 0 auto;
 }
 
-.mailicon {
+.mailicondark,
+.mailiconlight {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
+  border: 2px solid #e2e8ec;
   border-radius: 50%;
+}
+
+.mailiconlight {
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+.mailicondark {
+  border: 2px solid #e2e8ec3e;
 }
 
 .form {
@@ -130,21 +148,30 @@
   border: 2px solid #24ff7c;
 }
 
-.btn {
+.btndark,
+.btnlight {
   background-color: #24ff7c;
   border: 2px solid #24ff7c;
   margin-top: 1em;
   padding: 0.75em 0;
   border-radius: 8px;
-  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 0.7em;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btnlight {
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+.btndark:hover,
+.btnlight:hover {
   background-color: rgba(36, 255, 124, 0.2);
+}
+
+.btndark:hover {
+  color: #24ff7c;
 }
 
 @media (max-width: 600px) {
@@ -228,7 +255,7 @@
 
 @media (min-width: 800px) {
   .container {
-    width: 60%;
+    width: 65%;
   }
 
   .titlelight,
@@ -236,14 +263,43 @@
     font-size: 1.5em;
   }
 
-  .contactcontainer {
+  .contactcontainerdark,
+  .contactcontainerlight {
     flex-direction: row;
+    padding: 3em 2em;
+    width: 100%;
+  }
+
+  .emailcontainer {
+    flex-direction: row;
+  }
+
+  .email {
+    margin-top: 0;
+    margin-left: 1em;
+  }
+
+  .h1 {
+    font-size: 1.2em;
+  }
+
+  .email,
+  .message {
+    font-size: 1em;
+  }
+
+  .btndark,
+  .btnlight {
+    font-size: 0.8em;
+  }
+
+  .form {
+    margin-left: 2em;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    width: 65%;
     padding: 0 3em;
     padding-bottom: 5em;
   }
@@ -259,13 +315,6 @@
 @media (min-width: 1600px) {
   .container {
     padding: 0 12em;
-    padding-bottom: 5em;
-  }
-}
-
-@media (min-width: 1800px) {
-  .container {
-    padding: 0 18em;
     padding-bottom: 5em;
   }
 }
