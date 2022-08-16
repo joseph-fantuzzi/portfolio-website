@@ -57,7 +57,6 @@ const Contact = ({ dark }) => {
             }/thanks`}
           ></input>
           <input type="hidden" name="_subject" value="New message!" />
-          <input type="hidden" name="_captcha" value="false" />
           <input className={styles.input} type="text" name="name" placeholder="Name" />
           <input className={styles.input} type="email" name="email" placeholder="Email Address" />
           <input className={styles.input} type="text" name="subject" placeholder="Subject" />
