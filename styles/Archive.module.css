@@ -1,0 +1,36 @@
+.container {
+  min-height: calc(100vh - 52px);
+  margin-bottom: 3em;
+}
+
+.archivecontainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.full {
+  background-color: #e2e8ec;
+  color: #07112f;
+}
+
+.titlecontainer {
+  padding: 3em 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.about {
+  font-weight: 200;
+}
+
+.project {
+  display: flex;
+  padding: 0.7em 0;
+}
+
+.project h1 {
+  margin-left: 1em;
+}

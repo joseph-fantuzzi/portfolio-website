@@ -210,7 +210,8 @@
   opacity: 0.2;
 }
 
-.links:hover {
+.links:hover,
+.links:active {
   color: #24ff7c;
 }
 
@@ -223,6 +224,33 @@
 .about {
   font-weight: 200;
   font-size: 0.9em;
+}
+
+.archivecontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.archive {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.archive:hover,
+.archive:active {
+  color: #24ff7c;
+}
+
+.archivetitle {
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-right: 0.5em;
+}
+
+.archivebtn {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
@@ -342,6 +370,11 @@
 
   .row {
     display: flex;
+  }
+
+  .archivecontainer {
+    margin-top: 0;
+    justify-content: flex-end;
   }
 }
 

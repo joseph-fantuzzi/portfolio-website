@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "../styles/Work.module.css";
 import { CgBriefcase } from "react-icons/cg";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiFolder } from "react-icons/fi";
+import { AiOutlineFolderOpen } from "react-icons/ai";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import {
@@ -148,6 +149,16 @@ const Work = ({ dark }) => {
                 <FiExternalLink fontSize={22} />
               </div>
             </div>
+          </div>
+        </div>
+        <div className={styles.archivecontainer}>
+          <div className={styles.archive}>
+            <Link href="/archive">
+              <div className={styles.archivebtn}>
+                <h1 className={styles.archivetitle}>View Archive</h1>
+                <AiOutlineFolderOpen fontSize={25} />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
