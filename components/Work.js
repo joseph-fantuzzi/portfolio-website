@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "../styles/Work.module.css";
 import { CgBriefcase } from "react-icons/cg";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import {
@@ -39,9 +40,15 @@ const Work = ({ dark }) => {
       <div className={styles.allworkcontainer}>
         <div className={styles.row}>
           <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
-            <p className={styles.projecttitle}>Portfolio Website</p>
             <div className={styles.logo}>
               <PortfolioLogos.PortfolioLogo />
+            </div>
+            <p className={styles.projecttitle}>Portfolio</p>
+            <div className={styles.aboutcontainer}>
+              <p className={styles.about}>
+                A portfolio website to display my technical skills, showcase projects I&apos;ve
+                worked on, and to provide a means to contact me.
+              </p>
             </div>
             <Link href="/portfolio">
               <motion.div
@@ -52,11 +59,27 @@ const Work = ({ dark }) => {
                 <BsArrowRightShort fontSize={40} />
               </motion.div>
             </Link>
+            <div className={styles.linkscontainer}>
+              <a
+                className={styles.links}
+                href="https://github.com/joseph-fantuzzi/portfolio-website"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FiGithub fontSize={22} />
+              </a>
+            </div>
           </div>
           <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
-            <p className={styles.projecttitle}>Cryptox</p>
             <div className={styles.logo}>
               <PortfolioLogos.CryptoxLogo />
+            </div>
+            <p className={styles.projecttitle}>Cryptox</p>
+            <div className={styles.aboutcontainer}>
+              <p className={styles.about}>
+                A full-stack cryptocurrency tracking web application that enables users to monitor
+                the top 250 cryptocurrencies.
+              </p>
             </div>
             <Link href="/cryptox">
               <motion.div
@@ -67,30 +90,64 @@ const Work = ({ dark }) => {
                 <BsArrowRightShort fontSize={40} />
               </motion.div>
             </Link>
+            <div className={styles.linkscontainer}>
+              <a
+                className={styles.links}
+                href="https://github.com/joseph-fantuzzi/cryptocurrency-tracker"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FiGithub fontSize={22} />
+              </a>
+              <a
+                className={styles.links}
+                href="https://cryptox-cryptocurrency-tracker.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FiExternalLink fontSize={22} />
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles.row}>
           <div
             className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
           >
-            <p className={styles.projecttitle}>Coming Soon ...</p>
             <div className={styles.logoblurred}>
               <PortfolioLogos.Logo3 />
             </div>
+            <p className={styles.projecttitleblurred}>Coming Soon ...</p>
             <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
               <BsArrowRightShort fontSize={40} />
             </motion.div>
+            <div className={styles.linkscontainer}>
+              <div className={styles.linksblurred}>
+                <FiGithub fontSize={22} />
+              </div>
+              <div className={styles.linksblurred}>
+                <FiExternalLink fontSize={22} />
+              </div>
+            </div>
           </div>
           <div
             className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
           >
-            <p className={styles.projecttitle}>Coming Soon ...</p>
             <div className={styles.logoblurred}>
               <PortfolioLogos.Logo4 />
             </div>
+            <p className={styles.projecttitleblurred}>Coming Soon ...</p>
             <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
               <BsArrowRightShort fontSize={40} />
             </motion.div>
+            <div className={styles.linkscontainer}>
+              <div className={styles.linksblurred}>
+                <FiGithub fontSize={22} />
+              </div>
+              <div className={styles.linksblurred}>
+                <FiExternalLink fontSize={22} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -100,20 +100,10 @@
   margin-bottom: 2em;
 }
 
-.workcontainerblurreddark,
-.workcontainerblurredlight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .logo,
 .logoblurred {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 .logoblurred {
@@ -187,8 +177,52 @@
 .projecttitle {
   font-weight: 300;
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 25px;
+  left: 35%;
+}
+
+.projecttitleblurred {
+  font-weight: 200;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.linkscontainer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+}
+
+.links {
+  margin-left: 0.6em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #07112f;
+}
+
+.linksblurred {
+  margin-left: 0.6em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #07112f;
+  opacity: 0.2;
+}
+
+.links:hover {
+  color: #24ff7c;
+}
+
+.aboutcontainer {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.about {
+  font-weight: 200;
+  font-size: 0.9em;
 }
 
 @media (max-width: 600px) {

@@ -138,6 +138,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+textarea {
+  resize: vertical;
+}
+
 .bglight {
   background-color: #e2e8ec;
   color: #07112f;
