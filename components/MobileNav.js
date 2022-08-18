@@ -4,7 +4,7 @@ import styles from "../styles/MobileNav.module.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { mobileNavFadeLeft } from "./Animations";
+import { mobileNavFadeLeft } from "../utils/Animations";
 
 const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
   const [display, setDisplay] = useState(false);

@@ -1,6 +1,6 @@
 import styles from "../styles/Logo.module.css";
 import { motion } from "framer-motion";
-import { navFadeDown, logoHover, logoTap } from "./Animations";
+import { navFadeDown, logoHover, logoTap } from "../utils/Animations";
 
 const Logo = ({ setShowLogoAnimation }) => {
   return (

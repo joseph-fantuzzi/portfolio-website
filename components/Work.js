@@ -4,7 +4,12 @@ import styles from "../styles/Work.module.css";
 import { CgBriefcase } from "react-icons/cg";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
-import { initialScrollRevealFadeUp, scrollRevealFadeUp, arrowHover, arrowTap } from "./Animations";
+import {
+  initialScrollRevealFadeUp,
+  scrollRevealFadeUp,
+  arrowHover,
+  arrowTap,
+} from "../utils/Animations";
 import PortfolioLogos from "./PortfolioLogos";
 
 const Work = ({ dark }) => {

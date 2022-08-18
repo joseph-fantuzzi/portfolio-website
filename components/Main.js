@@ -5,7 +5,7 @@ import { AiOutlineDownCircle } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { mainFadeUpContainer, mainFadeUp, toggleFadeLeft } from "./Animations";
+import { mainFadeUpContainer, mainFadeUp, toggleFadeLeft } from "../utils/Animations";
 
 const Main = ({ dark, setDark }) => {
   const [toggleVisibility, setToggleVisibility] = useState(false);

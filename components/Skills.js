@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Skills.module.css";
 import { HiOutlinePencil } from "react-icons/hi";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "./Animations";
+import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "../utils/Animations";
 
 const Skills = ({ dark }) => {
   const [increaseIcon, setIncreaseIcon] = useState(false);
@@ -75,19 +75,19 @@ const Skills = ({ dark }) => {
               <div className={styles.bottomrow}>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-react-original colored"></i>
-                  <p>React</p>
+                  <p>React.js</p>
                 </div>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-redux-original colored"></i>
-                  <p>Redux</p>
+                  <p>Redux.js</p>
                 </div>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-nextjs-original"></i>
-                  <p>Next</p>
+                  <p>Next.js</p>
                 </div>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-tailwindcss-plain colored"></i>
-                  <p>Tailwind</p>
+                  <p>TailwindCSS</p>
                 </div>
               </div>
             </div>
@@ -98,11 +98,11 @@ const Skills = ({ dark }) => {
               <div className={styles.backtoprow}>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-nodejs-plain colored"></i>
-                  <p>Node</p>
+                  <p>Node.js</p>
                 </div>
                 <div className={styles.iconcontainer}>
                   <i style={{ fontSize }} className="devicon-express-original"></i>
-                  <p>Express</p>
+                  <p>Express.js</p>
                 </div>
               </div>
               <div className={styles.backbottomrow}>

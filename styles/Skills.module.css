@@ -161,6 +161,7 @@
 }
 
 .iconcontainer p {
+  display: none;
   font-weight: 300;
   font-size: 0.8em;
   margin-top: 0.8em;
@@ -251,6 +252,10 @@
   .otherlight,
   .otherdark {
     max-width: 500px;
+  }
+
+  .iconcontainer p {
+    display: block;
   }
 }
 

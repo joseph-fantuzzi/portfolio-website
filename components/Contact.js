@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styles from "../styles/Contact.module.css";
 import { HiOutlinePaperAirplane } from "react-icons/hi";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "./Animations";
+import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "../utils/Animations";
 import { FiMail } from "react-icons/fi";
 
 const Contact = ({ dark }) => {

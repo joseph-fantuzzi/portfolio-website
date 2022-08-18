@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { navFadeDownContainer, navFadeDown } from "./Animations";
+import { navFadeDownContainer, navFadeDown } from "../utils/Animations";
 
 const Navbar = ({ setMobileNav, setShowLogoAnimation }) => {
   const [hamburgerVisible, setHamburgerVisible] = useState(false);

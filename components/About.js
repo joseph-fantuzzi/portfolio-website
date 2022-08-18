@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styles from "../styles/About.module.css";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "./Animations";
+import { scrollRevealFadeUp, initialScrollRevealFadeUp } from "../utils/Animations";
 
 const About = ({ dark }) => {
   const aboutContainer = useRef(null);

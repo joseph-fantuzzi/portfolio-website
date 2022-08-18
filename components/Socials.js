@@ -1,7 +1,7 @@
 import styles from "../styles/Socials.module.css";
 import { FiGithub, FiTwitter, FiLinkedin, FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { socialsFadeLeftContainer, socialsFadeLeft } from "./Animations";
+import { socialsFadeLeftContainer, socialsFadeLeft } from "../utils/Animations";
 
 const Socials = ({ dark }) => {
   return (

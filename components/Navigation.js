@@ -6,7 +6,7 @@ import { CgBriefcase } from "react-icons/cg";
 import { HiOutlinePaperAirplane } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { navigationFadeRight, navigationFadeRightContainer } from "./Animations";
+import { navigationFadeRight, navigationFadeRightContainer } from "../utils/Animations";
 
 const Navigation = ({ dark }) => {
   return (
