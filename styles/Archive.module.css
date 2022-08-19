@@ -4,7 +4,7 @@
 }
 
 .archivecontainer {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -19,7 +19,7 @@
 
 .title {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .about {
@@ -27,10 +27,107 @@
 }
 
 .project {
-  display: flex;
   padding: 0.7em 0;
+  display: grid;
+  grid-template-columns: 15% 20% 50% 15%;
+  grid-column-gap: 0px;
+  align-items: center;
 }
 
 .project h1 {
-  margin-left: 1em;
+  width: 85%;
+}
+
+.labelcontainer {
+  display: grid;
+  grid-template-columns: 15% 20% 50% 15%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.techlabel,
+.categorylabel {
+  display: none;
+}
+
+.sprintcontainer,
+.bloomtechprojectcontainer,
+.apprenticeshipcontainer,
+.projectcontainer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.link {
+  display: flex;
+}
+
+.site {
+  margin-right: 0.4em;
+}
+
+.site,
+.github {
+  color: #07112f;
+  transition: all 0.3s ease;
+}
+
+.site:hover,
+.github:hover,
+.site:active,
+.github:active {
+  color: #24ff7c;
+}
+
+.category,
+.technologies {
+  display: none;
+}
+
+.technologies {
+  font-size: 0.8em;
+}
+
+.category {
+  width: 85%;
+}
+
+.date,
+.name,
+.category,
+.technologies {
+  font-weight: 300;
+}
+
+@media (min-width: 800px) {
+  .archivecontainer {
+    width: 60%;
+  }
+
+  .techlabel,
+  .categorylabel {
+    display: flex;
+  }
+
+  .labelcontainer {
+    grid-template-columns: 5% 10% 25% 25% 20% 10%;
+    grid-column-gap: 1%;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+
+  .project {
+    grid-template-columns: 5% 10% 25% 25% 20% 10%;
+    grid-column-gap: 1%;
+  }
+
+  .category,
+  .technologies {
+    display: flex;
+    flex-direction: column;
+  }
 }
