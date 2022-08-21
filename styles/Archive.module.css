@@ -8,9 +8,14 @@
   margin: 0 auto;
 }
 
-.full {
+.fulllight {
   background-color: #e2e8ec;
   color: #07112f;
+}
+
+.fulldark {
+  background-color: #07112f;
+  color: #e2e8ec;
 }
 
 .titlecontainer {
@@ -57,27 +62,38 @@
 .apprenticeshipcontainer,
 .projectcontainer {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .link {
   display: flex;
 }
 
-.site {
+.sitedark,
+.sitelight {
   margin-right: 0.4em;
 }
 
-.site,
-.github {
+.sitelight,
+.githublight {
   color: #07112f;
   transition: all 0.3s ease;
 }
 
-.site:hover,
-.github:hover,
-.site:active,
-.github:active {
+.sitedark,
+.githubdark {
+  color: #e2e8ec;
+  transition: all 0.3s ease;
+}
+
+.sitedark:hover,
+.githubdark:hover,
+.sitedark:active,
+.githubdark:active,
+.sitelight:hover,
+.githublight:hover,
+.sitelight:active,
+.githublight:active {
   color: #24ff7c;
 }
 

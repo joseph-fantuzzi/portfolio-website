@@ -1,0 +1,65 @@
+.container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linelight {
+  margin-top: 0.5em;
+  height: 75px;
+  border-right: 2px solid #07112f;
+  transition: all 0.3s ease;
+}
+
+.linedark {
+  margin-top: 0.5em;
+  height: 75px;
+  border-right: 2px solid #e2e8ec;
+  transition: all 0.3s ease;
+}
+
+.linkdark,
+.linklight {
+  cursor: pointer;
+  position: absolute;
+  bottom: 95px;
+  left: -11px;
+}
+
+.linklight {
+  color: #07112f;
+  transition: all 0.3s ease;
+}
+
+.linkdark {
+  color: #e2e8ec;
+  transition: all 0.3s ease;
+}
+
+.linklight:hover,
+.linkdark:hover {
+  color: #24ff7c;
+}
+
+.text {
+  width: 170px;
+  font-size: 1.1em;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  position: absolute;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: flex;
+  }
+}

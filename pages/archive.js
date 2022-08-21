@@ -3,49 +3,61 @@ import styles from "../styles/Archive.module.css";
 import data from "../utils/archive-data";
 import ArchiveLogos from "../components/ArchiveLogos";
 import Socials from "../components/Socials";
+import ReturnHome from "../components/ReturnHome";
 import { FiFolder, FiExternalLink, FiGithub } from "react-icons/fi";
+import { motion } from "framer-motion";
+import {
+  archiveFadeDownContainer,
+  archiveFadeDownContainer2,
+  archiveFadeDownContainer3,
+  archiveFadeDownContainer4,
+  archiveFadeDownContainer5,
+  archiveFadeDown,
+  archiveFadeRight,
+} from "../utils/Animations";
 
 const archive = () => {
   let isDark;
   if (typeof window !== "undefined") {
-    isDark = window.localStorage.getItem("dark");
+    isDark = window.localStorage.getItem("theme");
   }
 
   const labels = ["", "Year", "Name", "Category", "Technologies", "Link"];
 
   return (
-    <div className={styles.full}>
+    <div className={isDark === "dark" ? styles.fulldark : styles.fulllight}>
       <div className={styles.container}>
         <div className={styles.archivecontainer}>
-          <div className={styles.titlecontainer}>
+          <motion.div variants={archiveFadeRight} className={styles.titlecontainer}>
             <h1 className={styles.title}>Project Archive</h1>
             <p className={styles.about}>A record of the work I&apos;ve done.</p>
-          </div>
+          </motion.div>
           <div className={styles.archive}>
-            <div className={styles.labelcontainer}>
+            <motion.div variants={archiveFadeDownContainer} className={styles.labelcontainer}>
               {labels.map((label, i) => {
                 if (label === "Category" || label === "Technologies") {
                   return (
-                    <div
+                    <motion.div
+                      variants={archiveFadeDown}
                       className={label === "Category" ? styles.categorylabel : styles.techlabel}
                       key={i}
                     >
                       {label}
-                    </div>
+                    </motion.div>
                   );
                 } else {
                   return (
-                    <div className={styles.label} key={i}>
+                    <motion.div variants={archiveFadeDown} className={styles.label} key={i}>
                       {label}
-                    </div>
+                    </motion.div>
                   );
                 }
               })}
-            </div>
-            <div className={styles.projectcontainer}>
+            </motion.div>
+            <motion.div variants={archiveFadeDownContainer2} className={styles.projectcontainer}>
               {data.personalProjects.map((project, i) => {
                 return (
-                  <div key={i} className={styles.project}>
+                  <motion.div variants={archiveFadeDown} key={i} className={styles.project}>
                     {project.name === "Portfolio-v1" ? (
                       <ArchiveLogos.PortfolioLogo />
                     ) : project.name === "Cryptox" ? (
@@ -62,78 +74,110 @@ const archive = () => {
                       })}
                     </div>
                     <div className={styles.link}>
-                      <a href={project.site} className={styles.site}>
+                      <a
+                        href={project.site}
+                        rel="noreferrer"
+                        target="_blank"
+                        className={isDark === "dark" ? styles.sitedark : styles.sitelight}
+                      >
                         <FiExternalLink fontSize={22} />
                       </a>
-                      <a href={project.github} className={styles.github}>
+                      <a
+                        href={project.github}
+                        rel="noreferrer"
+                        target="_blank"
+                        className={isDark === "dark" ? styles.githubdark : styles.githublight}
+                      >
                         {project.name === "Portfolio-v0" ? "" : <FiGithub fontSize={22} />}
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
-            <div className={styles.apprenticeshipcontainer}>
+            </motion.div>
+            <motion.div
+              variants={archiveFadeDownContainer3}
+              className={styles.apprenticeshipcontainer}
+            >
               {data.bloomtechPRs.map((pr, i) => {
                 return (
-                  <div key={i} className={styles.project}>
+                  <motion.div variants={archiveFadeDown} key={i} className={styles.project}>
                     <FiFolder fontSize={22} />
                     <p className={styles.date}>{pr.date}</p>
                     <h1 className={styles.name}>{pr.name}</h1>
                     <p className={styles.category}>BloomTech Apprenticeship</p>
                     <div className={styles.technologies}></div>
                     <div className={styles.link}>
-                      <a href={pr.link} className={styles.github}>
+                      <a
+                        href={pr.link}
+                        rel="noreferrer"
+                        target="_blank"
+                        className={isDark === "dark" ? styles.githubdark : styles.githublight}
+                      >
                         <FiGithub fontSize={22} />
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
-            <div className={styles.bloomtechprojectcontainer}>
+            </motion.div>
+            <motion.div
+              variants={archiveFadeDownContainer4}
+              className={styles.bloomtechprojectcontainer}
+            >
               {data.bloomtechProjects.map((project, i) => {
                 return (
-                  <div key={i} className={styles.project}>
+                  <motion.div variants={archiveFadeDown} key={i} className={styles.project}>
                     <FiFolder fontSize={22} />
                     <p className={styles.date}>{project.date}</p>
                     <h1 className={styles.name}>{project.name}</h1>
-                    <p className={styles.category}>BloomTech Projects</p>
+                    <p className={styles.category}>BloomTech Project</p>
                     <div className={styles.technologies}></div>
                     <div className={styles.link}>
-                      <a href={project.github} className={styles.github}>
+                      <a
+                        href={project.github}
+                        rel="noreferrer"
+                        target="_blank"
+                        className={isDark === "dark" ? styles.githubdark : styles.githublight}
+                      >
                         <FiGithub fontSize={22} />
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
-            <div className={styles.sprintcontainer}>
+            </motion.div>
+            <motion.div variants={archiveFadeDownContainer5} className={styles.sprintcontainer}>
               {data.bloomtechSprints.map((sprintChallenge, i) => {
                 return (
-                  <div key={i} className={styles.project}>
+                  <motion.div variants={archiveFadeDown} key={i} className={styles.project}>
                     <FiFolder fontSize={22} />
                     <p className={styles.date}>{sprintChallenge.date}</p>
                     <h1 className={styles.name}>
-                      Sprint Challenge {i + 1}: {sprintChallenge.name}
+                      Sprint Challenge {data.bloomtechSprints.length - i}: {sprintChallenge.name}
                     </h1>
-                    <p className={styles.category}>BloomTech Sprint Challenges</p>
+                    <p className={styles.category}>BloomTech Sprint Challenge</p>
                     <div className={styles.technologies}></div>
                     <div className={styles.link}>
-                      <a href={sprintChallenge.link} className={styles.github}>
+                      <a
+                        href={sprintChallenge.link}
+                        rel="noreferrer"
+                        target="_blank"
+                        className={isDark === "dark" ? styles.githubdark : styles.githublight}
+                      >
                         <FiGithub fontSize={22} />
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <Footer />
-      <Socials />
+      <ReturnHome isDark={isDark} />
+      <Socials delay={false} isDark={isDark} />
     </div>
   );
 };

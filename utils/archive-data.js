@@ -156,40 +156,40 @@ const archiveData = {
 };
 
 const bloomtechSprints = [
-  archiveData.bloomtech.sprintChallenges.sprintChallenge1,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge2,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge3,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge4,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge5,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge6,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge7,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge8,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge9,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge10,
-  archiveData.bloomtech.sprintChallenges.sprintChallenge11,
   archiveData.bloomtech.sprintChallenges.sprintChallenge12,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge11,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge10,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge9,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge8,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge7,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge6,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge5,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge4,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge3,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge2,
+  archiveData.bloomtech.sprintChallenges.sprintChallenge1,
 ];
 
 const bloomtechPRs = [
-  archiveData.bloomtech.apprenticeship.pr1,
-  archiveData.bloomtech.apprenticeship.pr2,
   archiveData.bloomtech.apprenticeship.pr3,
+  archiveData.bloomtech.apprenticeship.pr2,
+  archiveData.bloomtech.apprenticeship.pr1,
 ];
 
 const bloomtechProjects = [
-  archiveData.bloomtech.projects.nasa_pod,
-  archiveData.bloomtech.projects.team_builder,
-  archiveData.bloomtech.projects.advanced_assignments,
-  archiveData.bloomtech.projects.user_onboarding,
   archiveData.bloomtech.projects.zip_code,
+  archiveData.bloomtech.projects.user_onboarding,
+  archiveData.bloomtech.projects.advanced_assignments,
+  archiveData.bloomtech.projects.team_builder,
+  archiveData.bloomtech.projects.nasa_pod,
 ];
 
 const personalProjects = [
-  archiveData.personal.portfolioV0,
-  archiveData.personal.cryptox,
-  archiveData.personal.portfolioV1,
-  archiveData.personal.algo_playground,
   archiveData.personal.omega,
+  archiveData.personal.algo_playground,
+  archiveData.personal.portfolioV1,
+  archiveData.personal.cryptox,
+  archiveData.personal.portfolioV0,
 ];
 
 const data = {

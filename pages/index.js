@@ -53,7 +53,7 @@ export default function Home() {
           <Contact dark={dark} />
           <Footer />
           <Navigation dark={dark} />
-          <Socials dark={dark} />
+          <Socials dark={dark} delay={true} />
         </>
       )}
     </div>

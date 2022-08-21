@@ -33,6 +33,67 @@ const mainFadeUpContainer = {
   },
 };
 
+const archiveFadeDownContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.25,
+    },
+  },
+};
+
+const archiveFadeDownContainer2 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.8,
+    },
+  },
+};
+
+const archiveFadeDownContainer3 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 1.2,
+    },
+  },
+};
+
+const archiveFadeDownContainer4 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 1.6,
+    },
+  },
+};
+
+const archiveFadeDownContainer5 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 2.0,
+    },
+  },
+};
+
+const archiveFadeDown = {
+  initial: {
+    y: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
 const mainFadeUp = {
   initial: {
     y: 60,
@@ -41,6 +102,22 @@ const mainFadeUp = {
   },
   animate: {
     y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
+const archiveFadeRight = {
+  initial: {
+    x: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    x: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -95,6 +172,14 @@ const socialsFadeLeftContainer = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 1.3,
+    },
+  },
+};
+
+const socialsFadeLeftContainerArchive = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
     },
   },
 };
@@ -168,12 +253,20 @@ export {
   navFadeDownContainer,
   navFadeDown,
   mainFadeUp,
+  archiveFadeDownContainer2,
+  archiveFadeDownContainer3,
+  archiveFadeDownContainer4,
+  archiveFadeDownContainer5,
+  archiveFadeRight,
+  archiveFadeDown,
+  archiveFadeDownContainer,
   mainFadeUpContainer,
   toggleFadeLeft,
   navigationFadeRight,
   navigationFadeRightContainer,
   socialsFadeLeft,
   socialsFadeLeftContainer,
+  socialsFadeLeftContainerArchive,
   scrollRevealFadeUp,
   initialScrollRevealFadeUp,
   mobileNavFadeLeft,
