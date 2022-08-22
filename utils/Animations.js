@@ -126,6 +126,22 @@ const archiveFadeRight = {
   },
 };
 
+const archiveFadeLeft = {
+  initial: {
+    x: 60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
 const toggleFadeLeft = {
   initial: {
     x: 60,
@@ -258,6 +274,7 @@ export {
   archiveFadeDownContainer4,
   archiveFadeDownContainer5,
   archiveFadeRight,
+  archiveFadeLeft,
   archiveFadeDown,
   archiveFadeDownContainer,
   mainFadeUpContainer,
