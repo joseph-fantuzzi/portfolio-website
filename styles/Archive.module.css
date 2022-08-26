@@ -144,6 +144,10 @@
   color: #24ff7c;
 }
 
+.image {
+  border-radius: 50%;
+}
+
 @media (min-width: 800px) {
   .archivecontainer {
     width: 60%;

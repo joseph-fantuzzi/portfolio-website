@@ -133,6 +133,7 @@ const Archive = () => {
                         alt="bloomtech-logo"
                         width="22px"
                         height="22px"
+                        className={styles.image}
                       />
                     </div>
                     <p className={styles.date}>{pr.date}</p>
@@ -170,6 +171,7 @@ const Archive = () => {
                         alt="bloomtech-logo"
                         width="22px"
                         height="22px"
+                        className={styles.image}
                       />
                     </div>
                     <p className={styles.date}>{project.date}</p>
@@ -204,6 +206,7 @@ const Archive = () => {
                         alt="bloomtech-logo"
                         width="22px"
                         height="22px"
+                        className={styles.image}
                       />
                     </div>
                     <p className={styles.date}>{sprintChallenge.date}</p>
