@@ -271,7 +271,7 @@ const CryptoxLogo = () => {
   );
 };
 
-const Logo3 = () => {
+const ZitrousLogo = () => {
   return (
     <svg
       className={styles.logo}
@@ -758,6 +758,6 @@ const Logo4 = () => {
   );
 };
 
-const PortfolioLogos = { PortfolioLogo, CryptoxLogo, Logo3, Logo4 };
+const PortfolioLogos = { PortfolioLogo, CryptoxLogo, ZitrousLogo, Logo4 };
 
 export default PortfolioLogos;

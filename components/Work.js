@@ -112,23 +112,43 @@ const Work = ({ dark }) => {
           </div>
         </div>
         <div className={styles.row}>
-          <div
-            className={dark ? styles.workcontainerblurreddark : styles.workcontainerblurredlight}
-          >
-            <div className={styles.logoblurred}>
-              <PortfolioLogos.Logo3 />
+          <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
+            <div className={styles.logo}>
+              <PortfolioLogos.ZitrousLogo />
             </div>
-            <p className={styles.projecttitleblurred}>Coming Soon ...</p>
-            <motion.div className={dark ? styles.arrowblurreddark : styles.arrowblurredlight}>
-              <BsArrowRightShort fontSize={40} />
-            </motion.div>
+            <p className={styles.projecttitle}>Zitrous</p>
+            <div className={styles.aboutcontainer}>
+              <p className={styles.about}>
+                A code to styled image converter. This front-end app allows users to easily add code
+                snippets and download a beautiful image to share with others.
+              </p>
+            </div>
+            <Link href="/zitrous">
+              <motion.div
+                whileHover={arrowHover}
+                whileTap={arrowTap}
+                className={dark ? styles.arrowdark : styles.arrowlight}
+              >
+                <BsArrowRightShort fontSize={40} />
+              </motion.div>
+            </Link>
             <div className={styles.linkscontainer}>
-              <div className={styles.linksblurred}>
+              <a
+                className={styles.links}
+                href="https://github.com/joseph-fantuzzi/code-to-image-converter"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <FiGithub fontSize={22} />
-              </div>
-              <div className={styles.linksblurred}>
+              </a>
+              <a
+                className={styles.links}
+                href="https://zitrous.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <FiExternalLink fontSize={22} />
-              </div>
+              </a>
             </div>
           </div>
           <div

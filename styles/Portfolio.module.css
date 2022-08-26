@@ -1,3 +1,46 @@
+.fulllight {
+  background-color: #e2e8ec;
+  color: #07112f;
+}
+
+.fulldark {
+  background-color: #07112f;
+  color: #e2e8ec;
+}
+
+.portfoliocontainer {
+  width: 90%;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  margin-bottom: 3em;
+}
+
+.backlight,
+.backdark {
+  position: absolute;
+  top: 55px;
+  right: 10%;
+  border: 2px solid #e2e8ec3e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.backlight {
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+.backlight:hover,
+.backlight:active,
+.backdark:hover,
+.backdark:active {
+  color: #24ff7c;
+}
+
 .container {
   min-height: 100vh;
   background-color: #e2e8ec;

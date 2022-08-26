@@ -172,6 +172,13 @@ const archiveData = {
       github: "https://github.com/joseph-fantuzzi/calculator-app",
       site: "",
     },
+    zitrous: {
+      name: "Zitrous",
+      date: "2022",
+      technologies: ["React.js", "Styled Components"],
+      github: "https://github.com/joseph-fantuzzi/code-to-image-converter",
+      site: "https://zitrous.vercel.app/",
+    },
   },
 };
 
@@ -205,6 +212,7 @@ const bloomtechProjects = [
 ];
 
 const personalProjects = [
+  archiveData.personal.zitrous,
   archiveData.personal.omega,
   archiveData.personal.algo_playground,
   archiveData.personal.portfolioV1,
