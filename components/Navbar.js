@@ -33,7 +33,7 @@ const Navbar = ({ setMobileNav, setShowLogoAnimation }) => {
   return (
     <div id="home" className={styles.container}>
       <div className={styles.navcontainer}>
-        <Logo setShowLogoAnimation={setShowLogoAnimation} />
+        <Logo animation={true} setShowLogoAnimation={setShowLogoAnimation} />
         <motion.div variants={navFadeDownContainer} className={styles.linkcontainer}>
           {links.map((link, index) => {
             return (

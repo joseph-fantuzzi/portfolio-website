@@ -1,11 +1,7 @@
-import styles from "../styles/Portfolio.module.css";
+import Portfolio from "../components/Portfolio";
 
 const portfolio = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Coming Soon ...</h1>
-    </div>
-  );
+  return <Portfolio />;
 };
 
 export default portfolio;

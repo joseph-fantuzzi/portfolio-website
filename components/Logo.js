@@ -2,13 +2,13 @@ import styles from "../styles/Logo.module.css";
 import { motion } from "framer-motion";
 import { navFadeDown, logoHover, logoTap } from "../utils/Animations";
 
-const Logo = ({ setShowLogoAnimation }) => {
+const Logo = ({ setShowLogoAnimation, animation }) => {
   return (
     <motion.svg
-      onClick={() => setShowLogoAnimation(true)}
+      onClick={animation ? () => setShowLogoAnimation(true) : Function.prototype}
       variants={navFadeDown}
-      whileHover={logoHover}
-      whileTap={logoTap}
+      whileHover={animation ? logoHover : ""}
+      whileTap={animation ? logoTap : ""}
       className={styles.logo}
       width="102"
       height="100"

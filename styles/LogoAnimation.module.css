@@ -10,3 +10,10 @@
   width: 30%;
   height: 30%;
 }
+
+@media (min-width: 800px) {
+  .logo {
+    width: 15%;
+    height: 15%;
+  }
+}
