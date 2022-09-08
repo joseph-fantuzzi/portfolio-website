@@ -163,7 +163,7 @@ const archiveData = {
       date: "2022",
       technologies: ["React.js", "CSS"],
       github: "https://github.com/joseph-fantuzzi/algo-playground",
-      site: "",
+      site: "https://algo-playground-visualizer.vercel.app/",
     },
     omega: {
       name: "Omega Calculator App",

@@ -123,7 +123,7 @@
 .backenddark,
 .otherdark {
   margin-top: 0.25em;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .toprow,
@@ -275,6 +275,7 @@
 
   .frontandback {
     display: flex;
+    justify-content: center;
   }
 
   .frontenddark,
@@ -286,7 +287,7 @@
   .backenddark,
   .backendlight {
     flex-direction: column;
-    max-width: 175px;
+    max-width: 200px;
   }
 
   .backtoprow {
@@ -300,7 +301,7 @@
 
   .otherdark,
   .otherlight {
-    max-width: 510px;
+    max-width: 536px;
   }
 
   .otherskillcontainer {
@@ -323,6 +324,16 @@
     width: 65%;
     padding: 0 3em;
     padding-bottom: 5em;
+  }
+
+  .frontenddark,
+  .frontendlight {
+    max-width: 420px;
+  }
+
+  .otherdark,
+  .otherlight {
+    max-width: 636px;
   }
 }
 

@@ -80,7 +80,7 @@
 
 .message,
 .email {
-  font-weight: 300;
+  font-weight: 200;
   font-size: 0.8em;
 }
 
@@ -125,9 +125,10 @@
   border: 2px solid #e2e8ec3e;
 }
 
-.form {
+.formcontainer {
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
+  max-width: 290px;
   display: flex;
   flex-direction: column;
 }
@@ -135,12 +136,12 @@
 .input {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 2px solid white;
-  margin: 0.5em 0;
   padding: 0.3em 1em;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 0.7em;
+  margin: 0.5em 0;
 }
 
 .input:focus {
@@ -284,9 +285,9 @@
     font-size: 1.2em;
   }
 
-  .email,
-  .message {
-    font-size: 1em;
+  .message,
+  .email {
+    font-size: 0.9em;
   }
 
   .btndark,
@@ -294,8 +295,15 @@
     font-size: 0.8em;
   }
 
-  .form {
-    margin-left: 2em;
+  .formcontainer {
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contactcontainerdark,
+  .contactcontainerlight {
+    width: 95%;
   }
 }
 

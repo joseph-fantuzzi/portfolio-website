@@ -44,7 +44,7 @@ const Contact = ({ dark }) => {
           </div>
         </div>
         <form
-          className={styles.form}
+          className={styles.formcontainer}
           action="https://formsubmit.co/9ecc34fc3f0d0c92c8d809625aca3b3a"
           method="POST"
         >
