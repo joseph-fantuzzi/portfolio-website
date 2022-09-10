@@ -170,7 +170,7 @@ const archiveData = {
       date: "2022",
       technologies: ["TypeScript", "React.js", "TailwindCSS"],
       github: "https://github.com/joseph-fantuzzi/calculator-app",
-      site: "",
+      site: "https://omega-calculator.vercel.app/",
     },
     zitrous: {
       name: "Zitrous",
