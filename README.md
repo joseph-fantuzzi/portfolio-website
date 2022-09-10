@@ -10,7 +10,7 @@
 <p align="center">
   Deployed Site: <a href="https://josephfantuzzi.dev" target="_blank">josephfantuzzi.dev</a>
 </p>
-<img alt="desktop-img" src="/public/desktop-img.jpg">
+<img alt="desktop-img" src="/public/portfolio-img.png">
 
 ## Installation and Set Up
 
