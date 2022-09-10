@@ -92,8 +92,11 @@ const Portfolio = () => {
               rendering differences. I struggled especially with the dark mode implementation, since
               what is rendered on server different from client due to local storage changes. To fix
               this issue, I researched how to set the local storage only on the client. After a bit
-              of research, I found that using this conditional: if (typeof window !== "undefined"),
-              solves the problem.
+              of research, I found that using a conditional before changing local storage solves the
+              problem. I checked if the the window object&apos;s type is not undefined. When it is
+              undefined, it is being rendered on the server since there is no window object. So,
+              having it not be undefined means only when the web app is being rendered in the
+              browser.
             </p>
           </div>
           <div className={styles.section}>
