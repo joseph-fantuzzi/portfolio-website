@@ -78,7 +78,56 @@ const archiveFadeDownContainer5 = {
   },
 };
 
+const projectFadeRightContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const projectFadeDownContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 1.0,
+    },
+  },
+};
+
+const projectFadeRight = {
+  initial: {
+    x: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
 const archiveFadeDown = {
+  initial: {
+    y: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
+const projectFadeDown = {
   initial: {
     y: -60,
     opacity: 0,
@@ -291,4 +340,8 @@ export {
   logoTap,
   arrowHover,
   arrowTap,
+  projectFadeDown,
+  projectFadeRightContainer,
+  projectFadeRight,
+  projectFadeDownContainer,
 };
