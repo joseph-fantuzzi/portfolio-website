@@ -1,11 +1,7 @@
-import styles from "../styles/Cryptox.module.css";
+import Cryptox from "../components/Cryptox";
 
 const cryptox = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Coming Soon ...</h1>
-    </div>
-  );
+  return <Cryptox />;
 };
 
 export default cryptox;

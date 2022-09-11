@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Portfolio.module.css";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
@@ -13,14 +14,23 @@ import {
   projectFadeRight,
   projectFadeRightContainer,
   projectFadeDownContainer,
+  projectFadeDownDelayed,
 } from "../utils/Animations";
 
 const Portfolio = () => {
+  const [isDark, setIsDark] = useState(null);
+
   const technologies = [
     { name: "JS", icon: "devicon-javascript-plain colored" },
     { name: "Next.js", icon: "devicon-nextjs-original" },
     { name: "CSS", icon: "devicon-css3-plain colored" },
   ];
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsDark(window.localStorage.getItem("theme"));
+    }
+  }, []);
 
   const router = useRouter();
 
@@ -29,12 +39,12 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={isDark === "dark" ? styles.containerdark : styles.containerlight}>
       <div className={styles.portfoliocontainer}>
         <header className={styles.header}>
           <motion.div variants={projectFadeRightContainer} className={styles.titlecontainer}>
             <motion.div variants={projectFadeRight}>
-              <Logo animation={false} />
+              <Logo animation={false} logo={"portfolio"} />
             </motion.div>
             <motion.h1 variants={projectFadeRight} className={styles.title}>
               Portfolio
@@ -44,7 +54,7 @@ const Portfolio = () => {
                 href="https://github.com/joseph-fantuzzi/portfolio-website"
                 rel="noreferrer"
                 target="_blank"
-                className={styles.link}
+                className={isDark === "dark" ? styles.linkdark : styles.linklight}
               >
                 <FiGithub fontSize={25} />
               </motion.a>
@@ -55,21 +65,21 @@ const Portfolio = () => {
             whileTap={{ scale: 0.9 }}
             variants={projectFadeDown}
             onClick={handleBack}
-            className={styles.back}
+            className={isDark === "dark" ? styles.backdark : styles.backlight}
           >
             <TbArrowBackUp fontSize={35} />
           </motion.div>
         </header>
-        <div className={styles.linkmobilecontainer}>
+        <motion.div variants={projectFadeDownDelayed} className={styles.linkmobilecontainer}>
           <a
             href="https://github.com/joseph-fantuzzi/portfolio-website"
             rel="noreferrer"
             target="_blank"
-            className={styles.linkmobile}
+            className={isDark === "dark" ? styles.linkmobiledark : styles.linkmobilelight}
           >
             <FiGithub fontSize={25} />
           </a>
-        </div>
+        </motion.div>
         <motion.main variants={projectFadeDownContainer} className={styles.main}>
           <motion.div variants={projectFadeDown}>
             <Image
@@ -78,6 +88,7 @@ const Portfolio = () => {
               src="/portfolio-img.png"
               alt="Portfolio site desktop image"
               className={styles.img}
+              priority
             />
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>

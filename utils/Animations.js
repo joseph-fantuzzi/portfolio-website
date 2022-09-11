@@ -143,6 +143,23 @@ const projectFadeDown = {
   },
 };
 
+const projectFadeDownDelayed = {
+  initial: {
+    y: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+      delay: 0.7,
+    },
+  },
+};
+
 const mainFadeUp = {
   initial: {
     y: 60,
@@ -344,4 +361,5 @@ export {
   projectFadeRightContainer,
   projectFadeRight,
   projectFadeDownContainer,
+  projectFadeDownDelayed,
 };
