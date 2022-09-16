@@ -1,11 +1,7 @@
-import styles from "../styles/Zitrous.module.css";
+import Zitrous from "../components/Zitrous";
 
 const zitrous = () => {
-  return (
-    <div className={styles.container}>
-      <h1>Coming Soon...</h1>
-    </div>
-  );
+  return <Zitrous />;
 };
 
 export default zitrous;
