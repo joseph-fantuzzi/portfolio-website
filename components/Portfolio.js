@@ -21,7 +21,7 @@ const Portfolio = () => {
   const [isDark, setIsDark] = useState(null);
 
   const technologies = [
-    { name: "JS", icon: "devicon-javascript-plain colored" },
+    { name: "JavaScript", icon: "devicon-javascript-plain colored" },
     { name: "Next.js", icon: "devicon-nextjs-original" },
     { name: "CSS", icon: "devicon-css3-plain colored" },
   ];
@@ -103,19 +103,21 @@ const Portfolio = () => {
               project is designed for all device types and sizes.
             </p>
           </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
-            <h2 className={styles.h2}>Technologies</h2>
+          <div className={styles.section}>
+            <motion.h2 variants={projectFadeDown} className={styles.h2}>
+              Technologies
+            </motion.h2>
             <div className={styles.techcontainer}>
               {technologies.map((tech, i) => {
                 return (
-                  <div className={styles.tech} key={i}>
+                  <motion.div variants={projectFadeDown} className={styles.tech} key={i}>
                     <i style={{ fontSize: 35 }} className={tech.icon}></i>
                     <p className={styles.techname}>{tech.name}</p>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Struggles</h2>
             <p className={styles.text}>

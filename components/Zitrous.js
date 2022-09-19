@@ -21,8 +21,9 @@ const Zitrous = () => {
   const [isDark, setIsDark] = useState(null);
 
   const technologies = [
-    { name: "JS", icon: "devicon-javascript-plain colored" },
+    { name: "JavaScript", icon: "devicon-javascript-plain colored" },
     { name: "React.js", icon: "devicon-react-original colored" },
+    { name: "CSS", icon: "devicon-css3-plain colored" },
   ];
 
   useEffect(() => {
@@ -116,25 +117,27 @@ const Zitrous = () => {
             <h2 className={styles.h2}>Description</h2>
             <p className={styles.text}>
               This front-end application is an all-in-one code to styled image converter created
-              using react, allowing users to easily add code snippets, choose between different
+              using react.js, allowing users to easily add code snippets, choose between different
               background color themes, filter between different modes, add padding, and select the
               desired programming language before saving a beautiful image to share with others.
             </p>
           </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
-            <h2 className={styles.h2}>Technologies</h2>
+          <div className={styles.section}>
+            <motion.h2 variants={projectFadeDown} className={styles.h2}>
+              Technologies
+            </motion.h2>
             <div className={styles.techcontainer}>
               {technologies.map((tech, i) => {
                 return (
-                  <div className={styles.tech} key={i}>
+                  <motion.div variants={projectFadeDown} className={styles.tech} key={i}>
                     <i style={{ fontSize: 35 }} className={tech.icon}></i>
                     <p className={styles.techname}>{tech.name}</p>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
+          </div>
+          {/* <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Struggles</h2>
             <p className={styles.text}></p>
           </motion.div>
@@ -148,7 +151,7 @@ const Zitrous = () => {
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Demo</h2>
-          </motion.div>
+          </motion.div> */}
         </motion.main>
       </div>
       <Footer />

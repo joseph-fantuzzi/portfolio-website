@@ -119,12 +119,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  border-radius: 8px;
+  padding: 1em;
 }
 
 .techcontainer {
-  display: flex;
-  gap: 3em;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
   margin-top: 1.5em;
 }
 
@@ -154,10 +157,6 @@
 
   .h2 {
     font-size: 1.2em;
-  }
-
-  .techcontainer {
-    width: 80%;
   }
 
   .linkdark,

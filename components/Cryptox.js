@@ -106,7 +106,7 @@ const Cryptox = () => {
           </motion.div>
         </div>
         <motion.main variants={projectFadeDownContainer} className={styles.main}>
-          <div variants={projectFadeDown} className={styles.imgcontainer}>
+          <div className={styles.imgcontainer}>
             <motion.div variants={projectFadeDown}>
               <Image
                 width={480}
@@ -146,34 +146,66 @@ const Cryptox = () => {
               enjoy and provides tracking capabilities for the world of decentralized money.
             </p>
           </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
-            <h2 className={styles.h2}>Technologies</h2>
+          <div className={styles.section}>
+            <motion.h2 variants={projectFadeDown} className={styles.h2}>
+              Technologies
+            </motion.h2>
             <div className={styles.techcontainer}>
               {technologies.map((tech, i) => {
                 return (
-                  <div className={styles.tech} key={i}>
+                  <motion.div variants={projectFadeDown} className={styles.tech} key={i}>
                     <i style={{ fontSize: 35 }} className={tech.icon}></i>
                     <p className={styles.techname}>{tech.name}</p>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Struggles</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              Throughout the development of this project, I came across minor struggles here and
+              there. Most were fixed through online research. The most notable struggle I had would
+              be the design process. I am a big believer in beautiful-looking UIs and wanted this
+              application to stand out. I had a rough time figuring out how I wanted to structure
+              all of the content. I conducted a lot of research and realized that keeping it simple
+              would be the best option so users can easily parse through different cryptocurrencies.
+              Also, I struggled a bit when converting my back-end database from SQLite to
+              PostgreSQL. After googling and finding articles on migrating to PostgreSQL, I was able
+              to migrate databases smoothly. All in all, the development process has been a learning
+              experience for this project and I have learned that I can never give up and anything
+              can be figured out with enough research and personal drive.
+            </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>What would I change if I started over?</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              I would definitely create more mockups and concept charts before starting the
+              development process. I, like many out there, like to dive into the development process
+              as soon as possible. I need to learn to not only create design prototypes, but also
+              figure out the intended user experience as a whole. Instead of thinking about it as I
+              go along, having a much more structured and planned approach will lead to an easier
+              development process.
+            </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Future Plans</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              This project has been a long time in the making. There are still many features I plan
+              on implementing in the future. Firstly, I plan on creating a better landing page that
+              has more scrollable content. This landing page will give users more information on
+              what it is like once you register an account. Also, I plan on implementing a coin
+              chart for each cryptocurrency. Each crypto coin has its own route with content
+              specific to that coin, but is currently unfinished. I would like users to be able to
+              view a chart of the recent price data of that specific coin. I plan on using a chart
+              library to make it easier to implement. Lastly, I plan on adding a news page where
+              users can see the most recent and most popular crypto news articles. This will keep
+              users in the loop on the latest in the cryptocurrency market.
+            </p>
           </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
+          {/* <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Demo</h2>
-          </motion.div>
+          </motion.div> */}
         </motion.main>
       </div>
       <Footer />
