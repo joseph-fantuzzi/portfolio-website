@@ -21,9 +21,9 @@ const Cryptox = () => {
   const [isDark, setIsDark] = useState(null);
 
   const technologies = [
-    { name: "JS", icon: "devicon-javascript-plain colored" },
+    { name: "JavaScript", icon: "devicon-javascript-plain colored" },
     { name: "React.js", icon: "devicon-react-original colored" },
-    { name: "TailwindCSS", icon: "devicon-tailwindcss-plain colored" },
+    { name: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
     { name: "Node.js", icon: "devicon-nodejs-plain colored" },
     { name: "Express.js", icon: "devicon-express-original" },
     { name: "Postgres", icon: "devicon-postgresql-plain colored" },
@@ -129,20 +129,21 @@ const Cryptox = () => {
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Description</h2>
             <p className={styles.text}>
-              This full-stack application tracks the top 250 cryptocurrencies, allows for user
-              functionality, and has full CRUD capabilities. While entering the application, users
-              are greeted at a landing page where they can get an understanding of the intended use
-              of the app. They will then have the option to register an account or log in if they
-              already have one. Once logged in, users will be able to view the top 250
-              cryptocurrencies sorted from highest market cap to lowest market cap. Users are able
-              to favorite certain coins as they wish and view their favorite coins in the favorites
-              list page. Search functionality is also present when users want to filter through a
-              coin of their choosing. Not only that, but users are also able to view their account
-              page where they can see their username and have the ability to change their password.
-              Dark mode feature is implemented as well to give users a better viewing experience
-              during night hours. Overall, this application does a great job at delivering a modern
-              and beautful user experience for users to enjoy and provides tracking capabilities for
-              the world of decentralized money.
+              This full-stack application tracks the top 250 cryptocurrencies and was created with a
+              React.js front-end and a node.js, express.js, and postgres back-end. Cryptox has full
+              CRUD capabilities, authenticates users with JSON web tokens, and hashes passwords
+              using bcrypt.js. While entering the application, users are greeted at a landing page
+              where they can get an understanding of the intended use of the app. They will then
+              have the option to register an account or log in if they already have one. Once logged
+              in, users will be able to view the top 250 cryptocurrencies sorted from highest market
+              cap to lowest market cap. Users are able to favorite certain coins as they wish and
+              view their favorite coins in the favorites list page. Search functionality is also
+              present when users want to filter through a coin of their choosing. Not only that, but
+              users are also able to view their account page where they can see their username and
+              have the ability to change their password. Dark mode feature is implemented as well to
+              give users a better viewing experience during night hours. Overall, this application
+              does a great job at delivering a modern and beautful user experience for users to
+              enjoy and provides tracking capabilities for the world of decentralized money.
             </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>

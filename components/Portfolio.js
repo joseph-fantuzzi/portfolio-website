@@ -98,7 +98,7 @@ const Portfolio = () => {
               projects I&apos;ve worked on, and provides a means to contact me. This app was built
               using Next.js and standard CSS. The project features rich animations accomplished
               using Framer Motion&apos;s animation library. The User Interface includes beautiful
-              color contrast, proper white spacing, impressive rendering, hovering, and scrolling
+              color contrast, proper white spacing, impressive rendering, hovering and scrolling
               animations, and an initial rendering logo animation designed using svgator. This
               project is designed for all device types and sizes.
             </p>
@@ -121,13 +121,13 @@ const Portfolio = () => {
             <p className={styles.text}>
               Since this was my first time using Next.js, I struggled with the client and server
               rendering differences. I struggled especially with the dark mode implementation, since
-              what is rendered on server different from client due to local storage changes. To fix
-              this issue, I researched how to set the local storage only on the client. After a bit
-              of research, I found that using a conditional before changing local storage solves the
-              problem. I checked if the the window object&apos;s type is not undefined. When it is
-              undefined, it is being rendered on the server since there is no window object. So,
-              having it not be undefined means only when the web app is being rendered in the
-              browser.
+              there could be server and client rendering differences due to local storage changes.
+              To fix this issue, I researched how to set the local storage only on the client. After
+              a bit of research, I found that using a conditional before changing local storage
+              solves the problem. I checked if the the window object&apos;s type is not undefined.
+              When it is undefined, it is being rendered on the server since there is no window
+              object. So, having it not be undefined means only when the web app is being rendered
+              in the browser. This fixed the problem and ultimately was a great lesson.
             </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
@@ -136,15 +136,19 @@ const Portfolio = () => {
               I would certainly use TailwindCSS or Styled Components to aid in the CSS styling
               process. Although, I&apos;ve used both before, I find it much easier and more
               efficient and effective to use CSS pre-processors or CSS libraries to aid in the CSS
-              design process.
+              design process. I have found that using standard CSS within Next.js is quite
+              challenging since component-level css in Next.js need to have different module
+              stylesheets. I like to have my stylesheets organized by certain components, so it
+              definitely would have been much simpler to integrate something like TailwindCSS into
+              this application.
             </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Future Plans</h2>
             <p className={styles.text}>
               In the future, I plan on implementing a section about my hobbies and personal
-              interests. I believe it is a good idea for users of this web application to know what
-              I like to do in my free time.
+              interests. I believe it is a good idea for viewers of this web application to know
+              what I like to do in my free time.
             </p>
           </motion.div>
         </motion.main>

@@ -1,5 +1,9 @@
-.logo {
+.logo,
+.portfoliologo {
   position: relative;
   top: 25px;
+}
+
+.portfoliologo {
   cursor: pointer;
 }

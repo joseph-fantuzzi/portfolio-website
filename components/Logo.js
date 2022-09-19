@@ -10,7 +10,7 @@ const Logo = ({ setShowLogoAnimation, animation, logo }) => {
         variants={navFadeDown}
         whileHover={animation ? logoHover : ""}
         whileTap={animation ? logoTap : ""}
-        className={styles.logo}
+        className={styles.portfoliologo}
         width="102"
         height="100"
         viewBox="0 0 102 100"

@@ -137,12 +137,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-self: start;
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  padding: 1em;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .techcontainer {
-  display: flex;
-  gap: 3em;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   margin-top: 1.5em;
 }
 
@@ -152,6 +159,13 @@
 
 .h2 {
   margin-bottom: 0.8em;
+}
+
+@media (max-width: 380px) {
+  .techcontainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 800px) {
@@ -174,9 +188,9 @@
     font-size: 1.2em;
   }
 
-  .techcontainer {
-    width: 80%;
-  }
+  /* .techcontainer {
+    width: 50%;
+  } */
 
   .linkdark,
   .linklight {
@@ -204,5 +218,12 @@
 @media (min-width: 1000px) {
   .cryptoxcontainer {
     width: 50%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .techcontainer {
+    display: flex;
+    gap: 1em;
   }
 }
