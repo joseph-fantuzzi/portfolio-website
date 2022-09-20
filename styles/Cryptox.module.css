@@ -130,7 +130,8 @@
   margin-bottom: 5em;
 }
 
-.tech {
+.techdark,
+.techlight {
   font-weight: 300;
   font-size: 0.9em;
   display: flex;
@@ -138,10 +139,14 @@
   justify-content: center;
   align-items: center;
   justify-self: start;
-  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
   padding: 1em;
   width: 100%;
   border-radius: 8px;
+  border: 2px solid #e2e8ec3e;
+}
+
+.techlight {
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 
 .techcontainer {

@@ -153,7 +153,11 @@ const Cryptox = () => {
             <div className={styles.techcontainer}>
               {technologies.map((tech, i) => {
                 return (
-                  <motion.div variants={projectFadeDown} className={styles.tech} key={i}>
+                  <motion.div
+                    variants={projectFadeDown}
+                    className={isDark === "dark" ? styles.techdark : styles.techlight}
+                    key={i}
+                  >
                     <i style={{ fontSize: 35 }} className={tech.icon}></i>
                     <p className={styles.techname}>{tech.name}</p>
                   </motion.div>
