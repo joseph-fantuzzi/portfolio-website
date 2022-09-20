@@ -185,7 +185,11 @@ const Cryptox = () => {
               as soon as possible. I need to learn to not only create design prototypes, but also
               figure out the intended user experience as a whole. Instead of thinking about it as I
               go along, having a much more structured and planned approach will lead to an easier
-              development process.
+              development process. Also, I would have used Redux as a state management tool instead
+              of consistently drilling down props using React. Since this project is a full-stack
+              application with many slices of state and different components, it would have been
+              smarter to implement Redux&apos;s state management library to make accessing state
+              variables much easier.
             </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>

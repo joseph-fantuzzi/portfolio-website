@@ -113,7 +113,7 @@
 }
 
 .text {
-  font-weight: 300;
+  font-weight: 200;
   font-size: 0.9em;
 }
 
@@ -139,7 +139,7 @@
 
 .techcontainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
   margin-top: 1.5em;
 }

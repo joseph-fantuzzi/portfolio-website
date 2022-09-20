@@ -23,7 +23,6 @@ const Zitrous = () => {
   const technologies = [
     { name: "JavaScript", icon: "devicon-javascript-plain colored" },
     { name: "React.js", icon: "devicon-react-original colored" },
-    { name: "CSS", icon: "devicon-css3-plain colored" },
   ];
 
   useEffect(() => {
@@ -120,6 +119,10 @@ const Zitrous = () => {
               using react.js, allowing users to easily add code snippets, choose between different
               background color themes, filter between different modes, add padding, and select the
               desired programming language before saving a beautiful image to share with others.
+              Zitrous features a beautiful, responsive UI created using Styled Components. To help
+              aid in embedding a text editor within the image, I used CodeMirror package to add a
+              code editor with support for multiple languages. I also used html-to-image package to
+              easily be able to download the source code image.
             </p>
           </motion.div>
           <div className={styles.section}>
@@ -137,19 +140,41 @@ const Zitrous = () => {
               })}
             </div>
           </div>
-          {/* <motion.div variants={projectFadeDown} className={styles.section}>
+          <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Struggles</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              During the development of this project, I struggled embedding the code editor within
+              the image. I had issues with making the code editor&apos;s background completely
+              transparent, so the terminal can be fully visible. Through reading tons of
+              documentation, I figured out how to make it transparent. Also, I struggled with
+              exporting the image as a png file. At first, I was using html-to-canvas package to
+              accomplish that but for some reason the quality of the image was really poor. I
+              decided to try another package, html-to-image, and that fixed the problem. Lastly, I
+              struggled when implementing the title of the image. I wanted there to be some form of
+              handling that allowed the title to fit within the terminal for all deivice sizes. I
+              figured I could implement a maximum character count at different screen lengths using
+              the matchMedia method on the window object.
+            </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>What would I change if I started over?</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              I would do more research on the packages that need to be used to complete this
+              project. I did not do enough research on the CodeMirror package that it led to some
+              delays and confusion during development. Before I start developing, I need to do an
+              ample amount of research to get a good idea on the steps I need to take to use it.
+            </p>
           </motion.div>
           <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Future Plans</h2>
-            <p className={styles.text}></p>
+            <p className={styles.text}>
+              I plan on implementing animations using Framer Motion&apos;s animation library. Also,
+              I plan on adding support for more languages and adding different background and
+              terminal colors. Also, I plan on allowing users to choose a file type when exporting
+              the image. I would like to have support for PDF, JPEG, and PNG.
+            </p>
           </motion.div>
-          <motion.div variants={projectFadeDown} className={styles.section}>
+          {/* <motion.div variants={projectFadeDown} className={styles.section}>
             <h2 className={styles.h2}>Demo</h2>
           </motion.div> */}
         </motion.main>
