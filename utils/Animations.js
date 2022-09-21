@@ -99,7 +99,7 @@ const arrowFadeDownContainer = {
   animate: {
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.3,
+      delayChildren: 0.05,
     },
   },
 };
