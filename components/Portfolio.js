@@ -6,7 +6,7 @@ import ReturnHome from "./ReturnHome";
 import Socials from "./Socials";
 import Logo from "./Logo";
 import { FiGithub } from "react-icons/fi";
-import { TbArrowBackUp } from "react-icons/tb";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -15,6 +15,8 @@ import {
   projectFadeRightContainer,
   projectFadeDownContainer,
   projectFadeDownDelayed,
+  arrowFadeDownContainer,
+  arrowFadeDown,
 } from "../utils/Animations";
 
 const Portfolio = () => {
@@ -36,6 +38,10 @@ const Portfolio = () => {
 
   const handleBack = () => {
     router.push("/");
+  };
+
+  const handleForward = () => {
+    router.push("/cryptox");
   };
 
   return (
@@ -60,14 +66,25 @@ const Portfolio = () => {
               </motion.a>
             </motion.div>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            variants={projectFadeDown}
-            onClick={handleBack}
-            className={isDark === "dark" ? styles.backdark : styles.backlight}
-          >
-            <TbArrowBackUp fontSize={35} />
+          <motion.div variants={arrowFadeDownContainer} className={styles.arrowcontainer}>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              variants={arrowFadeDown}
+              onClick={handleBack}
+              className={isDark === "dark" ? styles.backdark : styles.backlight}
+            >
+              <BsArrowLeftShort fontSize={35} />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              variants={arrowFadeDown}
+              onClick={handleForward}
+              className={isDark === "dark" ? styles.forwarddark : styles.forwardlight}
+            >
+              <BsArrowRightShort fontSize={35} />
+            </motion.div>
           </motion.div>
         </header>
         <motion.div variants={projectFadeDownDelayed} className={styles.linkmobilecontainer}>

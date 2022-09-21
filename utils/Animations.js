@@ -95,6 +95,31 @@ const projectFadeDownContainer = {
   },
 };
 
+const arrowFadeDownContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const arrowFadeDown = {
+  initial: {
+    y: -60,
+    opacity: 0,
+    transition: { duration: 1, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
 const projectFadeRight = {
   initial: {
     x: -60,
@@ -362,4 +387,6 @@ export {
   projectFadeRight,
   projectFadeDownContainer,
   projectFadeDownDelayed,
+  arrowFadeDownContainer,
+  arrowFadeDown,
 };
