@@ -80,6 +80,11 @@
   gap: 0.8em;
 }
 
+.arrowcontainer {
+  display: flex;
+  gap: 1em;
+}
+
 .title {
   font-weight: 700;
   font-size: 1.2em;
@@ -88,11 +93,13 @@
 }
 
 .backdark,
-.backlight {
+.backlight,
+.forwardlight,
+.forwarddark {
   border: 2px solid #e2e8ec3e;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   margin-top: 3em;
   justify-content: center;
@@ -101,14 +108,19 @@
   transition: all 0.3s ease;
 }
 
-.backlight {
+.backlight,
+.forwardlight {
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 
 .backdark:hover,
 .backdark:active,
 .backlight:hover,
-.backlight:active {
+.backlight:active,
+.forwarddark:hover,
+.forwarddark:active,
+.forwardlight:hover,
+.forwardlight:active {
   color: #24ff7c;
 }
 
@@ -157,6 +169,16 @@
   margin-bottom: 0.8em;
 }
 
+@media (min-width: 400px) {
+  .backdark,
+  .backlight,
+  .forwardlight,
+  .forwarddark {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media (min-width: 800px) {
   .zitrouscontainer {
     width: 60%;
@@ -169,7 +191,9 @@
   }
 
   .backdark,
-  .backlight {
+  .backlight,
+  .forwardlight,
+  .forwarddark {
     margin-top: 2.5em;
   }
 
