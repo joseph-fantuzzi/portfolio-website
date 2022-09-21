@@ -136,6 +136,9 @@ table {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  background-color: #e2e8ec;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 textarea {

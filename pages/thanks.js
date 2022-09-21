@@ -1,23 +1,15 @@
-import styles from "../styles/Thanks.module.css";
-import Link from "next/link";
-import { BiArrowBack } from "react-icons/bi";
-import { IoMdCheckmark } from "react-icons/io";
+import Head from "next/head";
+import Thanks from "../components/Thanks";
 
 const thanks = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.checkmark}>
-        <IoMdCheckmark fontSize={50} />
-      </div>
-      <h1>Thank you for your response!</h1>
-      <p>I will get back to you as soon as possible.</p>
-      <Link href="/">
-        <p className={styles.btn}>
-          Return
-          <BiArrowBack fontSize={20} style={{ marginLeft: 5 }} />
-        </p>
-      </Link>
-    </div>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title>Joseph Fantuzzi</title>
+      </Head>
+      <Thanks />
+    </>
   );
 };
 

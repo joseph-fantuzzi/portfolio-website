@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Footer from "./Footer";
 import styles from "../styles/Archive.module.css";
 import data from "../utils/archive-data";
@@ -9,7 +8,7 @@ import Image from "next/image";
 import Socials from "./Socials";
 import ReturnHome from "./ReturnHome";
 import { FiFolder, FiExternalLink, FiGithub } from "react-icons/fi";
-import { TbArrowBackUp } from "react-icons/tb";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { motion } from "framer-motion";
 import {
   archiveFadeDownContainer,
@@ -19,6 +18,8 @@ import {
   archiveFadeDownContainer5,
   archiveFadeDown,
   archiveFadeRight,
+  arrowFadeDownContainer,
+  arrowFadeDown,
 } from "../utils/Animations";
 
 const Archive = () => {
@@ -35,6 +36,10 @@ const Archive = () => {
   const labels = ["", "Year", "Name", "Category", "Technologies", "Link"];
 
   const handleBack = () => {
+    router.push("/zitrous");
+  };
+
+  const handleForward = () => {
     router.push("/");
   };
 
@@ -42,19 +47,32 @@ const Archive = () => {
     <div className={isDark === "dark" ? styles.fulldark : styles.fulllight}>
       <div className={styles.container}>
         <div className={styles.archivecontainer}>
-          <motion.div variants={archiveFadeRight} className={styles.titlecontainer}>
-            <h1 className={styles.title}>Project Archive</h1>
-            <p className={styles.about}>A record of the work I&apos;ve done.</p>
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            variants={archiveFadeDown}
-            onClick={handleBack}
-            className={isDark === "dark" ? styles.backdark : styles.backlight}
-          >
-            <TbArrowBackUp fontSize={35} />
-          </motion.div>
+          <div className={styles.headercontainer}>
+            <motion.div variants={archiveFadeRight} className={styles.titlecontainer}>
+              <h1 className={styles.title}>Project Archive</h1>
+              <p className={styles.about}>A record of the work I&apos;ve done.</p>
+            </motion.div>
+            <motion.div variants={arrowFadeDownContainer} className={styles.arrowcontainer}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={arrowFadeDown}
+                onClick={handleBack}
+                className={isDark === "dark" ? styles.backdark : styles.backlight}
+              >
+                <BsArrowLeftShort fontSize={35} />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={arrowFadeDown}
+                onClick={handleForward}
+                className={isDark === "dark" ? styles.forwarddark : styles.forwardlight}
+              >
+                <BsArrowRightShort fontSize={35} />
+              </motion.div>
+            </motion.div>
+          </div>
           <div className={styles.archive}>
             <motion.div variants={archiveFadeDownContainer} className={styles.labelcontainer}>
               {labels.map((label, i) => {
