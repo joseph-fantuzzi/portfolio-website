@@ -51,7 +51,7 @@ export default function Home() {
           <Skills dark={dark} />
           <Work dark={dark} />
           <Contact dark={dark} />
-          <Footer />
+          <Footer dark={dark} links={true} />
           <Navigation dark={dark} />
           <Socials dark={dark} delay={true} />
         </>

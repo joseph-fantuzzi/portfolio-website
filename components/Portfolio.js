@@ -176,7 +176,7 @@ const Portfolio = () => {
           </motion.div>
         </motion.main>
       </div>
-      <Footer />
+      <Footer dark={isDark === "dark" ? true : false} links={false} />
       <ReturnHome isDark={isDark} />
       <Socials delay={false} isDark={isDark} />
     </div>
