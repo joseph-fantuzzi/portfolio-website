@@ -129,6 +129,7 @@
   margin: 0 auto;
   width: 60%;
   max-width: 290px;
+  min-width: 180px;
   display: flex;
   flex-direction: column;
 }

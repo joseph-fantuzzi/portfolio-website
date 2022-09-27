@@ -18,7 +18,7 @@ const Footer = ({ dark, links }) => {
             className={styles.link}
             href="https://github.com/joseph-fantuzzi"
           >
-            <FiGithub size={25} />
+            <FiGithub size={20} />
           </a>
           <a
             rel="noreferrer"
@@ -26,7 +26,7 @@ const Footer = ({ dark, links }) => {
             className={styles.link}
             href="https://www.linkedin.com/in/josephfantuzzi/"
           >
-            <FiLinkedin size={25} />
+            <FiLinkedin size={20} />
           </a>
           <a
             rel="noreferrer"
@@ -34,7 +34,7 @@ const Footer = ({ dark, links }) => {
             className={styles.link}
             href="https://twitter.com/joseph_fantuzzi"
           >
-            <FiTwitter size={25} />
+            <FiTwitter size={20} />
           </a>
           <a
             rel="noreferrer"
@@ -42,7 +42,7 @@ const Footer = ({ dark, links }) => {
             className={styles.link}
             href="mailto:dev.josephfantuzzi@gmail.com"
           >
-            <FiMail size={25} />
+            <FiMail size={20} />
           </a>
         </div>
         <div className={links ? styles.linkcontainer : styles.hidden}>
@@ -54,7 +54,7 @@ const Footer = ({ dark, links }) => {
             offset={0}
             className={styles.link}
           >
-            <BiHome size={25} />
+            <BiHome size={20} />
           </Link>
           <Link
             activeClass="active"
@@ -74,7 +74,7 @@ const Footer = ({ dark, links }) => {
             offset={-40}
             className={styles.link}
           >
-            <HiOutlinePencil size={25} />
+            <HiOutlinePencil size={20} />
           </Link>
           <Link
             activeClass="active"
@@ -84,7 +84,7 @@ const Footer = ({ dark, links }) => {
             offset={-40}
             className={styles.link}
           >
-            <CgBriefcase size={25} />
+            <CgBriefcase size={20} />
           </Link>
           <Link
             activeClass="active"
@@ -94,7 +94,7 @@ const Footer = ({ dark, links }) => {
             offset={-40}
             className={styles.link}
           >
-            <HiOutlinePaperAirplane size={25} />
+            <HiOutlinePaperAirplane size={20} />
           </Link>
         </div>
       </div>
