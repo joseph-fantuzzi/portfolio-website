@@ -51,7 +51,7 @@ const Main = ({ dark, setDark }) => {
               <Typewriter
                 options={{
                   strings: [
-                    "Full-Stack Web Developer.",
+                    "Full-Stack Developer.",
                     "Front-End Engineer.",
                     "Software Engineer.",
                     "UI/UX Designer.",
