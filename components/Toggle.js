@@ -1,5 +1,4 @@
-import LightModeIcon from "@mui/icons-material/LightMode";
-import { FiMoon } from "react-icons/fi";
+import { FiMoon, FiSun } from "react-icons/fi";
 import styles from "../styles/Toggle.module.css";
 
 const Toggle = ({ dark, setDark, mobile }) => {
@@ -46,7 +45,7 @@ const Toggle = ({ dark, setDark, mobile }) => {
         {dark ? (
           <FiMoon className={styles.moon} />
         ) : (
-          <LightModeIcon className={mobile ? styles.sunmobile : styles.sun} />
+          <FiSun className={mobile ? styles.sunmobile : styles.sun} />
         )}
       </div>
     </div>
