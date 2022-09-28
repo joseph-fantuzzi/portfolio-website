@@ -65,7 +65,7 @@ const MobileNav = ({ mobileNav, setMobileNav, dark, setDark }) => {
           variants={mobileNavFadeLeft}
           animate={mobileNav ? "visible" : "hidden"}
         >
-          {display && <Toggle dark={dark} setDark={setDark} />}
+          {display && <Toggle dark={dark} setDark={setDark} mobile={true} />}
         </motion.div>
       </div>
     </div>

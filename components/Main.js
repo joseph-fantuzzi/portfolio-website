@@ -36,7 +36,7 @@ const Main = ({ dark, setDark }) => {
   return (
     <main className={styles.maincontainer}>
       <motion.div variants={toggleFadeLeft} className={styles.togglecontainer}>
-        {toggleVisibility && <Toggle dark={dark} setDark={setDark} />}
+        {toggleVisibility && <Toggle dark={dark} setDark={setDark} mobile={false} />}
       </motion.div>
       <motion.div variants={mainFadeUpContainer} className={styles.content}>
         <div className={styles.intro}>

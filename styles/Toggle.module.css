@@ -1,14 +1,23 @@
-.togglelight {
-  background-color: #e2e8ec;
+.togglelight,
+.togglelightmobile {
   width: 60px;
   height: 20px;
-  border: 2px solid #07112f;
   border-radius: 25px;
   position: relative;
   transition: all 0.5s ease;
 }
 
-.toggledark {
+.togglelight {
+  background-color: #e2e8ec;
+  border: 2px solid #07112f;
+}
+
+.togglelightmobile {
+  border: 2px solid #e2e8ec;
+}
+
+.toggledark,
+.toggledarkmobile {
   width: 60px;
   height: 20px;
   border: 2px solid #e2e8ec;
@@ -17,16 +26,15 @@
   transition: all 0.5s ease;
 }
 
-.circlelight {
+.circlelight,
+.circlelightmobile {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 28px;
   height: 28px;
-  border: 2px solid #07112f;
   border-radius: 50%;
-  background-color: #e2e8ec;
   position: absolute;
   left: -2px;
   bottom: -6px;
@@ -34,7 +42,18 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.circledark {
+.circlelight {
+  background-color: #e2e8ec;
+  border: 2px solid #07112f;
+}
+
+.circlelightmobile {
+  background-color: rgb(59, 66, 86);
+  border: 2px solid #e2e8ec;
+}
+
+.circledark,
+.circledarkmobile {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -42,7 +61,6 @@
   width: 28px;
   height: 28px;
   border: 2px solid #e2e8ec;
-  background-color: #07112f;
   border-radius: 50%;
   position: absolute;
   left: -2px;
@@ -51,15 +69,37 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+.circledark {
+  background-color: #07112f;
+}
+
+.circledarkmobile {
+  background-color: rgb(7, 17, 47);
+}
+
 .moon {
   color: #e2e8ec;
+  width: 18px;
+  height: 18px;
+}
+
+.sun,
+.sunmobile {
+  width: 18px;
+  height: 18px;
 }
 
 .sun {
   color: #07112f;
 }
 
+.sunmobile {
+  color: #e2e8ec;
+}
+
 .toggledark,
-.togglelight {
+.togglelight,
+.toggledarkmobile,
+.togglelightmobile {
   margin: 1.5em 0;
 }

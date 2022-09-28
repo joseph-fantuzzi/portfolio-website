@@ -101,7 +101,7 @@ const Portfolio = () => {
           <motion.div variants={projectFadeDown}>
             <Image
               width={1150}
-              height={804}
+              height={787}
               src="/portfolio-img.png"
               alt="Portfolio site desktop image"
               className={styles.img}
