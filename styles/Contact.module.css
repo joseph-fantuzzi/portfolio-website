@@ -153,12 +153,13 @@
 .btndark,
 .btnlight {
   background-color: #24ff7c;
-  border: 2px solid #24ff7c;
+  border: 3px solid #24ff7c;
   margin-top: 1em;
-  padding: 0.75em 0;
+  padding: 0.4em 0;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
-  font-size: 0.7em;
+  font-weight: 300;
+  font-size: 0.9em;
   cursor: pointer;
   color: #07112f;
   transition: all 0.3s ease;
@@ -170,7 +171,7 @@
 
 .btndark:hover,
 .btnlight:hover {
-  background-color: rgba(36, 255, 124, 0.2);
+  background-color: #24ff7c52;
 }
 
 .btndark:hover {
@@ -289,11 +290,6 @@
   .message,
   .email {
     font-size: 0.9em;
-  }
-
-  .btndark,
-  .btnlight {
-    font-size: 0.8em;
   }
 
   .formcontainer {

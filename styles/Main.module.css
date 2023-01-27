@@ -113,12 +113,13 @@
 }
 
 .connect {
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .work {
   margin-right: 0.5em;
-  font-weight: 700;
+  font-weight: 300;
+  font-size: 0.9em;
 }
 
 .workbtnlight {
@@ -127,8 +128,8 @@
   justify-content: center;
   align-items: center;
   background-color: #24ff7c;
-  padding: 0.7em 1.2em;
-  border: 2px solid #24ff7c;
+  padding: 0.5em 1.2em;
+  border: 3px solid #24ff7c;
   border-radius: 13px;
   margin-bottom: 1.2em;
   text-decoration: none;
@@ -138,7 +139,7 @@
 
 .workbtnlight:hover,
 .workbtndark:hover {
-  background-color: rgba(36, 255, 124, 0.2);
+  background-color: #24ff7c52;
 }
 
 .workbtndark {
@@ -147,8 +148,8 @@
   justify-content: center;
   align-items: center;
   background-color: #24ff7c;
-  padding: 0.7em 1.2em;
-  border: 2px solid #24ff7c;
+  padding: 0.5em 1.2em;
+  border: 3px solid #24ff7c;
   border-radius: 13px;
   margin-bottom: 1.2em;
   text-decoration: none;

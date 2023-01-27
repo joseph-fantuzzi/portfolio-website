@@ -1,8 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "../styles/Work.module.css";
 import { CgBriefcase } from "react-icons/cg";
-import { FiExternalLink, FiGithub, FiFolder } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { AiOutlineFolderOpen } from "react-icons/ai";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
@@ -39,6 +39,33 @@ const Work = ({ dark }) => {
         </h1>
       </div>
       <div className={styles.allworkcontainer}>
+        <div className={dark ? styles.sprixlworkcontainerdark : styles.sprixlworkcontainerlight}>
+          <div className={styles.logo}>
+            <PortfolioLogos.SprixlLogo />
+          </div>
+          <p className={styles.sprixlprojecttitle}>Sprixl</p>
+          <div className={styles.aboutcontainer}>
+            <p className={styles.about}>
+              An upcoming revolutionary AI-powered tool that helps agile development teams
+              streamline their planning process by generating user stories with unparalleled
+              accuracy and efficiency.
+            </p>
+          </div>
+          {/* <Link href="/sprixl">
+            <motion.div
+              whileHover={arrowHover}
+              whileTap={arrowTap}
+              className={dark ? styles.arrowdark : styles.arrowlight}
+            >
+              <BsArrowRightShort fontSize={40} />
+            </motion.div>
+          </Link> */}
+          <div className={styles.linkscontainer}>
+            <a className={styles.links} href="https://sprixl.com" rel="noreferrer" target="_blank">
+              <FiExternalLink fontSize={22} />
+            </a>
+          </div>
+        </div>
         <div className={styles.row}>
           <div className={dark ? styles.workcontainerdark : styles.workcontainerlight}>
             <div className={styles.logo}>
@@ -172,14 +199,12 @@ const Work = ({ dark }) => {
           </div>
         </div>
         <div className={styles.archivecontainer}>
-          <div className={styles.archive}>
-            <Link href="/archive">
-              <div className={styles.archivebtn}>
-                <h1 className={styles.archivetitle}>View Archive</h1>
-                <AiOutlineFolderOpen fontSize={25} />
-              </div>
-            </Link>
-          </div>
+          <Link href="/archive">
+            <div className={styles.archivebtn}>
+              <h1 className={styles.archivetitle}>View Archive</h1>
+              <AiOutlineFolderOpen fontSize={25} />
+            </div>
+          </Link>
         </div>
       </div>
     </motion.div>

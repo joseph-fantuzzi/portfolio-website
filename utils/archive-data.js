@@ -179,6 +179,12 @@ const archiveData = {
       github: "https://github.com/joseph-fantuzzi/code-to-image-converter",
       site: "https://zitrous.vercel.app/",
     },
+    sprixl: {
+      name: "Sprixl",
+      date: "2022",
+      technologies: ["TypeScript", "React.js", "Redux", "Python", "Django", "Auth0"],
+      site: "https://sprixl.com",
+    },
   },
 };
 
@@ -212,6 +218,7 @@ const bloomtechProjects = [
 ];
 
 const personalProjects = [
+  archiveData.personal.sprixl,
   archiveData.personal.zitrous,
   archiveData.personal.omega,
   archiveData.personal.algo_playground,

@@ -1,4 +1,12 @@
-.logo {
+.logo,
+.sprixllogo {
   width: 25%;
   height: 25%;
+}
+
+@media (min-width: 800px) {
+  .sprixllogo {
+    width: 12%;
+    height: 12%;
+  }
 }

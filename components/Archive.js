@@ -105,12 +105,16 @@ const Archive = () => {
                       <ArchiveLogos.CryptoxLogo />
                     ) : project.name === "Zitrous" ? (
                       <ArchiveLogos.ZitrousLogo />
+                    ) : project.name === "Sprixl" ? (
+                      <ArchiveLogos.SprixlLogo />
                     ) : (
                       <FiFolder fontSize={22} />
                     )}
                     <p className={styles.date}>{project.date}</p>
                     <h1 className={styles.name}>{project.name}</h1>
-                    <p className={styles.category}>Personal</p>
+                    <p className={styles.category}>
+                      {project.name === "Sprixl" ? "Startup" : "Personal"}
+                    </p>
                     <div className={styles.technologies}>
                       {project.technologies.map((tech, i) => {
                         return <p key={i}>{tech}</p>;
@@ -131,7 +135,11 @@ const Archive = () => {
                         target="_blank"
                         className={isDark === "dark" ? styles.githubdark : styles.githublight}
                       >
-                        {project.name === "Portfolio-v0" ? "" : <FiGithub fontSize={22} />}
+                        {project.name === "Portfolio-v0" || project.name === "Sprixl" ? (
+                          ""
+                        ) : (
+                          <FiGithub fontSize={22} />
+                        )}
                       </a>
                     </div>
                   </motion.div>
