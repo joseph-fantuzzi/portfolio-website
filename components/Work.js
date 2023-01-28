@@ -61,7 +61,12 @@ const Work = ({ dark }) => {
             </motion.div>
           </Link> */}
           <div className={styles.linkscontainer}>
-            <a className={styles.links} href="https://sprixl.com" rel="noreferrer" target="_blank">
+            <a
+              className={dark ? styles.linksdark : styles.linkslight}
+              href="https://sprixl.com"
+              rel="noreferrer"
+              target="_blank"
+            >
               <FiExternalLink fontSize={22} />
             </a>
           </div>
@@ -89,7 +94,7 @@ const Work = ({ dark }) => {
             </Link>
             <div className={styles.linkscontainer}>
               <a
-                className={styles.links}
+                className={dark ? styles.linksdark : styles.linkslight}
                 href="https://github.com/joseph-fantuzzi/portfolio-website"
                 rel="noreferrer"
                 target="_blank"
@@ -120,7 +125,7 @@ const Work = ({ dark }) => {
             </Link>
             <div className={styles.linkscontainer}>
               <a
-                className={styles.links}
+                className={dark ? styles.linksdark : styles.linkslight}
                 href="https://github.com/joseph-fantuzzi/cryptocurrency-tracker"
                 rel="noreferrer"
                 target="_blank"
@@ -128,7 +133,7 @@ const Work = ({ dark }) => {
                 <FiGithub fontSize={22} />
               </a>
               <a
-                className={styles.links}
+                className={dark ? styles.linksdark : styles.linkslight}
                 href="https://cryptox-cryptocurrency-tracker.vercel.app/"
                 rel="noreferrer"
                 target="_blank"
@@ -161,7 +166,7 @@ const Work = ({ dark }) => {
             </Link>
             <div className={styles.linkscontainer}>
               <a
-                className={styles.links}
+                className={dark ? styles.linksdark : styles.linkslight}
                 href="https://github.com/joseph-fantuzzi/code-to-image-converter"
                 rel="noreferrer"
                 target="_blank"
@@ -169,7 +174,7 @@ const Work = ({ dark }) => {
                 <FiGithub fontSize={22} />
               </a>
               <a
-                className={styles.links}
+                className={dark ? styles.linksdark : styles.linkslight}
                 href="https://zitrous.vercel.app/"
                 rel="noreferrer"
                 target="_blank"
@@ -189,10 +194,10 @@ const Work = ({ dark }) => {
               <BsArrowRightShort fontSize={40} />
             </motion.div>
             <div className={styles.linkscontainer}>
-              <div className={styles.linksblurred}>
+              <div className={dark ? styles.linksblurreddark : styles.linksblurredlight}>
                 <FiGithub fontSize={22} />
               </div>
-              <div className={styles.linksblurred}>
+              <div className={dark ? styles.linksblurreddark : styles.linksblurredlight}>
                 <FiExternalLink fontSize={22} />
               </div>
             </div>
@@ -200,7 +205,7 @@ const Work = ({ dark }) => {
         </div>
         <div className={styles.archivecontainer}>
           <Link href="/archive">
-            <div className={styles.archivebtn}>
+            <div className={dark ? styles.archivebtndark : styles.archivebtnlight}>
               <h1 className={styles.archivetitle}>View Archive</h1>
               <AiOutlineFolderOpen fontSize={25} />
             </div>
